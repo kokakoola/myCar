@@ -1,0 +1,14 @@
+{
+  "name": "myToyota",
+  "version": "1.0.0",
+  "description": "Hi!",
+  "main": "index.js",
+  "scripts": {
+    "test": "cmd"
+  },
+  "keywords": [
+    "customer"
+  ],
+  "author": "Mare Hunt",
+  "license": "ISC"
+}
