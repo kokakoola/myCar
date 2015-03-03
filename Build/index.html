@@ -417,39 +417,57 @@
     <span style="width: auto; right: -180px;" class="contracted">Contacteer ons</span>
   </a>
 </div>
-  <div class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between">
+  <div class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between ">
     
     <div class="container quickspec-caption">
       <header class="article-header-parallax header-center header-light skrollable skrollable-before" data-top="padding-top:170px" data--70-top="padding-top:240px" data--400-top="padding-top:350px" style="padding-top: 170px;">
-        <h1></h1></header>
-
-        
-          <div class="col-xs-12 col-sm-6 col-md-5">
-          <div id="mini-clndr"></div>
+        <h1>Some text here</h1></header>
+          
+            <div id="mini-clndr"></div>
+          
     <script id="calendar-template" type="text/template">
-      <div class="controls">
-        <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
-      </div>
+    <div class="col-xs-12 col-sm-6 col-md-5">
+      <a href="#!" class="btn btn-default clndr-today-button">Today</a>
+        <div class="controls">
+          <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
+        </div>
 
-      <div class="days-container">
-        <div class="days">
-          <div class="headers">
-            <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+        <div class="days-container">
+          <div class="days">
+            <div class="headers">
+              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+            </div>
+            <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
           </div>
-          <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+        <div class="event-listing quick-spec prices">
+          <div class="event-listing-title">
+            <p class="title">Evénement du mois :</p> 
+          </div>
+            <% _.each(eventsThisMonth, function(event) { %>
+            <div class="event-item">
+
+            <div class="event-item-name">
+              <p class="quickspec-label"><%= moment(event.startDate).format('DD/MM/YYYY') %> : <%= event.title %></p>
+              <div class="event-item-location"><%= event.location %></div>
+            </div>         
+          </div>
+          <% }); %>
         </div>
       </div>
 
     </script>
-        </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+          
+          <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
             <div class="quick-spec prices">
   <div class="row">
     <div class="col-xs-8">
       <p class="title">From € 26.999,00</p>
     </div>
     <div class="col-xs-4">
-      <a class="view-prices" href="http://t1-production-client.herokuapp.com/mockups/pages/carchapter-prices.html">View prices</a>
+      <a class="view-prices show-sv sv-callback3" href="#example-subview-1" data-startFrom="right">View prices</a>
     </div>
   </div>
   <div class="row">
@@ -497,16 +515,81 @@
     </div>
   </div>
 </div>
-        </div>
 
-
-
-
-
-
-          
-
-
+<div class="container">
+    <h5>3col table</h5>
+    <div class="table-responsive">
+        <table class="table">
+            <caption>
+                Car price list
+            </caption>
+            <thead>
+            <tr>
+                <th style="width:50%" class="active sort-link">Motorisierung</th>
+                <th class="sort-link">Ausstattung</th>
+                <th class="sort-link">Preis</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Hybrid (Elektro- und Verbrennungsmotor) stufenloses Getriebe
+                    <br>
+                    Verbrauch kombiniert: 3.9 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 91 g/km</td>
+                <td><a href="article-gallery.html#car">Life Plus</a></td>
+                <td>23.250,00 </td>
+            </tr>
+            <tr>
+                <td>Hybrid (Elektro- und Verbrennungsmotor) stufenloses Getriebe
+                    <br>
+                    Verbrauch kombiniert: 3.9 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 91 g/km</td>
+                <td><a href="article-gallery.html#car">Executive</a></td>
+                <td>25.500,00 </td>
+            </tr>
+            <tr>
+                <td>Hybrid (Elektro- und Verbrennungsmotor) stufenloses Getriebe
+                    <br>
+                    Verbrauch kombiniert: 3.9 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 91 g/km</td>
+                <td><a href="article-gallery.html#car">Life</a></td>
+                <td>22.950,00 </td>
+            </tr>
+            <tr>
+                <td>2,0-l-D-4D 6-Gang Schaltgetriebe
+                    <br>
+                    Verbrauch kombiniert: 4.3 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 112 g/km</td>
+                <td><a href="article-gallery.html#car">Life</a></td>
+                <td>23.150,00 </td>
+            </tr>
+            <tr>
+                <td>2,0-l-D-4D 6-Gang Schaltgetriebe
+                    <br>
+                    Verbrauch kombiniert: 4.3 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 112 g/km</td>
+                <td><a href="article-gallery.html#car">Life Plus</a></td>
+                <td>23.450,00 </td>
+            </tr>
+            <tr>
+                <td>2,0-l-D-4D 6-Gang Schaltgetriebe
+                    <br>
+                    Verbrauch kombiniert: 4.3 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 112 g/km</td>
+                <td><a href="article-gallery.html#car">Executive</a></td>
+                <td>25.700,00 </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+          </div>
 
 <!-- <div class="buttons col-xs-12">
   <a href="/forms/testdrive-t1.html" class="btn btn-red action-overlayer-ajax " data-bt-value="test_drive" data-bt-workflowname="test_drive" data-bt-track="">
@@ -728,12 +811,12 @@
 
       <div class="row row-2 collapse">
         <a href="carchapter-radio.html" class="col-xs-12 col-sm-6 spotlight direct-link regular-size">
-          <img class="img-responsive" src="../../images/next-step-2.jpg" alt="">
+          <img class="img-responsive" src="assets/img/next-step-2.jpg" alt="">
           <h3 class="item-title">Finance & insurance</h3>
           <span class="description">Nisi elit consequat ipsum sit amet nibh vulputate cursus a sit amet mauris.</span>
         </a>
         <a href="carchapter-radio.html" class="col-xs-12 col-sm-6 spotlight direct-link regular-size">
-          <img class="img-responsive" src="../../images/next-step-1.jpg" alt="">
+          <img class="img-responsive" src="assets/img/next-step-1.jpg" alt="">
           <h3 class="item-title">Warranty</h3>
           <span class="description">Nisi elit consequat ipsum sit amet nibh vulputate cursus a sit amet mauris.</span>
         </a>
@@ -977,19 +1060,175 @@
     </div>
   </div>
 </section>
+                      <div class="subviews">
+            <div class="subviews-container"></div>
+          </div>
+<div class="container">
+    <h5>3col table</h5>
+    <div class="table-responsive">
+        <table class="table">
+            <caption>
+                Car price list
+            </caption>
+            <thead>
+            <tr>
+                <th style="width:50%" class="active sort-link">Motorisierung</th>
+                <th class="sort-link">Ausstattung</th>
+                <th class="sort-link">Preis</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Hybrid (Elektro- und Verbrennungsmotor) stufenloses Getriebe
+                    <br>
+                    Verbrauch kombiniert: 3.9 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 91 g/km</td>
+                <td><a href="article-gallery.html#car">Life Plus</a></td>
+                <td>23.250,00 </td>
+            </tr>
+            <tr>
+                <td>Hybrid (Elektro- und Verbrennungsmotor) stufenloses Getriebe
+                    <br>
+                    Verbrauch kombiniert: 3.9 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 91 g/km</td>
+                <td><a href="article-gallery.html#car">Executive</a></td>
+                <td>25.500,00 </td>
+            </tr>
+            <tr>
+                <td>Hybrid (Elektro- und Verbrennungsmotor) stufenloses Getriebe
+                    <br>
+                    Verbrauch kombiniert: 3.9 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 91 g/km</td>
+                <td><a href="article-gallery.html#car">Life</a></td>
+                <td>22.950,00 </td>
+            </tr>
+            <tr>
+                <td>2,0-l-D-4D 6-Gang Schaltgetriebe
+                    <br>
+                    Verbrauch kombiniert: 4.3 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 112 g/km</td>
+                <td><a href="article-gallery.html#car">Life</a></td>
+                <td>23.150,00 </td>
+            </tr>
+            <tr>
+                <td>2,0-l-D-4D 6-Gang Schaltgetriebe
+                    <br>
+                    Verbrauch kombiniert: 4.3 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 112 g/km</td>
+                <td><a href="article-gallery.html#car">Life Plus</a></td>
+                <td>23.450,00 </td>
+            </tr>
+            <tr>
+                <td>2,0-l-D-4D 6-Gang Schaltgetriebe
+                    <br>
+                    Verbrauch kombiniert: 4.3 l/100 km
+                    <br>
+                    CO2-Emission, kombiniert: 112 g/km</td>
+                <td><a href="article-gallery.html#car">Executive</a></td>
+                <td>25.700,00 </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="example-subview-1" class="no-display">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Text in Subview</h3>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </p>
+          <h3>Popover in Subview</h3>
+          <a href="#" class="close-subviews" style="display: block; opacity: 1; left: 0px;">
+                  <i class="fa fa-times"></i> CLOSE
+                </a>
+          <p>
+            This
+            <a data-content="And here's some amazing content. It's very engaging. right?" title="" class="btn btn-default popovers" role="button" href="#" data-original-title="A Title">
+              button
+            </a>
+            should trigger a popover on click.
+          </p>
+          <h3>Tooltips in Subview</h3>
+          <p>
+            <a title="" class="tooltips" href="#" data-original-title="Tooltip">
+              This link
+            </a>
+            and
+            <a title="" class="tooltips" href="#" data-original-title="Tooltip">
+              that link
+            </a>
+            should have tooltips on hover.
+          </p>
+          <hr>
+          <h3>Overflowing text to show scroll behavior</h3>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+        </div>
+      </div>
+
         <footer></footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
-        <!-- scripts -->
-        <script src='bower_components/jquery/src/jquery.js'></script>
+        <script src='bower_components/jquery/dist/jquery.min.js'></script>
 <script src='assets/js/vendor/bootstrap.js'></script>
 <script src='bower_components/moment/moment.js'></script>
 <script src='bower_components/underscore/underscore.js'></script>
 <script src='bower_components/clndr/clndr.min.js'></script>
 <script src='assets/js/plugins.js'></script>
 <script src='assets/js/main.js'></script>
+<script src='bower_components/skrollr/dist/skrollr.min.js'></script>
+<script src='assets/js/subview.js'></script>
 
         <script>
 

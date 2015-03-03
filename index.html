@@ -1,33 +1,57 @@
 <!-- $title Home -->
 <!-- $bodyClass home -->
-<!-- @include _header -->
+<!-- @include header -->
 
 <!-- @include nav -->
 
 <div id="pagecontent">
   <!-- @include cta-bar -->
-  <div class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between">
+  <div class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between ">
     
     <div class="container quickspec-caption">
       <header class="article-header-parallax header-center header-light skrollable skrollable-before" data-top="padding-top:170px" data--70-top="padding-top:240px" data--400-top="padding-top:350px" style="padding-top: 170px;">
-        <h1></h1></header>
-
-        
-          <div class="col-xs-12 col-sm-6 col-md-5">
-          <!-- @include calendar -->
-        </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
-            <!-- @include events -->
-        </div>
-
-
-
-
-
-
+        <h1>Some text here</h1></header>
           
+            <div id="mini-clndr"></div>
+          
+    <script id="calendar-template" type="text/template">
+    <div class="col-xs-12 col-sm-6 col-md-5">
+      <a href="#!" class="btn btn-default clndr-today-button">Today</a>
+        <div class="controls">
+          <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
+        </div>
 
+        <div class="days-container">
+          <div class="days">
+            <div class="headers">
+              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+            </div>
+            <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+        <div class="event-listing quick-spec prices">
+          <div class="event-listing-title">
+            <p class="title">Evénement du mois :</p> 
+          </div>
+            <% _.each(eventsThisMonth, function(event) { %>
+            <div class="event-item">
 
+            <div class="event-item-name">
+              <p class="quickspec-label"><%= moment(event.startDate).format('DD/MM/YYYY') %> : <%= event.title %></p>
+              <div class="event-item-location"><%= event.location %></div>
+            </div>         
+          </div>
+          <% }); %>
+        </div>
+      </div>
+
+    </script>
+          
+          <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+            <!-- @include events -->
+          </div>
 
 <!-- <div class="buttons col-xs-12">
   <a href="/forms/testdrive-t1.html" class="btn btn-red action-overlayer-ajax " data-bt-value="test_drive" data-bt-workflowname="test_drive" data-bt-track="">
@@ -45,4 +69,90 @@
 </div>
 
 <!-- @include footer-chapter -->
+                      <div class="subviews">
+            <div class="subviews-container"></div>
+          </div>
+<!-- @include table -->
+
+<div id="example-subview-1" class="no-display">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Text in Subview</h3>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </p>
+          <h3>Popover in Subview</h3>
+          <a href="#" class="close-subviews" style="display: block; opacity: 1; left: 0px;">
+                  <i class="fa fa-times"></i> CLOSE
+                </a>
+          <p>
+            This
+            <a data-content="And here's some amazing content. It's very engaging. right?" title="" class="btn btn-default popovers" role="button" href="#" data-original-title="A Title">
+              button
+            </a>
+            should trigger a popover on click.
+          </p>
+          <h3>Tooltips in Subview</h3>
+          <p>
+            <a title="" class="tooltips" href="#" data-original-title="Tooltip">
+              This link
+            </a>
+            and
+            <a title="" class="tooltips" href="#" data-original-title="Tooltip">
+              that link
+            </a>
+            should have tooltips on hover.
+          </p>
+          <hr>
+          <h3>Overflowing text to show scroll behavior</h3>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          </p>
+          <p>
+            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+        </div>
+      </div>
+
 <!-- @include _footer -->

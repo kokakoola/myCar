@@ -10,5 +10,8 @@
     "customer"
   ],
   "author": "Mare Hunt",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "subview": "^0.2.4"
+  }
 }

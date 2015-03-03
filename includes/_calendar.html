@@ -1,5 +1,6 @@
 <div id="mini-clndr"></div>
     <script id="calendar-template" type="text/template">
+    <a href="#!" class="btn btn-default clndr-today-button">Today</a>
       <div class="controls">
         <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
       </div>
@@ -12,5 +13,15 @@
           <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
         </div>
       </div>
+
+      <div class="event-listing quick-spec prices">
+    <div class="event-listing-title">Evénement du mois : </div>
+    <% _.each(eventsThisMonth, function(event) { %>
+    <div class="event-item">
+
+        <div class="event-item-name"><%= moment(event.startDate).format('DD/MM/YYYY') %> : <%= event.title %></div>         
+    </div>
+    <% }); %>
+</div>
 
     </script>

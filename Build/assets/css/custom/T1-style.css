@@ -8577,7 +8577,7 @@ section.footer {
   background: rgba(244, 178, 82, 0.7); }
 
 .promo-text-wrapperv1 > div, .promo-text-wrapperv2 > div {
-  background: url("/images/arrow.png") no-repeat scroll 92px bottom;
+  background: url(../../img/arrow.png) no-repeat scroll 92px bottom;
   min-height: 80px; }
 
 .promo-text {
@@ -13139,7 +13139,7 @@ body.vjs-full-window {
   z-index: 20; }
 
 .topfeature-text-wrapper > div {
-  background: url("/images/arrow.png") no-repeat scroll 92px bottom;
+  background: url(../../img/arrow.png) no-repeat scroll 92px bottom;
   min-height: 100px;
   height: 100px;
   margin-top: -100px; }
