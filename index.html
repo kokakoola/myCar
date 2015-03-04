@@ -11,12 +11,12 @@
     <div class="container quickspec-caption">
       <header class="article-header-parallax header-center header-light skrollable skrollable-before" data-top="padding-top:170px" data--70-top="padding-top:240px" data--400-top="padding-top:350px" style="padding-top: 170px;">
         <h1>Some text here</h1></header>
-          
+
             <div id="mini-clndr"></div>
           
     <script id="calendar-template" type="text/template">
     <div class="col-xs-12 col-sm-6 col-md-5">
-      <a href="#!" class="btn btn-default clndr-today-button">Today</a>
+      <a href="#!" class="clndr-today-button">Today</a>
         <div class="controls">
           <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
         </div>
@@ -41,7 +41,10 @@
             <div class="event-item-name">
               <p class="quickspec-label"><%= moment(event.startDate).format('DD/MM/YYYY') %> : <%= event.title %></p>
               <div class="event-item-location"><%= event.location %></div>
-            </div>         
+            </div> 
+            <button type="button" class="btn btn-primary btn-lg" data-target="#myModal" data-direction="right">
+  Launch demo modal
+</button>
           </div>
           <% }); %>
         </div>
@@ -69,90 +72,30 @@
 </div>
 
 <!-- @include footer-chapter -->
-                      <div class="subviews">
-            <div class="subviews-container"></div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog fullscreen">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+        <a class="close-link" data-dismiss="modal" aria-label="Close">
+          <div class="btn-back">
+            <div class="btn-graphic" >
+              <i class="icon-angle-left"></i>
+            </div>
           </div>
-<!-- @include table -->
-
-<div id="example-subview-1" class="no-display">
-        <div class="col-md-8 col-md-offset-2">
-          <h3>Text in Subview</h3>
-          <p>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
-          <h3>Popover in Subview</h3>
-          <a href="#" class="close-subviews" style="display: block; opacity: 1; left: 0px;">
-                  <i class="fa fa-times"></i> CLOSE
-                </a>
-          <p>
-            This
-            <a data-content="And here's some amazing content. It's very engaging. right?" title="" class="btn btn-default popovers" role="button" href="#" data-original-title="A Title">
-              button
-            </a>
-            should trigger a popover on click.
-          </p>
-          <h3>Tooltips in Subview</h3>
-          <p>
-            <a title="" class="tooltips" href="#" data-original-title="Tooltip">
-              This link
-            </a>
-            and
-            <a title="" class="tooltips" href="#" data-original-title="Tooltip">
-              that link
-            </a>
-            should have tooltips on hover.
-          </p>
-          <hr>
-          <h3>Overflowing text to show scroll behavior</h3>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </p>
-          <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </p>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </p>
-          <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </p>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </p>
-          <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </p>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </p>
-          <p>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </p>
-        </div>
+          <span class="back-text">Tagasi <strong>lehele</strong></span>
+        </a>
       </div>
+       
+        <!-- @include table -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- @include _footer -->
