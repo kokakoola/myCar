@@ -1,0 +1,41 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+
+  <div class="event-listing quick-spec prices">
+    <!-- <p class="quickspec-label">10 lähimat sündmust:</p>  -->
+
+      <% _.each(eventsThisMonth, function(event) { %>
+        <div class="event-item <%= event.type %>">
+          <div class="row">
+            <div class="col-xs-8">
+              <p class="title"><%= event.title %></p>
+            </div>
+            <div class="col-xs-4">
+              <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+            </div>
+          </div>
+          <div class="event-item-name">
+            <p class="quickspec-label"><%= moment(event.date).format('DD.MM') %> &nbsp;&nbsp;|&nbsp;&nbsp; <%= event.time %> &nbsp;&nbsp;| &nbsp;&nbsp;<%= event.location %></p>
+          </div>
+        </div>
+      
+
+    <% }); %>
+    <div class="quick-spec conclusion">
+      <hr>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="quickspec-label">Mustakivi Auto ; Teenindus: +372 6502 111; E-kiri: info.jarve@amserv.ee <a href="" class="btn btn-link" >Muuda</a></p>
+        </div>
+        <div class="col-sm-6  text-right">
+          <button type="button" class="btn btn-dark btn-small btn-serviceModal" data-target="#serviceModal" data-direction="right">
+            Lisa sündmus
+          </button>
+
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,100 +1,20 @@
 <!-- $title Home -->
-<!-- $bodyClass home -->
+<!-- $bodyClass content -->
 <!-- @include header -->
 
 <!-- @include nav -->
 
-<div id="pagecontent">
-  <!-- @include cta-bar -->
-  <div class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between ">
-    
-    <div class="container quickspec-caption">
-      <header class="article-header-parallax header-center header-light skrollable skrollable-before" data-top="padding-top:170px" data--70-top="padding-top:240px" data--400-top="padding-top:350px" style="padding-top: 170px;">
-        <h1>Some text here</h1></header>
-
-            <div id="mini-clndr"></div>
-          
-    <script id="calendar-template" type="text/template">
-    <div class="col-xs-12 col-sm-6 col-md-5">
-      <a href="#!" class="clndr-today-button">Today</a>
-        <div class="controls">
-          <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
-        </div>
-
-        <div class="days-container">
-          <div class="days">
-            <div class="headers">
-              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
-            </div>
-            <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
-        <div class="event-listing quick-spec prices">
-          <div class="event-listing-title">
-            <p class="title">Evénement du mois :</p> 
-          </div>
-            <% _.each(eventsThisMonth, function(event) { %>
-            <div class="event-item">
-
-            <div class="event-item-name">
-              <p class="quickspec-label"><%= moment(event.startDate).format('DD/MM/YYYY') %> : <%= event.title %></p>
-              <div class="event-item-location"><%= event.location %></div>
-            </div> 
-            <button type="button" class="btn btn-primary btn-lg" data-target="#myModal" data-direction="right">
-  Launch demo modal
-</button>
-          </div>
-          <% }); %>
-        </div>
-      </div>
-
-    </script>
-          
-          <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
-            <!-- @include events -->
-          </div>
-
-<!-- <div class="buttons col-xs-12">
-  <a href="/forms/testdrive-t1.html" class="btn btn-red action-overlayer-ajax " data-bt-value="test_drive" data-bt-workflowname="test_drive" data-bt-track="">
-    <span>Vraag een proefrit aan</span><i class="icon-chevron-right"></i>
-  </a><a href="/modellen/e-brochures.json" class="btn btn-red  " data-bt-value="ebrochures" data-bt-workflowname="ebrochures" data-bt-track="">
-    <span>Download een brochure</span><i class="icon-chevron-right"></i>
-  </a>
-</div> -->
-
-
-      </div>
-  </div>
+<div class="maincontent" id="pagecontent">
+  <!-- @include calendar-chapter -->
   <!-- @include model-chapter -->
   <!-- @include video-lg-dark -->
+  <!-- @include accessories -->
+  <!-- @include dealer-map -->
+  <!-- @include contact -->
+
 </div>
 
 <!-- @include footer-chapter -->
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog fullscreen">
-    
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="toolbar">
-        <a class="close-link" data-dismiss="modal" aria-label="Close">
-          <div class="btn-back">
-            <div class="btn-graphic" >
-              <i class="icon-angle-left"></i>
-            </div>
-          </div>
-          <span class="back-text">Tagasi <strong>lehele</strong></span>
-        </a>
-      </div>
-       
-        <!-- @include table -->
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 

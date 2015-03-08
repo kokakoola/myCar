@@ -4687,6 +4687,28 @@ a.list-group-item-danger {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden; }
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive iframe,
+  .embed-responsive embed,
+  .embed-responsive object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0; }
+  .embed-responsive.embed-responsive-16by9 {
+    padding-bottom: 56.25%; }
+  .embed-responsive.embed-responsive-4by3 {
+    padding-bottom: 75%; }
+
 @-ms-viewport {
   width: device-width; }
 
@@ -17780,6 +17802,49 @@ body .tfs-input, body .tfs-disclaimer {
   -ms-user-select: none;
   /* IE10+ */ }
 
+@-webkit-keyframes greenPulse {
+  from {
+    background-color: #749a02;
+    -webkit-box-shadow: 0 0 9px #333; }
+
+  50% {
+    background-color: #91bd09;
+    -webkit-box-shadow: 0 0 18px #91bd09; }
+
+  to {
+    background-color: #749a02;
+    -webkit-box-shadow: 0 0 9px #333; } }
+
+@-webkit-keyframes redPulse {
+  from {
+    background-color: #bc330d;
+    -webkit-box-shadow: 0 0 9px #333; }
+
+  50% {
+    background-color: #e33100;
+    -webkit-box-shadow: 0 0 18px #e33100; }
+
+  to {
+    background-color: #bc330d;
+    -webkit-box-shadow: 0 0 9px #333; } }
+
+@-webkit-keyframes bluePulse {
+  from {
+    background-color: #00a0f0;
+    -webkit-box-shadow: 0 0 9px #333; }
+
+  50% {
+    background-color: #005faf;
+    -webkit-box-shadow: 0 0 18px #2daebf; }
+
+  to {
+    background-color: #00a0f0;
+    -webkit-box-shadow: 0 0 9px #333; } }
+
+.event-item.important {
+  background-color: #02a0f0;
+  background-color: rgba(0, 160, 240, 0.9); }
+
 #mini-clndr {
   margin: 0 auto;
   width: 100%;
@@ -17793,7 +17858,8 @@ body .tfs-input, body .tfs-disclaimer {
     /*border-bottom: 7px solid #69a776;*/ }
     #mini-clndr .clndr .controls {
       /*background-color: #69a776;*/
-      background-color: #47A3DA;
+      background-color: #02a0f0;
+      background-color: rgba(0, 160, 240, 0.9);
       color: white; }
       #mini-clndr .clndr .controls .clndr-previous-button,
       #mini-clndr .clndr .controls .clndr-next-button {
@@ -17817,7 +17883,7 @@ body .tfs-input, body .tfs-disclaimer {
         #mini-clndr .clndr .controls .clndr-previous-button:hover,
         #mini-clndr .clndr .controls .clndr-next-button:hover {
           /*background-color: #528b5e;*/
-          background-color: #2A91CF; }
+          background-color: #00a0f0; }
       #mini-clndr .clndr .controls .month {
         width: 70%;
         padding-top: 5px;
@@ -17855,10 +17921,15 @@ body .tfs-input, body .tfs-disclaimer {
           color: #fff;
           border-right: 1px solid rgba(255, 255, 255, 0.5);
           border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+          #mini-clndr .clndr .days-container .days .day:hover,
+          #mini-clndr .clndr .days-container .days .empty:hover {
+            background: #000;
+            opacity: 0.3;
+            cursor: pointer; }
           #mini-clndr .clndr .days-container .days .day.event,
           #mini-clndr .clndr .days-container .days .empty.event {
             /*background-color: #d2d2d2;*/
-            background-color: #0D77B6;
+            background-color: #00a0f0;
             -webkit-transition: background-color 0.5s;
             -moz-transition: background-color 0.5s;
             -ms-transition: background-color 0.5s;
@@ -17869,6 +17940,11 @@ body .tfs-input, body .tfs-disclaimer {
             #mini-clndr .clndr .days-container .days .empty.event:hover {
               /*background-color: #b8b8b8;*/
               background-color: #0D77B6; }
+            #mini-clndr .clndr .days-container .days .day.event.important,
+            #mini-clndr .clndr .days-container .days .empty.event.important {
+              -webkit-animation-name: bluePulse;
+              -webkit-animation-duration: 2s;
+              -webkit-animation-iteration-count: infinite; }
           #mini-clndr .clndr .days-container .days .day.adjacent-month,
           #mini-clndr .clndr .days-container .days .empty.adjacent-month {
             color: rgba(0, 0, 0, 0.3); }
@@ -17876,7 +17952,7 @@ body .tfs-input, body .tfs-disclaimer {
           height: 31px;
           vertical-align: bottom; }
         #mini-clndr .clndr .days-container .days .today {
-          color: red; }
+          color: #00a0f0; }
         #mini-clndr .clndr .days-container .days .headers {
           /*background-color: #97ce7f;*/
           background-color: #0D77B6;
@@ -17887,13 +17963,6 @@ body .tfs-input, body .tfs-disclaimer {
             display: inline-block;
             text-align: center;
             color: white; }
-
-.calendar.hero-unit {
-  background: url(../img/Toyota-2014-AbstractCar_tcm-3028-59412.jpg);
-  background-size: cover; }
-
-.spotlight {
-  background: transparent; }
 
 .modal.fade:not(.in).left .modal-dialog {
   -webkit-transform: translate3d(-25%, 0, 0);
@@ -17994,3 +18063,60 @@ body .tfs-input, body .tfs-disclaimer {
     width: -moz-calc(100% - 70px);
     width: -webkit-calc(100% - 70px);
     width: calc(100% - 70px); }
+
+.calendar.hero-unit {
+  background: url(../img/Toyota-2014-AbstractCar_tcm-3028-59412.jpg);
+  background-size: cover; }
+
+.spotlight {
+  background: transparent; }
+
+.calendar .container {
+  padding-top: 110px; }
+  .calendar .container .dropdown-toggle {
+    color: #fff;
+    font-family: toyotatext_bd;
+    font-size: 1.8rem;
+    line-height: 2.2rem; }
+    .calendar .container .dropdown-toggle i {
+      padding-left: 10px; }
+
+.quick-spec {
+  min-height: 50px;
+  padding: 0; }
+  .quick-spec.conclusion {
+    background: transparent;
+    padding: 9px; }
+  .quick-spec hr {
+    margin-bottom: 20px; }
+
+.quick-spec p.quickspec-label {
+  min-height: 15px; }
+
+.event-listing {
+  color: #fff; }
+
+.event-item {
+  padding: 9px; }
+
+.service h5 {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.service-list li {
+  margin-bottom: 10px; }
+
+.forms {
+  background: #fff; }
+
+.padded {
+  padding-bottom: 24px; }
+
+.readMore.lined {
+  display: inline; }
+
+.icon.flagged {
+  color: #e50000; }
+
+.logo-logo-lvl2, .logo-logo-md-blue, .logo-logo-md-brown, .logo-logo-md-green, .logo-logo-md-lightblue, .logo-logo-md-purple, .logo-logo-md-red, .logo-logo-md-yellow, .logo-logo-sm, .logo-logo-xs, .logo-sprite {
+  background: url(../images/sprites/logo-s6f7aa3aeee.png) no-repeat; }

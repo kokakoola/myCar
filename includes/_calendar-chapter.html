@@ -1,0 +1,102 @@
+<section class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between " id="calendar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-5 padded">
+          <!-- <h5>Sinu auto sündmuste kalender</h5> -->
+          <div class="dropdown" data-select="title">
+            <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="forms.html%3Ftab=pane-contact.html#">
+              <span>GT 86 817MBO</span>
+              <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="mr">Avensis 826mhd</a></li>
+              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="mrs">Auris 934mmr</a></li>
+              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="ms">Corolla 43223HGG</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="mini-clndr"></div>
+      </div>
+    </div>
+  </section>
+      <!-- <a href="#!" class="clndr-today-button">Today</a> -->
+  <script id="calendar-template" type="text/template">
+    <div class="col-xs-12 col-sm-6 col-md-5">
+        <div class="controls">
+          <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %> <%= year %></div><div class="clndr-next-button">&rsaquo;</div>
+        </div>
+        <div class="days-container">
+          <div class="days">
+            <div class="headers">
+              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+            </div>
+            <% _.each(days, function(day) { %><div id="<%= day.id %>" class="<%= day.classes %> 
+              <% _.each(day.events, function(event){ %>
+             <%= event.type %>
+          <% }) %>
+
+              " ><%= day.day %></div><% }); %>
+          </div>
+        </div>
+      </div>
+      <!-- @include events-current-month -->
+  </script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog fullscreen">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+        <a class="close-link" data-dismiss="modal" aria-label="Close">
+          <div class="btn-back">
+            <div class="btn-graphic" >
+              <i class="icon-angle-left"></i>
+            </div>
+          </div>
+          <span class="back-text">Tagasi <strong>lehele</strong></span>
+        </a>
+      </div>
+       
+        <!-- @include service -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog fullscreen">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+          <a class="close-link" data-dismiss="modal" aria-label="Close">
+            <div class="btn-back">
+              <div class="btn-graphic" >
+                <i class="icon-angle-left"></i>
+              </div>
+            </div>
+            <span class="back-text">Tagasi <strong>lehele</strong></span>
+          </a>
+        </div>
+         <div class="row in-modal">
+            <div class="col-sm-12">
+              <p>Siia tuleb eventi lisamine</p>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="submit" value="submit">
+                    Save
+                </button>
+                <button name="cancel" value="cancel" class="btn btn-default" data-dismiss="modal">
+                    Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

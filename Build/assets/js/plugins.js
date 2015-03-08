@@ -22,15 +22,15 @@
 
   // http://jsfiddle.net/duck/aEwNt/
 
-  $('#calendar').clndr();
-
+  // $('#calendar').clndr();
   var currentMonth = moment().format('YYYY-MM');
+  var prevMonth    = moment().add('month', -1).format('YYYY-MM');
   var nextMonth    = moment().add('month', 1).format('YYYY-MM');
   var events = [
-    { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
-    { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
-    { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
-    { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+    { time: '14.00 - 16.00', date: currentMonth + '-' + '14', title: 'Autopesu ja vahatamine', location: 'Mustakivi Auto', linkto: '' },
+    { time: '14.00 - 16.00', date: currentMonth + '-' + '19', title: 'Teenindus 32 417 km', location: 'Mustakivi Auto', type: 'important', linkto: '' },
+    { time: '14.00 - 16.00', date: currentMonth + '-' + '23', title: 'Rehvivahetus', location: 'Kummimeister', linkto: ''  },
+    { time: '14.00 - 16.00', date: currentMonth + '-' + '07',    title: 'Hooldus', location: 'Mustakivi Auto', linkto: '' }
   ];
 
 $('#mini-clndr').clndr({
@@ -40,17 +40,27 @@ $('#mini-clndr').clndr({
 
     clickEvents: {
       click: function(target) {
-        if(target.events.length) {
-          var daysContainer = $('#mini-clndr').find('.days-container');
-          daysContainer.toggleClass('show-events', true);
-          $('#mini-clndr').find('.x-button').click( function() {
-            daysContainer.toggleClass('show-events', true);
-          });
-        }
+        $('#eventModal')
+            .prop('class', 'modal fade') // revert to default
+            .addClass( 'right' );
+        $('#eventModal').modal('show');
       }
     },
     adjacentDaysChangeMonth: true
   });
+
+      $('#nav-secondary-level').localScroll({
+        target: 'body', // could be a selector or a jQuery object too.
+        queue:true,
+        duration:1000,
+        hash:true,
+        onBefore:function( e, anchor, $target ){
+          // The 'this' is the settings object, can be modified
+        },
+        onAfter:function( anchor, settings ){
+          // The 'this' contains the scrolled element (#content)
+        }
+      });
 
 
 }());

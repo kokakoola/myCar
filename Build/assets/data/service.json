@@ -1,0 +1,6 @@
+var data = {
+    "Hooldus": [
+            {"Tegevused": "Jalamati kinnituse kontroll"},
+            {"Tegevused": "Piduripedaali kõrguse ja seisupiduri töötamise kontroll"}
+            ]
+}
