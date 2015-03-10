@@ -18072,7 +18072,7 @@ body .tfs-input, body .tfs-disclaimer {
   background: transparent; }
 
 .calendar .container {
-  padding-top: 110px; }
+  padding-top: 70px; }
   .calendar .container .dropdown-toggle {
     color: #fff;
     font-family: toyotatext_bd;
@@ -18082,19 +18082,23 @@ body .tfs-input, body .tfs-disclaimer {
       padding-left: 10px; }
 
 .quick-spec {
-  min-height: 50px;
+  min-height: 20px;
   padding: 0; }
   .quick-spec.conclusion {
     background: transparent;
-    padding: 9px; }
+    padding: 9px;
+    padding-bottom: 12px; }
   .quick-spec hr {
-    margin-bottom: 20px; }
+    margin-bottom: 9px; }
 
 .quick-spec p.quickspec-label {
   min-height: 15px; }
 
 .event-listing {
   color: #fff; }
+  .event-listing .page-tools {
+    margin: 0;
+    opacity: 0.8; }
 
 .event-item {
   padding: 9px; }

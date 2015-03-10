@@ -6,10 +6,10 @@
       <% _.each(eventsThisMonth, function(event) { %>
         <div class="event-item <%= event.type %>">
           <div class="row">
-            <div class="col-xs-8">
+            <div class="col-sm-8">
               <p class="title"><%= event.title %></p>
             </div>
-            <div class="col-xs-4">
+            <div class="col-sm-4">
               <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
             </div>
           </div>
@@ -20,11 +20,22 @@
       
 
     <% }); %>
+    <div class="event-item page-tools">
+
+      <ul class="list1">
+            <li><a href="#!"><i class="icon icon-bookmark flagged"></i><strong>Kaasreisija  turvapadi</strong> Osale sõidukitele võib olla koostamise käigus paigaldatud kvaliteedinõuetele mittevastav kaassõitjapoolse turvapadja pürotehniline süütel. Liiklusõnnetuse korral võib see mõjutada turvapadja täitumist. <br> Pöördugu klient ASAP teenindusse autoga <i class="icon-chevron-right"></i> </a></li>
+            
+            
+          </ul>
+
+
+    </div>
+    <hr>
     <div class="quick-spec conclusion">
-      <hr>
+      
       <div class="row">
         <div class="col-sm-6">
-          <p class="quickspec-label">Mustakivi Auto ; Teenindus: +372 6502 111; E-kiri: info.jarve@amserv.ee <a href="" class="btn btn-link" >Muuda</a></p>
+          <p class="quickspec-label">Mustakivi Auto ; Teenindus: +372 6502 111; E-kiri: info.jarve@amserv.ee </p>
         </div>
         <div class="col-sm-6  text-right">
           <button type="button" class="btn btn-dark btn-small btn-serviceModal" data-target="#serviceModal" data-direction="right">
