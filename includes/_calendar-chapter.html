@@ -1,23 +1,14 @@
 <section class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between " id="calendar">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-md-5 padded">
-          <!-- <h5>Sinu auto sündmuste kalender</h5> -->
-          <div class="dropdown" data-select="title">
-            <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="forms.html%3Ftab=pane-contact.html#">
-              <span>GT 86 817MBO</span>
-              <i class="icon-chevron-down"></i>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="mr">Avensis 826mhd</a></li>
-              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="mrs">Auris 934mmr</a></li>
-              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="ms">Corolla 43223HGG</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div id="mini-clndr"></div>
+        <!-- <div class="col-sm-6  text-right">
+          <button type="button" class="btn btn-dark btn-small btn-serviceModal" data-target="#serviceModal" data-direction="right">
+            Lisa sündmus
+          </button>
+
+        </div> -->
+          <!-- @include events-current-month -->
       </div>
     </div>
   </section>
@@ -41,8 +32,11 @@
           </div>
         </div>
       </div>
-      <!-- @include events-current-month -->
+
+      
   </script>
+
+
 
 
 <!-- Modal -->
@@ -83,20 +77,34 @@
             <span class="back-text">Tagasi <strong>lehele</strong></span>
           </a>
         </div>
-         <div class="row in-modal">
-            <div class="col-sm-12">
-              <p>Siia tuleb eventi lisamine</p>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" name="submit" value="submit">
-                    Save
-                </button>
-                <button name="cancel" value="cancel" class="btn btn-default" data-dismiss="modal">
-                    Cancel
-                </button>
-              </div>
-            </div>
-          </div>
+         <!-- @include new-event -->
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- events template -->
+<!-- //       <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+//         <div class="event-listing quick-spec prices">
+//     <% _.each(eventsThisMonth, function(event) { %>
+//     <div class="event-item <%= event.type %>">
+//       <div class="row">
+//         <div class="col-sm-8">
+//           <p class="title"><%= event.title %></p>
+//         </div>
+//         <div class="col-sm-4">
+//           <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+//         </div>
+//       </div>
+//       <div class="event-item-name">
+//         <p class="quickspec-label"><%= moment(event.date).format('DD.MM') %> &nbsp;&nbsp;|&nbsp;&nbsp; <%= event.time %> &nbsp;&nbsp;| &nbsp;&nbsp;<%= event.location %></p>
+//       </div>
+//     </div>
+  
+
+// <% }); %>
+
+          
+//         </div>
+//       </div> -->

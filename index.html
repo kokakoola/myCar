@@ -2,20 +2,54 @@
 <!-- $bodyClass content -->
 <!-- @include header -->
 
-<!-- @include nav -->
+<!-- @include header-lg -->
 
-<div class="maincontent" id="pagecontent">
+<div class="maincontent">
   <!-- @include calendar-chapter -->
-  <!-- @include model-chapter -->
-  <!-- @include video-lg-dark -->
+  <!-- <header class="section-title yourcar">
+    <h1>Minu autod</h1>
+        <div class="filter-bar row">
+      <div class="fb-inner">
+        <button type="button" class="btn btn-grey btn-addCar" data-target="#addCar" data-direction="right">
+            Lisa uus auto
+          </button>
+
+      </div>
+    </div>
+  </header> -->
+  <!-- @include offers -->
+  <!-- @include model-chapter-3rd -->
+  <!-- @include downloads -->
   <!-- @include accessories -->
-  <!-- @include dealer-map -->
+  <!-- @include video-lg-dark -->
+
+<!-- dealer-map -->
   <!-- @include contact -->
 
 </div>
 
 <!-- @include footer-chapter -->
 
-
-
+<!-- Modal -->
+<div class="modal fade" id="addCar">
+  <div class="modal-dialog fullscreen">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+        <a class="close-link" data-dismiss="modal" aria-label="Close">
+          <div class="btn-back">
+            <div class="btn-graphic" >
+              <i class="icon-angle-left"></i>
+            </div>
+          </div>
+          <span class="back-text">Tagasi <strong>lehele</strong></span>
+        </a>
+      </div>
+       
+        <!-- @include add-car -->
+      </div>
+    </div>
+  </div>
+</div>
 <!-- @include _footer -->

@@ -6,6 +6,7 @@ $('.btn-serviceModal').click(function() {
         .prop('class', 'modal fade') // revert to default
         .addClass( $(this).data('direction') );
     $('#serviceModal').modal('show');
+    
 });
 
 $('.btn-eventModal').click(function() {
@@ -13,21 +14,43 @@ $('.btn-eventModal').click(function() {
         .prop('class', 'modal fade') // revert to default
         .addClass( $(this).data('direction') );
     $('#eventModal').modal('show');
+    
 });
+
+$('.btn-addCar').click(function() {
+    $('#addCar')
+        .prop('class', 'modal fade') // revert to default
+        .addClass( $(this).data('direction') );
+    $('#addCar').modal('show');
+
+});
+
+$('.link-Conditions').click(function() {
+    $('#conditions')
+        .prop('class', 'modal fade') // revert to default
+        .addClass( $(this).data('direction') );
+    $('#conditions').modal('show');
+
+});
+
+$('.btn-changePass').click(function() {
+    $('#changePass')
+        .prop('class', 'modal fade') // revert to default
+        .addClass( $(this).data('direction') );
+    $('#changePass').modal('show');
+
+});
+
+$('.close').click(function() {
+    $(this).modal('hide');
+
+});
+
 
 })(jQuery);
 
   var source   = $("#page-footer-template").html();
   var template = Handlebars.compile(source);
-//   	var data = {
-//     "Hooldus": {
-//         "Foo": "loo",
-//         "Tegevused": [
-//             "Jalamati kinnituse kontroll",
-//             "Piduripedaali kõrguse ja seisupiduri töötamise kontroll"
-//         ]
-//     }
-// };
   var data = {
     "hooldus": [
       {"tegevus": "Jalamati kinnituse kontroll"},

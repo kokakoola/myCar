@@ -20,12 +20,52 @@
       }
   }
 
+// bootstrap popover
+  $('[data-toggle="popover"]').popover();
+
+// bootstrap datepicker
+$('.date').datepicker();
+
+// owl carousel
+  $('.owl-carousel').owlCarousel({
+    singleItem:true,
+    // navigation: true,
+    //     navigationText: [
+    //   "<i class='icon-chevron-left icon-white'></i>",
+    //   "<i class='icon-chevron-right icon-white'></i>"
+    //   ],
+    autoPlay: true,
+    slideSpeed: 300,
+    stopOnHover: true,
+    pagination: false
+
+  });
+
+  $('.owl-carousel-1').owlCarousel({
+    loop:true,
+    nav:true,
+    items: 2,
+    margin: 0,
+    itemsDesktop : [1199,2],
+    itemsDesktopSmall : [979,3]
+});
+
+  var owl = $(".owl-carousel-1");
+    // Custom Navigation Events
+  $(".carousel-control.right").click(function(){
+    owl.trigger('owl.next');
+  })
+  $(".carousel-control.left").click(function(){
+    owl.trigger('owl.prev');
+  })
+
+
   // http://jsfiddle.net/duck/aEwNt/
 
   // $('#calendar').clndr();
   var currentMonth = moment().format('YYYY-MM');
-  var prevMonth    = moment().add('month', -1).format('YYYY-MM');
-  var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+  var prevMonth    = moment().add( -1, 'month').format('YYYY-MM');
+  var nextMonth    = moment().add(-1, 'month').format('YYYY-MM');
   var events = [
     { time: '14.00 - 16.00', date: currentMonth + '-' + '14', title: 'Autopesu ja vahatamine', location: 'Mustakivi Auto', linkto: '' },
     { time: '14.00 - 16.00', date: currentMonth + '-' + '19', title: 'Teenindus 32 417 km', location: 'Mustakivi Auto', type: 'important', linkto: '' },

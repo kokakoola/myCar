@@ -2,22 +2,96 @@
     'custom/T1-style',
     'custom/clndr',
     'side-modal',
+    '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/popovers',
     'modules';
 
     // ************
 
-    .calendar.hero-unit {
-      background: url('assets/img/Toyota-2014-AbstractCar_tcm-3028-59412.jpg');
-      // background: url('http://t1-production-client.herokuapp.com/images/dealer-card-1.jpg');
-      background-size: cover;
-    }
+.navy {
+  background: #1C2830;
+}
 
-    .spotlight {
-      background: transparent;
-    }
+.promotions {
+  position: relative;
+}
+
+.logo-logo-lvl2, .logo-logo-md-blue, .logo-logo-md-brown, .logo-logo-md-green, .logo-logo-md-lightblue, .logo-logo-md-purple, .logo-logo-md-red, .logo-logo-md-yellow, .logo-logo-sm, .logo-logo-xs, .logo-sprite {
+  background: url(assets/images/sprites/logo-s6f7aa3aeee.png) no-repeat;
+}
+
+.logo-logo-md-red {
+  background-position: 0 0;
+  height: 153px;
+  width: 90px;
+}
+
+.logo-logo-sm {
+  background-position: 0 -1141px;
+  height: 70px;
+  width: 73px;
+}
+
+.logo-logo-xs {
+  background-position: 0 -1211px;
+  height: 56px;
+  width: 66px;
+}
+
+@media (min-width: 768px) {
+  .open .dropdown-menu#dropdown-menu-car {
+  padding-bottom: 0;
+  height: auto;
+  }
+}
+
+.sprite-menu-dark-arrow, .sprite-share-arrow, .sprite-share-arrow-inverted, .sprite-sprite, .sprite-trolley, .sprite-tumblr-share-button, .sprite-videoplayer-start-button, .trolley {
+  background: url('assets/images/sprites/sprite-sdd5c6c5eeb.png') no-repeat;
+}
+
+.breadcrumb li.active i.sprite-menu-dark-arrow {
+  left: 220px;
+}
+
+.popover {
+  border-radius: 2px;
+}
+
+.maincontent {
+  margin-top: 130px;
+}
+
+.promo-headerv1 {
+  overflow: hidden;
+  &.noimg {
+    height: 100px;
+  }
+  // .background-wrapper {
+  //   display: table-cell;
+  //   vertical-align: middle;
+  // }
+}
+
+@media screen and (min-width: 1200px) {
+  .promo-headerv1 {
+    height: 550px;
+  }
+}
+
+.calendar.hero-unit {
+  // background: url('assets/img/Toyota-2014-AbstractCar_tcm-3028-59412.jpg');
+  // background: url('http://t1-production-client.herokuapp.com/images/dealer-card-1.jpg');
+  // background: url('assets/img/AURIS_DET_01_DPL_2015.jpg');
+  background: url('assets/img/toyota-prius-2012-exterior-tme-003-full_tcm-22-43939.jpg');
+  background-position: center left;
+  background-size: cover;
+}
+
+.spotlight {
+  background: transparent;
+}
 
 .calendar .container {
-  padding-top: 70px;
+  padding-top: 80px;
   .dropdown-toggle {
     color: #fff;
     font-family: toyotatext_bd;
@@ -40,10 +114,57 @@
   hr {
     margin-bottom: 9px;
   }
+  &.prices {
+    background-color: rgba(30, 42, 50, 0.8);
+  }
 }
 
 .quick-spec p.quickspec-label {
 min-height: 15px;
+}
+
+.label {
+  background: $colour-vi-red-1; 
+  margin-right: 15px;
+}
+
+.form label {
+  margin-right: 0;
+  display: inline;
+}
+
+.btn-bordered {
+  border: 1px solid #FFF;
+  font-size: 15px;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  padding: 9px 13px 9px;
+  text-decoration: none;
+  line-height: normal;
+  margin: 10px;
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-weight: bold;
+  }
+}
+
+.accessories h1 {
+  font-size: 24px;
+  font-size: 3.4rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  text-indent: 0;
+
+  margin-top: 40px;
 }
 
 .event-listing {
@@ -54,8 +175,18 @@ min-height: 15px;
   }
 }
 
+.page-tools.price {
+  text-align: center;
+  color: $colour-default-grey-0;
+}
+
 .event-item {
   padding: 9px;
+}
+
+.event-items {
+  max-height: 300px;
+  overflow-x: hidden; 
 }
 
 .service h5 {
@@ -63,15 +194,26 @@ min-height: 15px;
   margin-bottom: 10px;
 }
 .service-list li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+#servicesListed {
+  margin-top: 35px;
 }
 
 .forms {
   background: #fff;
+  &.page-tools-downloads {
+    background: $colour-bg-beige;
+  }
 }
 
 .padded {
   padding-bottom: 24px;
+  .imagewrapper {
+    max-height: 312px;
+    overflow: hidden;
+  }
 }
 
 .readMore.lined {
@@ -86,7 +228,44 @@ min-height: 15px;
 background: url(../assets/images/sprites/logo-s6f7aa3aeee.png) no-repeat;
 }
 
+header .filter-bar {
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
 
+.modal-header {
+  padding-top: 60px;
+}
+
+.service.forms {
+  ul li {
+    list-style-type: none;
+  }
+}
+
+.right {
+  float: right;
+}
+
+// .accordion.heading {
+//     font-size: 17px;
+//   font-size: 1.7rem;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   border-top: 1px solid #BDBFC0;
+//   cursor: pointer;
+//   &:after {
+//     content: "\f107";
+//     font-family: 'toyotaicons';
+//     float: right;
+//     font-weight: bold;
+//     margin-right: 5px;
+//     font-size: 21px;
+//     font-size: 2.1rem;
+//     line-height: 21px;
+//     line-height: 2.1rem;
+//   }
+// }
 
 // .today {
 //     border: 3px solid red;
@@ -103,7 +282,50 @@ background: url(../assets/images/sprites/logo-s6f7aa3aeee.png) no-repeat;
 //     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 // }
 
+.forms.on-well {
+  background-color: #F4F4F5;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+@media (min-width: 992px) {
+  .maincontent section {
+    padding-top: 0;
+  }
+}
 
 
 
-
+#howl .item{
+  display: block;
+  padding: 30px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.owl-theme .owl-controls .owl-buttons div {
+  padding: 5px 9px;
+}
+ 
+.owl-theme .owl-buttons i{
+  margin-top: 2px;
+}
+ 
+//To move navigation buttons outside use these settings:
+ 
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: -45px;
+  top: 55px; 
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: -45px;
+  top: 55px;
+}
