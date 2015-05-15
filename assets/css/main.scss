@@ -49,7 +49,7 @@
 }
 
 .breadcrumb li.active i.sprite-menu-dark-arrow {
-  left: 220px;
+  left: 150px;
 }
 
 .popover {
@@ -58,6 +58,9 @@
 
 .maincontent {
   margin-top: 130px;
+  &.login {
+    margin-top: 70px;
+  }
 }
 
 .promo-headerv1 {
@@ -77,11 +80,22 @@
   }
 }
 
+.login .hero-unit {
+  // background: url('assets/img/Toyota-2014-AbstractCar_tcm-3028-59412.jpg');
+  // background: url('http://t1-production-client.herokuapp.com/images/dealer-card-1.jpg');
+  // background: url('assets/img/AURIS_DET_01_DPL_2015.jpg');
+  // background: url('assets/img/toyota-prius-2012-exterior-tme-003-full_tcm-22-43939.jpg');
+  background: url('assets/img/loginimg.jpg');
+  background-position: center left;
+  background-size: cover;
+}
+
 .calendar.hero-unit {
   // background: url('assets/img/Toyota-2014-AbstractCar_tcm-3028-59412.jpg');
   // background: url('http://t1-production-client.herokuapp.com/images/dealer-card-1.jpg');
   // background: url('assets/img/AURIS_DET_01_DPL_2015.jpg');
-  background: url('assets/img/toyota-prius-2012-exterior-tme-003-full_tcm-22-43939.jpg');
+  // background: url('assets/img/toyota-prius-2012-exterior-tme-003-full_tcm-22-43939.jpg');
+  background: url('assets/img/AUR0025a_15.jpg');
   background-position: center left;
   background-size: cover;
 }
@@ -233,10 +247,6 @@ header .filter-bar {
   padding-bottom: 20px;
 }
 
-.modal-header {
-  padding-top: 60px;
-}
-
 .service.forms {
   ul li {
     list-style-type: none;
@@ -328,4 +338,50 @@ header .filter-bar {
 .owl-theme .owl-controls .owl-buttons .owl-next{
   right: -45px;
   top: 55px;
+}
+
+.promotions.carousel {
+  padding-bottom: 30px;
+  .carouselNav {
+    bottom: 180px;
+  }
+}
+
+.owl-theme .owl-controls .owl-page span {
+  width: 8px;
+  height: 8px;
+}
+
+.login h1,
+.login h2 {
+  text-align: left;
+}
+
+.login .well {
+    background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+.login .intro {
+
+}
+
+.login .call-now {
+  margin-top: 20px;
+}
+.maincontent.login header {
+  padding-top: 40px;
+  h1 {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}
+
+// Bootstrap dialog
+.modal-dialog {
+  margin-top: 150px;
+}
+
+.bootstrap-dialog.type-primary .modal-header {
+  background-color: #fff;
 }

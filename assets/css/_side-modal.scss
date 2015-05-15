@@ -16,11 +16,14 @@
   transform: translate3d(0, 125%, 0);
 }
 
-.modal-dialog.fullscreen {
 
+.modal-dialog.fullscreen {
   width: 100%;
   margin: 130px 0 0 0;
   height: 100vh;
+  &.profile {
+    margin-top: 70px;
+  }
   .toolbar {
     width: 70px;
     float: left;
@@ -105,8 +108,11 @@
       //position: absolute;
     }
   }
-}
-.modal-content {
+  .modal-header {
+    margin-left: 70px;
+    padding-top: 60px;
+  }
+  .modal-content {
   border-radius: 0;
   border: none;
   display: inline-block;
@@ -127,6 +133,9 @@
     }
   }
 }
+}
+
+
 
 
 // end modal

@@ -16,8 +16,8 @@
 
   <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
 
-
-  <link rel='stylesheet' href='bower_components/owlcarousel/owl-carousel/owl.carousel.css'>
+  <link rel='stylesheet' href='bower_components/bootstrap-dialog/dist/css/bootstrap-dialog.min.css'>
+<link rel='stylesheet' href='bower_components/owlcarousel/owl-carousel/owl.carousel.css'>
 <link rel='stylesheet' href='bower_components/owlcarousel/owl-carousel/owl.theme.css'>
 <link rel='stylesheet' href='assets/css/main.css'>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -72,7 +72,7 @@
         <a href="error.html"><i class="icon-search"></i></a>
       </div> -->
       <ol id="menu-breadcrumb" class="breadcrumb">
-        <li>Minu autod<i class="sprite-menu-dark-arrow" style=></i><i>/</i></li>
+        <!-- <li>Minu autod<i class="sprite-menu-dark-arrow" style=></i><i>/</i></li> -->
         <li class="active">Auris 123ABC<i class="sprite-menu-dark-arrow"></i><i>/</i></li>
       </ol>
 
@@ -253,31 +253,25 @@
 <div id="nav-secondary-level" class="hidden-xs">
   <ul class="container">
     <li class="active">
-      <a class="scrollTo" href="iq-index.html#mainfocus" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#mainfocus&quot; }">Sündmuste kalender</a>
+      <a class="scrollTo" href="#calendar">Kalender</a>
     </li>
     <li class="">
-      <a class="scrollTo" href="#videos" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#videos&quot; }" data-bt-value="videos" data-bt-track="">Auto andmed
-      </a>
+      <a class="scrollTo" href="#offers">Eripakkumised</a>
     </li>
     <li class="">
-      <a class="scrollTo" href="#videos" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#videos&quot; }" data-bt-value="videos" data-bt-track="">Lisavarustus
-      </a>
+      <a class="scrollTo" href="#baseData">Auto andmed</a>
     </li>
     <li class="">
-      <a class="scrollTo" href="#videos" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#videos&quot; }" data-bt-value="videos" data-bt-track="">Hooli oma autost
-      </a>
+      <a class="scrollTo" href="#accessories">Lisavarustus</a>
     </li>
     <li class="">
-      <a class="scrollTo" href="#videos" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#videos&quot; }" data-bt-value="videos" data-bt-track="">Kasulik
-      </a>
+      <a class="scrollTo" href="#videos">Videod</a>
     </li>
     <li class="">
-      <a class="scrollTo" href="iq-index.html#browsable-pdf11-52901" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#browsable-pdf11-52901&quot; }" data-bt-value="browsable-pdf11-52901" data-bt-track="">Hooldused Baltikumis
-      </a>
+      <a class="scrollTo" href="#services">Hooldused</a>
     </li>
     <li class="">
-      <a class="scrollTo" href="iq-index.html#browsable-pdf11-52901" data-scrollto=" { &quot;parent&quot;: &quot;body&quot;, &quot;jumpTo&quot;: &quot;#browsable-pdf11-52901&quot; }" data-bt-value="browsable-pdf11-52901" data-bt-track="">Kontakt
-      </a>
+      <a class="scrollTo" href="#contact">Tagasiside</a>
     </li>
     <li class="dropdown">
       <a href="iq-index.html#">More<i class="icon-chevron-down display-md"></i></a>
@@ -303,92 +297,85 @@
 <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
 
   <div class="event-listing quick-spec prices">
-      
-          
-<div class="event-items">
-  <div class="event-item alerted">
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="title"><br>Kaasreisija turvapadi pekkis!</p>
-        <!-- <p class="quickspec-label">ASAP &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p> -->
-      </div>
-      <div class="col-sm-4 text-right">
-        <a class="btn-bordered btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Loe edasi</a>
-      </div>
-    </div>
-    
-  </div>
 
-  <div class="event-item ">
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="title">Autopesu ja vahatamine</p>
-        <p class="quickspec-label">14.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
+
+    <div class="event-items">
+      <div class="event-item alerted">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="title"><br>Kaasreisija turvapadi pekkis!</p>
+            <!-- <p class="quickspec-label">ASAP &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p> -->
+          </div>
+          <div class="col-sm-4 text-right">
+            <a class="btn-bordered btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Loe edasi</a>
+          </div>
+        </div>
+
       </div>
-      <div class="col-sm-4">
-        <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+
+      <div class="event-item ">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="title">Autopesu ja vahatamine</p>
+            <p class="quickspec-label">14.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
+          </div>
+          <div class="col-sm-4">
+            <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+          </div>
+        </div>
+
       </div>
-    </div>
-    
-  </div>
-    
-  
-  
-  <div class="event-item important">
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="title">Järgmine hooldus 30 000 km</p>
-        <p class="quickspec-label">19.03 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
-      </div>
-      <div class="col-sm-4 text-right">
-        <a class="btn-bordered btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Broneeri</a>
-      </div>
-    </div>
-    
-  </div>
-    
-  
-  
-  <div class="event-item ">
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="title">Rehvivahetus</p>
-      </div>
-      <div class="col-sm-4">
-        <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
-      </div>
-    </div>
-    <div class="event-item-name">
-      <p class="quickspec-label">23.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Kummimeister</p>
-    </div>
-  </div>
-    
-  
-  
-  <div class="event-item ">
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="title">Hooldus</p>
-      </div>
-      <div class="col-sm-4">
-        <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
-      </div>
-    </div>
-    <div class="event-item-name">
-      <p class="quickspec-label">07.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
-    </div>
-  </div>
-    </div>
 
 
 
-          
+      <div class="event-item important">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="title">Järgmine hooldus 30 000 km</p>
+            <p class="quickspec-label">19.03 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
+          </div>
+          <div class="col-sm-4 text-right">
+            <a class="btn-bordered btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Broneeri</a>
+          </div>
+        </div>
 
-      
+      </div>
 
-<div class="event-item page-tools "  >
-<!-- <i class="icon icon-bookmark flagged"></i> -->
-  <ul class="list1 owl-carousel">
+
+
+      <div class="event-item ">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="title">Rehvivahetus</p>
+          </div>
+          <div class="col-sm-4">
+            <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+          </div>
+        </div>
+        <div class="event-item-name">
+          <p class="quickspec-label">23.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Kummimeister</p>
+        </div>
+      </div>
+
+
+
+      <div class="event-item ">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="title">Hooldus</p>
+          </div>
+          <div class="col-sm-4">
+            <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+          </div>
+        </div>
+        <div class="event-item-name">
+          <p class="quickspec-label">07.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
+        </div>
+      </div>
+    </div>
+    <div class="event-item page-tools "  >
+      <!-- <i class="icon icon-bookmark flagged"></i> -->
+      <ul class="list1 owl-carousel">
         <!-- <li><a href="#!" class="nb"><span class="label">Tähtis!</span><strong>Kaasreisija  turvapadi</strong> Osale sõidukitele võib olla koostamise käigus paigaldatud kvaliteedinõuetele mittevastav kaassõitjapoolse turvapadja pürotehniline süütel. Liiklusõnnetuse korral võib see mõjutada turvapadja täitumist. <br> Palun pöördu koheselt teenindusse, kui... <i class="icon-chevron-right"></i> </a></li> -->
 
         <li><a href="#!"><strong>Suverehvid Rehvikeskusest superhinnaga</strong> On aeg mõelda suvele. Loe lisa meie kodulehelt. <i class="icon-chevron-right"></i></a></li>
@@ -397,29 +384,29 @@
       </ul>
 
 
-</div>
-<hr>
-<div class="quick-spec conclusion">
-  
-  <div class="row">
-    <div class="col-sm-12">
-      <!-- <p class="quickspec-label">Mustakivi Auto ; Teenindus: +372 6502 111; E-kiri: info.jarve@amserv.ee </p> -->
-      
-      <ul class="list2">
-
-        <li><a class="btn  btn-dark btn-small" href="article-all-options.html#tag1">Varasemad sündmused</a></li>
-        <li><a class="btn btn-dark btn-small" href="article-all-options.html#tag3">Ainult hooldused</a></li>
-        <li><a class="btn btn-dark btn-small" href="article-all-options.html#tag4">Näita kõiki</a></li>
-        <li class="text-right"><button type="button" class="btn btn-grey btn-small btn-serviceModal" data-target="#serviceModal" data-direction="right">Lisa sündmus</button></li>
-      </ul>
-      
-      
-
     </div>
+    <hr>
+    <div class="quick-spec conclusion">
 
-    
-  </div>
-</div>
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- <p class="quickspec-label">Mustakivi Auto ; Teenindus: +372 6502 111; E-kiri: info.jarve@amserv.ee </p> -->
+
+          <ul class="list2">
+
+            <li><a class="btn  btn-dark btn-small" href="article-all-options.html#tag1">Varasemad sündmused</a></li>
+            <li><a class="btn btn-dark btn-small" href="article-all-options.html#tag3">Ainult hooldused</a></li>
+            <li><a class="btn btn-dark btn-small" href="article-all-options.html#tag4">Näita kõiki</a></li>
+            <li class="text-right"><button type="button" class="btn btn-grey btn-small btn-eventModal" data-target="#eventModal" data-direction="right">Lisa sündmus</button></li>
+          </ul>
+
+
+
+        </div>
+
+
+      </div>
+    </div>
 
   </div>
 </div>
@@ -475,8 +462,8 @@
         <div class="in-modal forms service modal-header">
   <div class="row">
     <div class="col-sm-12">
-      <h1> Hoolduse registreerimine</h1>
-      <h3 class="text-center">TOYOTA GT86, 01.03.2012-, 2.0, 147 KW, RWD, M/T, PETROL, W/O LSD 30000 KM</h3>
+      <h1> 30 000 km hoolduse aja broneerimine</h1>
+      <h3 class="text-center">TOYOTA GT86 123ABC</h3>
     </div>
   </div>
   <div class="row form">
@@ -496,16 +483,20 @@
           </ul>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6  col-md-2">
+      <div class="col-xs-12 col-sm-6  col-md-4">
       <h5>Hoolduse tüüp:</h5>
       <ul>
         <li>
           <input type="radio" name="options" id="options-00" checked>
-          <label for="options-00">Tavahooldus</label>
+          <label for="options-00">Tavahooldus (maksumus 328 €)</label>
         </li>
         <li>
           <input type="radio" name="options" id="options-11">
-          <label for="options-11">Express Service </label><a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Siin on info"><i class="icon-info-sign"></i></a>
+          <label for="options-11">Express Service (maksumus 328 €) </label><a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Siin on info"><i class="icon-info-sign"></i></a>
+        </li>
+        <li>
+          <input type="radio" name="options" id="options-22">
+          <label for="options-22">Tavahooldus rehvivahetusega (maksumus 328 €) </label><a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Siin on info"><i class="icon-info-sign"></i></a>
         </li>
         
       </ul>
@@ -539,19 +530,19 @@
         </ul>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-2">
-        <h5 class="form-label">Hind:<a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Siin on disclaimer"><i class="icon-info-sign"></i></a></h5>
+    <!-- <div class="col-xs-12 col-sm-6 col-md-2">
+        <h5 class="form-label">Maksumus:<a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Siin on disclaimer"><i class="icon-info-sign"></i></a></h5>
         <h3 class="page-tools pric">328 €</h3> 
-      </div>
+      </div> -->
   </div>
 
 <div class="row form"> 
   <div class="col-xs-12 col-sm-6 col-md-3">
-      <h5>Luban teha vajalikke pisitöid:</h5>
+      <h5>Minu autol võib vahetada või lisada:</h5>
       <ul>
         <li>
           <input type="checkbox" name="options" id="options-0" value="showroom" checked>
-          <label for="options-0">Aknapesuvedelik</label>
+          <label for="options-0">Klaasipesuvedelik</label>
         </li>
         <li>
           <input type="checkbox" name="options" id="options-1" value="usedcars" checked>
@@ -559,7 +550,7 @@
         </li>
         <li>
           <input type="checkbox" name="options" id="options-2" value="fastfit">
-          <label for="options-2">Kojamehed</label>
+          <label for="options-2">Klaasipuhastajad</label>
         </li>
       </ul>
     </div>
@@ -720,25 +711,6 @@
         </ul>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-2">
-      <h5 class="form-label">Lõpuaeg</h5>
-      <div class="dropdown" data-select="time">
-        <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="forms.html%3Ftab=pane-contact.html#">
-          <span>13:00</span>
-          <i class="icon-chevron-down"></i>
-        </a>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">09:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1000">10:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1100">11:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1200">12:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1300">13:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1400">14:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1500">15:00</a></li>
-          <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="1600">16:00</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="col-xs-12 col-sm-6 col-md-5">
       <h5 class="form-label">Nimetus:</h5>
       <input type="text">
@@ -793,28 +765,11 @@
           
 //         </div>
 //       </div> -->
-  <!-- <header class="section-title yourcar">
-    <h1>Minu autod</h1>
-        <div class="filter-bar row">
-      <div class="fb-inner">
-        <button type="button" class="btn btn-grey btn-addCar" data-target="#addCar" data-direction="right">
-            Lisa uus auto
-          </button>
-
-      </div>
-    </div>
-  </header> -->
-  <section class="promotions carousel">
-  <div class="carouselNav">
-        <ol class="carousel-indicators">
-          <li data-target="#T1Carousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#T1Carousel1" data-slide-to="1"></li>
-          <li data-target="#T1Carousel1" data-slide-to="2"></li>
-          <li data-target="#T1Carousel1" data-slide-to="3"></li>
-        </ol>
-        <a class="carousel-control left"><i class="icon-angle-left"></i></a>
-        <a class="carousel-control right"><i class="icon-angle-right"></i></a>
-      </div>
+  <section class="promotions carousel" id="offers">
+  <div class="carouselNav"> 
+    <a class="carousel-control left"><i class="icon-angle-left"></i></a>
+    <a class="carousel-control right"><i class="icon-angle-right"></i></a>
+  </div>
   <div class="container">
     <header class="section-title">
       <h1>Toyota pakkumised</h1>
@@ -823,30 +778,95 @@
 
   <div class="container">
 
-    <div class="row owl-carousel-1">
-
+    <div class="row">
+      <div class="owl-carousel-1">
+      
+        <div class="filterable">
+        <!-- promotion-list-group-info.nj : begin -->
+        <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
+          <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
+            <a href="/new-cars/auris/promo/auris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-226975-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-promo.json">
+              <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_Auris_555x249_EST_tcm-3019-296002.jpg" alt="Toyota Öko+ Auris ja Auris Hybrid eripakkumine">
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="/new-cars/auris/promo/auris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-226975-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-promo.json">
+              <div class="promo-headlines">
+                <h4>Toyota Öko+ Auris ja Auris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
+              </a>
+            </li><li class="list-group-item finance-rate">
+            <p>Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.
+            </p>
+          </li><li class="list-group-item">
+          <p class="desc">Hinnavõit kuni 3000 €</p>
+        </li><li class="list-group-item">
+        <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo10" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-226975-64" data-bt-action="view_info" data-bt-value="promotion_info">
+          <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
+        </a></div><div id="item_promo10" class="expansion-content">
+        <div class="expansion-inner">
+          <p></p><p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.&nbsp;</em></p>
+          <p><em><br></em></p>
+          <p><em>Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.</em></p>
+          <p><em><br></em></p>
+          <em>Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13 258-eurose netohinnaga Auris krediidikulukuse määr 1,44% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 13 802,03 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.</em><p></p>
+        </div>
+        <div class="expansion-arrow"></div>
+        <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
+      </div>
+        </li>
+        </ul>
+        <!-- promotion-list-group-info.nj : end -->
+      </div>
       <div class="filterable">
       <!-- promotion-list-group-info.nj : begin -->
       <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
         <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-          <a href="/new-cars/auris/promo/auris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-226975-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-promo.json">
-            <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_Auris_555x249_EST_tcm-3019-296002.jpg" alt="Toyota Öko+ Auris ja Auris Hybrid eripakkumine">
-          </a>
+      <a href="/new-cars/yaris/promo/yaris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-225131-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-promo.json">
+        <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_Yaris_555x249_EST_tcm-3019-296008.jpg" alt="Toyota Öko+ Yaris ja Yaris Hybrid eripakkumine">
+      </a>
         </li>
         <li class="list-group-item">
-          <a href="/new-cars/auris/promo/auris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-226975-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-promo.json">
-            <div class="promo-headlines">
-              <h4>Toyota Öko+ Auris ja Auris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
-            </a>
-          </li><li class="list-group-item finance-rate">
-          <p>Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.
-          </p>
-        </li><li class="list-group-item">
-        <p class="desc">Hinnavõit kuni 3000 €</p>
+      <a href="/new-cars/yaris/promo/yaris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-225131-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-promo.json">
+        <div class="promo-headlines">
+          <h4>Toyota Öko+ Yaris ja Yaris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
+        </a>
       </li><li class="list-group-item">
-      <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo10" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-226975-64" data-bt-action="view_info" data-bt-value="promotion_info">
+      <p class="desc">Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.</p>
+        </li><li class="list-group-item">
+        <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo21" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-225131-64" data-bt-action="view_info" data-bt-value="promotion_info">
+      <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
+        </a></div><div id="item_promo21" class="expansion-content">
+        <div class="expansion-inner">
+      <p></p><p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
+      <br>
+      <br>
+      Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.</em></p>
+      <p><em><br></em></p>
+      <p><em>Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13990-eurose netohinnaga Yarise krediidikulukuse määr 1,47% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 14 912,67 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.
+      </em></p><p></p>
+        </div>
+        <div class="expansion-arrow"></div>
+        <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
+      </div></li>
+      </ul>
+      <!-- promotion-list-group-info.nj : end -->
+      </div><div class="filterable">
+      <!-- promotion-list-group-info.nj : begin -->
+      <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
+        <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
+      <a href="/new-cars/auris/promo/auris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351699-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-hybrid-bonus.json">
+        <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_AurisHybrid_555x249_EST_tcm-3019-357322.jpg" alt="Toyota Öko+ Auris Hybrid eripakkumine">
+      </a>
+        </li>
+        <li class="list-group-item">
+      <a href="/new-cars/auris/promo/auris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351699-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-hybrid-bonus.json">
+        <div class="promo-headlines">
+          <h4>Toyota Öko+ Auris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
+        </a>
+      </li><li class="list-group-item">
+      <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo9" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351699-64" data-bt-action="view_info" data-bt-value="promotion_info">
         <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
-      </a></div><div id="item_promo10" class="expansion-content">
+      </a></div><div id="item_promo9" class="expansion-content">
       <div class="expansion-inner">
         <p></p><p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.&nbsp;</em></p>
         <p><em><br></em></p>
@@ -856,211 +876,153 @@
       </div>
       <div class="expansion-arrow"></div>
       <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-    </div>
-  </li>
-  </ul>
-  <!-- promotion-list-group-info.nj : end -->
-</div>
-<div class="filterable">
-<!-- promotion-list-group-info.nj : begin -->
-<ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
-  <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-    <a href="/new-cars/yaris/promo/yaris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-225131-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-promo.json">
-      <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_Yaris_555x249_EST_tcm-3019-296008.jpg" alt="Toyota Öko+ Yaris ja Yaris Hybrid eripakkumine">
-    </a>
-  </li>
-  <li class="list-group-item">
-    <a href="/new-cars/yaris/promo/yaris-promo.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-225131-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-promo.json">
-      <div class="promo-headlines">
-        <h4>Toyota Öko+ Yaris ja Yaris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
+        </div></li>
+      </ul>
+      <!-- promotion-list-group-info.nj : end -->
+      </div><div class="filterable">
+      <!-- promotion-list-group-info.nj : begin -->
+      <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
+        <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
+      <a href="/new-cars/auris/promo/auris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351698-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-bonus.json">
+        <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_AurisTS_555x249_EST_tcm-3019-357333.jpg" alt="Toyota Öko+ Auris ja Auris Touring Sports eripakkumine">
       </a>
-    </li><li class="list-group-item">
-    <p class="desc">Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.</p>
-  </li><li class="list-group-item">
-  <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo21" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-225131-64" data-bt-action="view_info" data-bt-value="promotion_info">
-    <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
-  </a></div><div id="item_promo21" class="expansion-content">
-  <div class="expansion-inner">
-    <p></p><p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
-    <br>
-    <br>
-    Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.</em></p>
-    <p><em><br></em></p>
-    <p><em>Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13990-eurose netohinnaga Yarise krediidikulukuse määr 1,47% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 14 912,67 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.
-    </em></p><p></p>
-  </div>
-  <div class="expansion-arrow"></div>
-  <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-</div></li>
-</ul>
-<!-- promotion-list-group-info.nj : end -->
-</div><div class="filterable">
-<!-- promotion-list-group-info.nj : begin -->
-<ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
-  <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-    <a href="/new-cars/auris/promo/auris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351699-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-hybrid-bonus.json">
-      <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_AurisHybrid_555x249_EST_tcm-3019-357322.jpg" alt="Toyota Öko+ Auris Hybrid eripakkumine">
-    </a>
-  </li>
-  <li class="list-group-item">
-    <a href="/new-cars/auris/promo/auris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351699-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-hybrid-bonus.json">
-      <div class="promo-headlines">
-        <h4>Toyota Öko+ Auris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
-      </a>
-    </li><li class="list-group-item">
-    <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo9" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351699-64" data-bt-action="view_info" data-bt-value="promotion_info">
+        </li>
+        <li class="list-group-item">
+      <a href="/new-cars/auris/promo/auris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351698-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-bonus.json">
+        <div class="promo-headlines">
+          <h4>Toyota Öko+ Auris ja Auris Touring Sports eripakkumine<i class="icon-tag"></i></h4></div>
+        </a>
+      </li><li class="list-group-item finance-rate">
+      <p>Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.
+      </p>
+        </li><li class="list-group-item">
+        <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo8" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351698-64" data-bt-action="view_info" data-bt-value="promotion_info">
       <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
-    </a></div><div id="item_promo9" class="expansion-content">
-    <div class="expansion-inner">
-      <p></p><p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.&nbsp;</em></p>
-      <p><em><br></em></p>
-      <p><em>Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.</em></p>
-      <p><em><br></em></p>
-      <em>Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13 258-eurose netohinnaga Auris krediidikulukuse määr 1,44% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 13 802,03 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.</em><p></p>
-    </div>
-    <div class="expansion-arrow"></div>
-    <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-  </div></li>
-</ul>
-<!-- promotion-list-group-info.nj : end -->
-</div><div class="filterable">
-<!-- promotion-list-group-info.nj : begin -->
-<ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
-  <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-    <a href="/new-cars/auris/promo/auris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351698-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-bonus.json">
-      <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_AurisTS_555x249_EST_tcm-3019-357333.jpg" alt="Toyota Öko+ Auris ja Auris Touring Sports eripakkumine">
-    </a>
-  </li>
-  <li class="list-group-item">
-    <a href="/new-cars/auris/promo/auris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351698-64" data-bt-action="view_promotion" data-bt-value="/new-cars/auris/promo/auris-bonus.json">
-      <div class="promo-headlines">
-        <h4>Toyota Öko+ Auris ja Auris Touring Sports eripakkumine<i class="icon-tag"></i></h4></div>
+        </a></div><div id="item_promo8" class="expansion-content">
+        <div class="expansion-inner">
+      <p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
+        <br>
+        Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.
+        <br>
+        Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13 258-eurose netohinnaga Auris krediidikulukuse määr 1,44% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 13 802,03 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga</em></p>
+      </div>
+      <div class="expansion-arrow"></div>
+      <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
+        </div></li>
+      </ul>
+      <!-- promotion-list-group-info.nj : end -->
+      </div><div class="filterable" data-model="ya" data-offer="ecoplus" data-type="hybrid">
+      <!-- promotion-list-group-info.nj : begin -->
+      <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
+        <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
+      <a href="/new-cars/yaris/promo/yaris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-347610-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-hybrid-bonus.json">
+        <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_YarisHybrid_555x249_EST_tcm-3019-347615.jpg" alt="Toyota Öko+ Yaris Hybrid eripakkumine">
       </a>
-    </li><li class="list-group-item finance-rate">
-    <p>Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.
-    </p>
-  </li><li class="list-group-item">
-  <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo8" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-351698-64" data-bt-action="view_info" data-bt-value="promotion_info">
-    <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
-  </a></div><div id="item_promo8" class="expansion-content">
-  <div class="expansion-inner">
-    <p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
-      <br>
-      Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.
-      <br>
-      Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13 258-eurose netohinnaga Auris krediidikulukuse määr 1,44% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 13 802,03 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga</em></p>
-    </div>
-    <div class="expansion-arrow"></div>
-    <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-  </div></li>
-</ul>
-<!-- promotion-list-group-info.nj : end -->
-</div><div class="filterable" data-model="ya" data-offer="ecoplus" data-type="hybrid">
-<!-- promotion-list-group-info.nj : begin -->
-<ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
-  <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-    <a href="/new-cars/yaris/promo/yaris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-347610-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-hybrid-bonus.json">
-      <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_YarisHybrid_555x249_EST_tcm-3019-347615.jpg" alt="Toyota Öko+ Yaris Hybrid eripakkumine">
-    </a>
-  </li>
-  <li class="list-group-item">
-    <a href="/new-cars/yaris/promo/yaris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-347610-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-hybrid-bonus.json">
-      <div class="promo-headlines">
-        <h4>Toyota Öko+ Yaris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
+        </li>
+        <li class="list-group-item">
+      <a href="/new-cars/yaris/promo/yaris-hybrid-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-347610-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-hybrid-bonus.json">
+        <div class="promo-headlines">
+          <h4>Toyota Öko+ Yaris Hybrid eripakkumine<i class="icon-tag"></i></h4></div>
+        </a>
+      </li><li class="list-group-item">
+      <p class="desc">Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.</p>
+        </li><li class="list-group-item">
+        <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo20" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-347610-64" data-bt-action="view_info" data-bt-value="promotion_info">
+      <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
+        </a></div><div id="item_promo20" class="expansion-content">
+        <div class="expansion-inner">
+      <p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
+        <br>
+        <br>
+        Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.
+        <br>
+        <br>
+        Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13990-eurose netohinnaga Yarise krediidikulukuse määr 1,47% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 14 912,67 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.
+      </em></p>
+        </div>
+        <div class="expansion-arrow"></div>
+        <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
+      </div></li>
+      </ul>
+      <!-- promotion-list-group-info.nj : end -->
+      </div><div class="filterable">
+      <!-- promotion-list-group-info.nj : begin -->
+      <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
+        <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
+      <a href="/new-cars/yaris/promo/yaris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-357363-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-bonus.json">
+        <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_Yaris_555x249_EST_tcm-3019-347617.jpg" alt="Toyota Öko+ Yaris eripakkumine">
       </a>
-    </li><li class="list-group-item">
-    <p class="desc">Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.</p>
-  </li><li class="list-group-item">
-  <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo20" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-347610-64" data-bt-action="view_info" data-bt-value="promotion_info">
-    <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
-  </a></div><div id="item_promo20" class="expansion-content">
-  <div class="expansion-inner">
-    <p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
-      <br>
-      <br>
-      Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.
-      <br>
-      <br>
-      Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13990-eurose netohinnaga Yarise krediidikulukuse määr 1,47% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 14 912,67 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.
-    </em></p>
-  </div>
-  <div class="expansion-arrow"></div>
-  <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-</div></li>
-</ul>
-<!-- promotion-list-group-info.nj : end -->
-</div><div class="filterable">
-<!-- promotion-list-group-info.nj : begin -->
-<ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
-  <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-    <a href="/new-cars/yaris/promo/yaris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-357363-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-bonus.json">
-      <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Hybrid_eko_Yaris_555x249_EST_tcm-3019-347617.jpg" alt="Toyota Öko+ Yaris eripakkumine">
-    </a>
-  </li>
-  <li class="list-group-item">
-    <a href="/new-cars/yaris/promo/yaris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-357363-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-bonus.json">
-      <div class="promo-headlines">
-        <h4>Toyota Öko+ Yaris eripakkumine<i class="icon-tag"></i></h4></div>
+        </li>
+        <li class="list-group-item">
+      <a href="/new-cars/yaris/promo/yaris-bonus.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-357363-64" data-bt-action="view_promotion" data-bt-value="/new-cars/yaris/promo/yaris-bonus.json">
+        <div class="promo-headlines">
+          <h4>Toyota Öko+ Yaris eripakkumine<i class="icon-tag"></i></h4></div>
+        </a>
+      </li><li class="list-group-item">
+      <p class="desc">Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.</p>
+        </li><li class="list-group-item">
+        <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo19" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-357363-64" data-bt-action="view_info" data-bt-value="promotion_info">
+      <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
+        </a></div><div id="item_promo19" class="expansion-content">
+        <div class="expansion-inner">
+      <p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
+        <br>
+        Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.
+        <br>
+        Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13990-eurose netohinnaga Yarise krediidikulukuse määr 1,47% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 14 912,67 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.</em></p>
+      </div>
+      <div class="expansion-arrow"></div>
+      <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
+        </div></li>
+      </ul>
+      <!-- promotion-list-group-info.nj : end -->
+      </div><div class="filterable">
+      <!-- promotion-list-group-info.nj : begin -->
+      <ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
+        <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
+      <a href="/current-offers/accessories-yaris.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-370948-64" data-bt-action="view_promotion" data-bt-value="/current-offers/accessories-yaris.json">
+        <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Yaris_veebibanner_555x249_EST_tcm-3019-370972.jpg" alt="Yaris lisavarustus">
       </a>
-    </li><li class="list-group-item">
-    <p class="desc">Vaata boonuspakkumisi kõikidele Aurise ja Yarise mudelitele.</p>
-  </li><li class="list-group-item">
-  <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo19" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-357363-64" data-bt-action="view_info" data-bt-value="promotion_info">
-    <span>Kehtib alates 1.04.2015 kuni 30.06.2015</span><i class="icon-info-sign"></i>
-  </a></div><div id="item_promo19" class="expansion-content">
-  <div class="expansion-inner">
-    <p><em>Kombineeritud kütusekulu 3,3 - 3,9 l / 100 km, kombineeritud CO2 emissioon 75 - 91 g/km.
-      <br>
-      Kampaania kestab kuni 30.06.2015 või seni kuni kampaaniaautod on saadaval. Fotod on illustratiivsed. Soovituslikud jaemüügihinnad. Toyota Baltic AS jätab endale õiguse muuta hinnakirja ette teatamata. Konkreetse müügipakkumise saamiseks pöörduge Toyota ametlikku müügiesindusse.
-      <br>
-      Toyota Liisingu aastase fikseerimata kampaaniaintressiga, milleks on 0,99% + 3 kuu EURIBOR, on 13990-eurose netohinnaga Yarise krediidikulukuse määr 1,47% aastas. Sissemakse 15%. Krediidi kogusumma 60 kuu jooksul on 14 912,67 eurot. Krediidi kogusumma arvutamisel ei ole arvestatud võimalikke sõiduki registreerimiskulusid, riigilõive, hindamisakti tasu ega finantseerimise eeltingimuseks oleva kasko- ja liikluskindlustuse makse suurust. Pakkumine kehtib Toyota Liisinguga ning kestab kuni 30. juunini 2015. Finantsteenuse pakkuja on Nordea Finance Estonia AS. Tutvuge liisingutingimustega toyota.ee ning vajaduse korral konsulteerige asjatundjaga.</em></p>
+        </li>
+        <li class="list-group-item">
+      <a href="/current-offers/accessories-yaris.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-370948-64" data-bt-action="view_promotion" data-bt-value="/current-offers/accessories-yaris.json">
+        <div class="promo-headlines">
+          <h4>Yaris lisavarustus<i class="icon-tag"></i></h4><h5>Vali brošüürist lisavarustuspakett või neli ükskõik millist lisavarustusse kuuluvat toodet ning saad need soodushinnaga.</h5></div>
+        </a>
+      </li><li class="list-group-item">
+      <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo5" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-370948-64" data-bt-action="view_info" data-bt-value="promotion_info">
+        <span>Vaata kohustustest lahtiütlemise teavet</span><i class="icon-info-sign"></i>
+      </a></div><div id="item_promo5" class="expansion-content">
+      <div class="expansion-inner">
+        <p>Brošüüris olevad müügihinnad on soovituslikud. Toote- või teenusepakkujal on õigus hindu ette teatamata muuta. Pildid on illustratiivsed, tooted võivad mudelist sõltuvalt piltidel olevatest erineda.</p>
+      </div>
+      <div class="expansion-arrow"></div>
+      <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
+        </div></li>
+      </ul>
+      <!-- promotion-list-group-info.nj : end -->
+      </div>
+      
+      
+      </div>
     </div>
-    <div class="expansion-arrow"></div>
-    <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-  </div></li>
-</ul>
-<!-- promotion-list-group-info.nj : end -->
-</div><div class="filterable">
-<!-- promotion-list-group-info.nj : begin -->
-<ul class="list-group" data-bt-eventclass="promotionevent" data-bt-category="component" data-bt-componentname="promotions">
-  <li class="list-group-item" data-bt-action="view_promotion" data-bt-ispromotion="1">
-    <a href="/current-offers/accessories-yaris.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-370948-64" data-bt-action="view_promotion" data-bt-value="/current-offers/accessories-yaris.json">
-      <img src="http://d1hu588lul0tna.cloudfront.net/toyotaone/eeet/Yaris_veebibanner_555x249_EST_tcm-3019-370972.jpg" alt="Yaris lisavarustus">
-    </a>
-  </li>
-  <li class="list-group-item">
-    <a href="/current-offers/accessories-yaris.json" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-370948-64" data-bt-action="view_promotion" data-bt-value="/current-offers/accessories-yaris.json">
-      <div class="promo-headlines">
-        <h4>Yaris lisavarustus<i class="icon-tag"></i></h4><h5>Vali brošüürist lisavarustuspakett või neli ükskõik millist lisavarustusse kuuluvat toodet ning saad need soodushinnaga.</h5></div>
-      </a>
-    </li><li class="list-group-item">
-    <div class="read-more-container"><a class="readMore" href="#" data-tooltip-selector="#item_promo5" data-bt-track="" data-bt-ispromotion="1" data-bt-promotionid="tcm-3019-370948-64" data-bt-action="view_info" data-bt-value="promotion_info">
-      <span>Vaata kohustustest lahtiütlemise teavet</span><i class="icon-info-sign"></i>
-    </a></div><div id="item_promo5" class="expansion-content">
-    <div class="expansion-inner">
-      <p>Brošüüris olevad müügihinnad on soovituslikud. Toote- või teenusepakkujal on õigus hindu ette teatamata muuta. Pildid on illustratiivsed, tooted võivad mudelist sõltuvalt piltidel olevatest erineda.</p>
-    </div>
-    <div class="expansion-arrow"></div>
-    <a class="closelink" href="#">Sulge<i class="icon-remove"></i></a>
-  </div></li>
-</ul>
-<!-- promotion-list-group-info.nj : end -->
-</div>
-
-
-</div>
 
 </div>
 </section>
-  <section id="promotions-inpage" class="promotions hidden-xs" data-section-title="Latest Offers" data-bt-componentname="promotions" data-bt-category="component">
-  <header class="promo-headerv1 navy noimg">
-    
+    <section id="promotions-inpage" class="promotions hidden-xs" data-section-title="Latest Offers" data-bt-componentname="promotions" data-bt-category="component">
+
+  <header class="promo-headerv1 color-cyan">
+    <div class="container">
+      <div class="col-xs-12 background-wrapper">
+        <img src="http://images.toyota-europe.com/lt/rav4/width/920/height/480/exterior-27_040.png">
+      </div>
+    </div>
     <div class="clearfix"></div>
   </header>
   <div class="promo-text-wrapperv1">
     <div class="container">
       <div class="col-xs-12 promo-text">
-        <h2> RAV4 345ABC</h2>
+        <h2> Auris 632MBO</h2>
       </div>
     </div>
   </div>
@@ -1078,11 +1040,8 @@
             <li><a class="btn btn-grey btn-small" href="article-all-options.html#tag3">Challenge</a></li>
             <li><a class="btn btn-grey btn-small" href="article-all-options.html#tag4">Adventure</a></li>
             <li><a class="btn btn-grey btn-small" href="article-all-options.html#tag5">...</a></li>
-          </ul> --> 
+          </ul> -->
           <a class="btn btn-grey btn-submit" data-action="delete">Kustuta see auto</a> 
-          <button type="button" class="btn btn-grey btn-addCar" data-target="#addCar" data-direction="right">
-            Lisa uus auto
-          </button>
         </div>
 <!--         <div class="read-more-container">
           <a class="readMore" href="carchapter-index.html#" data-tooltip-selector=".expansion-content.itemPromo1">
@@ -1199,14 +1158,9 @@
     <div class="col-xs-12 col-md-6">
       
       <div class="padded">
-      
-      <div class="imagewrapper">
-        <img src="assets/img/carousel_2.jpg" alt="small image 1">
-      </div>
-      <figcaption class="support-text">Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-        <a href="article-all-options.html#">per inceptos himenaeos</a>
-        .
-      </figcaption>
+        <div class="imagewrapper">
+          <img src="assets/img/carousel_2.jpg" alt="small image 1">
+        </div>
       </div>
       <aside>
 
@@ -1258,7 +1212,7 @@
     </div>
     <!-- article-section-items.nj : end --></div>
 </article>
-  <section class="accessories articles-list">
+  <section class="accessories articles-list" id="accessories">
 <header class="section-title">
   <h1>Lisavarustus</h1>
 </header>
@@ -1760,8 +1714,20 @@
     </div>
   </div>
 </section>
-
-<!-- dealer-map -->
+  <section class="spotlights navy" id="services">
+  <div class="container">
+    <header>
+      <h1>Teenindused Balti riikides</h1>
+    </header>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="http://aabw.toyota.ee/locator/et?mode=mobile"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
   <section class="forms" id="contact">
 <div id="pane-contact" class="container tab-pane">
   <header>
@@ -1931,6 +1897,10 @@
             <input id="options-2" type="radio" name="options" value="">
             <label for="options-2">Läti</label>
           </li>
+          <li>
+            <input id="options-2" type="radio" name="options" value="">
+            <label for="options-2">Leedu</label>
+          </li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-6 language">
@@ -1943,7 +1913,7 @@
     
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <p>Autoriõigus &copy; Toyota Motor Europe.</p>
+        <p>Autoriõigus &copy; Toyota Baltic.</p>
       </div>
       <div class="col-xs-12 col-sm-6 social-media-grey">
         <figure class="eprivacy-component" data-type="eprivacy" data-level="40" data-url="/api/eprivacy/social-media-links.html"></figure>
@@ -2018,8 +1988,6 @@
     </div>
   </div>
 </div>
-        <footer></footer>
-
         <script src='bower_components/jquery/dist/jquery.min.js'></script>
 <script src='bower_components/handlebars/handlebars.js'></script>
 <script src='assets/data/service.json'></script>
@@ -2028,16 +1996,12 @@
 <script src='bower_components/underscore/underscore.js'></script>
 <script src='bower_components/clndr/clndr.min.js'></script>
 <script src='bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js'></script>
+<script src='bower_components/bootstrap-dialog/dist/js/bootstrap-dialog.min.js'></script>
 <script src='bower_components/jquery.scrollTo/jquery.scrollTo.min.js'></script>
-<script src='bower_components/jquery.localScroll/jquery.localScroll.min.js'></script>
 <script src='bower_components/skrollr/dist/skrollr.min.js'></script>
 <script src='bower_components/owlcarousel/owl-carousel/owl.carousel.js'></script>
 <script src='assets/js/plugins.js'></script>
 <script src='assets/js/main.js'></script>
-
-        <script>
-
-        </script>
 
     </body>
 </html>

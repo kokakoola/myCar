@@ -164,27 +164,19 @@
       <div class="page-tools">
         <div class="row padded">
           <div class="col-xs-12 col-sm-12">
-            <h3>Eelmine auto</h3>
+            <h3>Lisa auto</h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-7 form">
-            <h5 class="form-label">Mark</h5>
-            <div class="dropdown" data-select="time">
-              <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="#!">
-                <span>Maybach</span>
-                <i class="icon-chevron-down"></i>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine mark</a></li>
-                <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine mark</a></li>
-                <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine mark</a></li>
-              </ul>
-            </div>
+        <div class="row form">
+          <div class="col-xs-12 col-sm-7">
+            <h5 class="form-label">Tehasetähis (17-kohaline VIN-kood)</h5>
+            <input type="text" name="model" value="">
           </div>
-          <div class="col-xs-12 col-sm-5">
-            <h5 class="form-label">Mudel</h5>
-            <input type="text" name="model" value="GT86">
+          <div class="col-sm-5">
+            <h5 class="form-label">&nbsp;</h5>
+                            
+                <input type="checkbox" name="owner" id="owner-1">
+                <label for="owner-1">Olen selle auto omanik/vastutav kasutaja</label>
           </div>
         </div>
       </div>
@@ -219,7 +211,7 @@
 <!--                             <button type="button" class="btn btn-grey btn-addCar" data-target="#addCar" data-direction="right">
                       Lisa uus auto
                     </button> -->
-          <a class="btn btn-grey btn-submit">Kustuta konto</a>
+          <a class="btn btn-grey btn-submit" id="delAccount">Kustuta konto</a>
           <a class="btn btn-link btn-cancel" data-action="cancel">Loobu</a>
           
         </div>
@@ -239,7 +231,7 @@
 
 <!-- Modal password-->
 <div class="modal fade" id="changePass">
-  <div class="modal-dialog fullscreen">
+  <div class="modal-dialog fullscreen profile">
 
     <div class="modal-content">
       <div class="modal-body">
@@ -274,11 +266,9 @@
             </div>
           </div>
           <div class="row padded">
-            <div class="form-btn ">
-
-              <a class="btn btn-dark btn-submit" data-action="submit">Kinnita</a>
-              <a class="btn btn-link btn-cancel" data-action="cancel">Loobu</a>
-
+            <div class="col-xs-12 text-right">
+              <a class="btn btn-dark btn-submit">Kinnita</a>
+              <a class="btn btn-link btn-cancel" data-dismiss="modal" aria-label="Close">Loobu</a>
             </div>
           </div>
         </div>

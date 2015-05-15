@@ -54,11 +54,22 @@ $('.date').datepicker();
     // Custom Navigation Events
   $(".carousel-control.right").click(function(){
     owl.trigger('owl.next');
-  })
+  });
   $(".carousel-control.left").click(function(){
     owl.trigger('owl.prev');
-  })
+  });
 
+
+  // Bind to the click of all links with a #hash in the href
+  $('a[href^="#"]').click(function(e) {
+    // Prevent the jump and the #hash from appearing on the address bar
+    e.preventDefault();
+    // Scroll the window, stop any previous animation, stop on user manual scroll
+    // Check https://github.com/flesler/jquery.scrollTo for more customizability
+    $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true, offset: {top: -120}});
+    $('li.active').removeClass('active');
+    $(this).parent().addClass('active');
+  });
 
   // http://jsfiddle.net/duck/aEwNt/
 
@@ -89,24 +100,45 @@ $('#mini-clndr').clndr({
     adjacentDaysChangeMonth: true
   });
 
-      $('#nav-secondary-level').localScroll({
-        target: 'body', // could be a selector or a jQuery object too.
-        queue:true,
-        duration:1000,
-        hash:true,
-        onBefore:function( e, anchor, $target ){
-          // The 'this' is the settings object, can be modified
-        },
-        onAfter:function( anchor, settings ){
-          // The 'this' contains the scrolled element (#content)
-        }
-      });
+$("#collapseBtn").on('click', firstClick);
 
+function firstClick() {
+  $("#collapsePass").collapse('show').off('click').on('click', secondClick);
+}
+
+// function secondClick() {
+//   alert(2);
+// $('.collapse').on('shown.bs.collapse', function () {
+//   $("#collapsePass").off('click').on('click', firstClick);
+
+// });
+// }
+
+// dialogs - more methods at:
+//http://nakupanda.github.io/bootstrap3-dialog/#available-options
 
 }());
 
+$("#delAccount").on('click', areYouSure);
 
-
-
+function areYouSure() {
+  BootstrapDialog.show({
+    title: ' ',
+    message: 'Oled sa <strong>KINDEL</strong>, et soovid kustutada?',
+    buttons: [{
+        label: 'Katkesta',
+        cssClass: 'btn-link',
+        action: function(dialogItself){
+            dialogItself.close();
+        }
+    }, {
+        label: 'Jah',
+        cssClass: 'btn-dark',
+        action: function(dialog) {
+            alert('Olgu nii - oled kustutatud. Oli kena sind kohata. Jällenägemiseni!');
+        }
+    }]
+});
+}
 
 // Place any jQuery/helper plugins in here.
