@@ -227,6 +227,7 @@
       </div>
     </div>
     <div class="float-right">
+
       <a href="index.html" id="logo-small" class="current logo-link visible-xs visible-sm logo-logo-xs"></a>
       <a href="index.html" id="logo-medium" class="current logo-link hidden-xs hidden-sm logo-logo-sm"></a>
       <a href="index.html" id="logo-big" class="current logo-link hidden-xs hidden-sm logo-logo-md-red"></a>
@@ -282,7 +283,14 @@
 </div>
 
 <div class="maincontent">
-  <section class="calendar hero-unit bg-image-hero background image0 skrollable skrollable-between " id="calendar">
+  <section class="calendar hero-unit bg-image-hero background">
+  <div class="container">
+    <header class="section-title">
+      <h1>Toyota kalender</h1>
+    </header>
+  </div>
+</section>
+<section id="calendar" class="articles-list">
     <div class="container">
       <div class="row">
         <div id="mini-clndr"></div>
@@ -296,18 +304,18 @@
 
 <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
 
-  <div class="event-listing quick-spec prices">
+  <div class="event-listing ">
 
 
     <div class="event-items">
-      <div class="event-item alerted">
+      <div class="event-item">
         <div class="row">
-          <div class="col-sm-8">
-            <p class="title"><br>Kaasreisija turvapadi pekkis!</p>
+          <div class="col-sm-7 alerted">
+            <h5><br><i class="icon-bookmark alerted"></i>Kaasreisija turvapadi pekkis!</h5>
             <!-- <p class="quickspec-label">ASAP &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p> -->
           </div>
-          <div class="col-sm-4 text-right">
-            <a class="btn-bordered btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Loe edasi</a>
+          <div class="col-sm-5 text-right">
+            <a class="btn btn-dark btn-small  btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Loe edasi</a>
           </div>
         </div>
 
@@ -315,90 +323,92 @@
 
       <div class="event-item ">
         <div class="row">
-          <div class="col-sm-8">
-            <p class="title">Autopesu ja vahatamine</p>
+          <div class="col-sm-7">
+            <h5>Autopesu ja vahatamine</h5>
             <p class="quickspec-label">14.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
           </div>
-          <div class="col-sm-4">
-            <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+          <div class="col-sm-5 text-right">
+            <a class="btn btn-link btn-small  btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
           </div>
         </div>
-
       </div>
 
-
-
-      <div class="event-item important">
+      <div class="event-item forms">
         <div class="row">
-          <div class="col-sm-8">
-            <p class="title">Järgmine hooldus 30 000 km</p>
+          <div class="col-sm-6 important">
+            <h5><i class="icon-bookmark important"></i>Järgmine hooldus 30 000 km</h5>
             <p class="quickspec-label">19.03 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
           </div>
-          <div class="col-sm-4 text-right">
-            <a class="btn-bordered btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Broneeri</a>
+          <div class="col-sm-6 text-right">
+            <a class="btn btn-link" href="#serviceDone" data-target="#serviceDone" data-toggle="collapse" >Tehtud</a>
+            <a class="btn btn-small btn-dark btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Broneeri</a>
           </div>
         </div>
-
+        <div class="row collapse service-collapse" id="serviceDone">
+          <div class="col-xs-12 col-sm-6 form">
+            <h5 class="form-label">Läbisõit</h5>
+            <input type="text" name="" value="">
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h5 class="form-label">Kuupäev</h5>
+            <div class="input-group date">
+              <input type="text" class="form-control" data-validation="length" min-length="5" placeholder="20-03-2015">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+            </div>
+          </div>
+          <div class="col-xs-12 text-right">
+            <a href="" class="btn btn-small btn-link">Loobu</a>
+            <a href="" class="btn btn-small btn-dark">Kinnita</a>
+          </div>
+        </div>
       </div>
-
-
+      <div class="event-item ">
+        <div class="row">
+          <div class="col-sm-7">
+            <h5>Rehvivahetus</h5>
+            <p class="quickspec-label">23.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Kummimeister</p>
+          </div>
+          <div class="col-sm-5 text-right">
+            <a class="btn btn-link btn-small btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+          </div>
+        </div>
+      </div>
 
       <div class="event-item ">
         <div class="row">
-          <div class="col-sm-8">
-            <p class="title">Rehvivahetus</p>
+          <div class="col-sm-7">
+            <h5>Hooldus</h5>
+            <p class="quickspec-label">07.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
           </div>
-          <div class="col-sm-4">
-            <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
-          </div>
-        </div>
-        <div class="event-item-name">
-          <p class="quickspec-label">23.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Kummimeister</p>
-        </div>
-      </div>
-
-
-
-      <div class="event-item ">
-        <div class="row">
-          <div class="col-sm-8">
-            <p class="title">Hooldus</p>
-          </div>
-          <div class="col-sm-4">
-            <a class="view-prices show-sv sv-callback3 btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
+          <div class="col-sm-5 text-right">
+            <a class="btn btn-link btn-small btn-serviceModal" href="#serviceModal" data-target="#serviceModal" data-direction="right">Vaata / Muuda</a>
           </div>
         </div>
-        <div class="event-item-name">
-          <p class="quickspec-label">07.03 &nbsp;&nbsp;|&nbsp;&nbsp; 14.00 - 16.00 &nbsp;&nbsp;| &nbsp;&nbsp;Mustakivi Auto</p>
-        </div>
+        
       </div>
     </div>
-    <div class="event-item page-tools "  >
-      <!-- <i class="icon icon-bookmark flagged"></i> -->
-      <ul class="list1 owl-carousel">
-        <!-- <li><a href="#!" class="nb"><span class="label">Tähtis!</span><strong>Kaasreisija  turvapadi</strong> Osale sõidukitele võib olla koostamise käigus paigaldatud kvaliteedinõuetele mittevastav kaassõitjapoolse turvapadja pürotehniline süütel. Liiklusõnnetuse korral võib see mõjutada turvapadja täitumist. <br> Palun pöördu koheselt teenindusse, kui... <i class="icon-chevron-right"></i> </a></li> -->
 
-        <li><a href="#!"><strong>Suverehvid Rehvikeskusest superhinnaga</strong> On aeg mõelda suvele. Loe lisa meie kodulehelt. <i class="icon-chevron-right"></i></a></li>
-        <li><a href="article-all-options.html#link2"><strong>Toyota is the winner of Auto Bild Quality Report 2012</strong> For since the inception of the study in 2001, the brand is the fifth time at the top of the quality rankings.<i class="icon-chevron-right"></i></a></li>
-        <li><a href="article-all-options.html#link3"><strong>Toyota most successful brand in the TUV report 2013</strong> 20 times in the Top 10 in 5 classes<i class="icon-chevron-right"></i></a></li>
-      </ul>
-
-
-    </div>
     <hr>
-    <div class="quick-spec conclusion">
-
+    <div class="conclusion">
       <div class="row">
         <div class="col-sm-12">
           <!-- <p class="quickspec-label">Mustakivi Auto ; Teenindus: +372 6502 111; E-kiri: info.jarve@amserv.ee </p> -->
 
-          <ul class="list2">
+          <div class="btn-group">
+        <a href="#" class="btn btn-grey " >Varasemad sündmused</a>
+        <a href="#" class="btn btn-grey ">Ainult hooldused</a>
+        <button class="btn btn-grey active " data-bt-value="view_all" data-bt-track="">Vaata kõiki</button>
 
-            <li><a class="btn  btn-dark btn-small" href="article-all-options.html#tag1">Varasemad sündmused</a></li>
-            <li><a class="btn btn-dark btn-small" href="article-all-options.html#tag3">Ainult hooldused</a></li>
-            <li><a class="btn btn-dark btn-small" href="article-all-options.html#tag4">Näita kõiki</a></li>
-            <li class="text-right"><button type="button" class="btn btn-grey btn-small btn-eventModal" data-target="#eventModal" data-direction="right">Lisa sündmus</button></li>
-          </ul>
+      </div>
+      <button type="button" class="btn btn-red btn-eventModal right" data-target="#eventModal" data-direction="right">Lisa sündmus</button>
+
+          <!-- <ul class="list2">
+
+            <li><a class="btn  btn-grey btn-small" href="article-all-options.html#tag1">Varasemad sündmused</a></li>
+            <li><a class="btn btn-grey btn-small" href="article-all-options.html#tag3">Ainult hooldused</a></li>
+            <li><a class="btn btn-grey btn-small" href="article-all-options.html#tag4">Näita kõiki</a></li>
+            <li class="text-right"><button type="button" class="btn btn-red btn-small btn-eventModal" data-target="#eventModal" data-direction="right">Lisa sündmus</button></li>
+          </ul> -->
 
 
 
@@ -413,8 +423,37 @@
 
 
       </div>
+      <!-- <div class="row filer-row">
+        <div class="filter-bar">
+          <div class="conclusion">
+            <button type="button" class="btn btn-red btn-eventModal" data-target="#eventModal" data-direction="right">Lisa sündmus</button>
+    </div>
+        </div>
+      </div> -->
     </div>
   </section>
+
+  <section class="page-tools carousel">
+<!--       <div class="carouselNav "> 
+    <a class="carousel-control left"><i class="icon-angle-left"></i></a>
+    <a class="carousel-control right"><i class="icon-angle-right"></i></a>
+  </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="  "  >
+            <ul class="list1 owl-carousel">
+              <li><a href="#!"><strong>Suverehvid Rehvikeskusest superhinnaga</strong> On aeg mõelda suvele. Loe lisa meie kodulehelt. <i class="icon-chevron-right"></i></a></li>
+              <li><a href="article-all-options.html#link2"><strong>Toyota is the winner of Auto Bild Quality Report 2012</strong> For since the inception of the study in 2001, the brand is the fifth time at the top of the quality rankings.<i class="icon-chevron-right"></i></a></li>
+              <li><a href="article-all-options.html#link3"><strong>Toyota most successful brand in the TUV report 2013</strong> 20 times in the Top 10 in 5 classes<i class="icon-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
       <!-- <a href="#!" class="clndr-today-button">Today</a> -->
   <script id="calendar-template" type="text/template">
     <div class="col-xs-12 col-sm-6 col-md-5">
@@ -711,6 +750,7 @@
         </ul>
       </div>
     </div>
+
     <div class="col-xs-12 col-sm-6 col-md-5">
       <h5 class="form-label">Nimetus:</h5>
       <input type="text">
@@ -1212,7 +1252,11 @@
     </div>
     <!-- article-section-items.nj : end --></div>
 </article>
-  <section class="accessories articles-list" id="accessories">
+  <section class="accessories articles-list carousel" id="accessories">
+  <div class="carouselNav"> 
+    <a class="carousel-control left"><i class="icon-angle-left"></i></a>
+    <a class="carousel-control right"><i class="icon-angle-right"></i></a>
+  </div>
 <header class="section-title">
   <h1>Lisavarustus</h1>
 </header>
@@ -1230,10 +1274,10 @@
   </div>
 </div>
 
-<div class="tab-content">
+<div class="tab-content"> 
 <div class="tab-pane responsive-carousel active accessories-list " id="top" data-enableswipe=true data-maxcols=24 data-bt-action="click_function" data-bt-value="browse_accessories">
-<div class="container"><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz413-99683-00">
+<div class="container owl-carousel-2"><!-- accessories-item.nj : begin -->
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz413-99683-00">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/27483a27-ea6d-49eb-984f-921887a2683e.JPG"/></div>
     <div class="col-xs-12">
@@ -1259,7 +1303,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0521-zb">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0521-zb">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/ef8f1e3f-657d-4f5c-a122-7768a4f525d5.JPG"/></div>
     <div class="col-xs-12">
@@ -1285,7 +1329,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-ze">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-ze">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/bdb8d26f-d09d-4837-9280-7d857515cff2.JPG"/></div>
     <div class="col-xs-12">
@@ -1311,7 +1355,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-zj">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-zj">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/b83d6208-9119-4507-ab76-8dc41c20aaf7.JPG"/></div>
     <div class="col-xs-12">
@@ -1337,7 +1381,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-zf">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-zf">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/5d291668-bb6d-4562-b1b5-5d76b3306329.JPG"/></div>
     <div class="col-xs-12">
@@ -1363,7 +1407,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-ze">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-ze">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/2c54d8e5-2bcd-4fd2-984b-8830171b95df.JPG"/></div>
     <div class="col-xs-12">
@@ -1389,7 +1433,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-zj">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-zj">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/06eaaec1-285f-4c30-9c09-773141525927.JPG"/></div>
     <div class="col-xs-12">
@@ -1415,7 +1459,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-zf">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-zf">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/c1c12e40-a6bf-47e5-8b44-50e027496455.JPG"/></div>
     <div class="col-xs-12">
@@ -1441,7 +1485,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz416-i0960-00">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz416-i0960-00">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/430e6c43-5b8e-4631-b9e7-33cde902ca82.JPG"/></div>
     <div class="col-xs-12">
@@ -1467,7 +1511,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0491-zb">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0491-zb">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/6e65eaff-d00a-4b97-af11-be712be722d9.JPG"/></div>
     <div class="col-xs-12">
@@ -1493,7 +1537,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0520-00">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0520-00">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/5834beb8-f2d5-4fc3-a067-ca157c4aa3ed.JPG"/></div>
     <div class="col-xs-12">
@@ -1519,7 +1563,7 @@
   </div>
 </div>
 <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12 col-sm-3" data-filter="" data-bt-action="view_accessory" data-bt-value="pz464-i0130-00">
+<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz464-i0130-00">
   <div class="row">
     <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/40550971-89dd-4e5c-82bb-14aed2a23c71.JPG"/></div>
     <div class="col-xs-12">
@@ -1714,20 +1758,7 @@
     </div>
   </div>
 </section>
-  <section class="spotlights navy" id="services">
-  <div class="container">
-    <header>
-      <h1>Teenindused Balti riikides</h1>
-    </header>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="http://aabw.toyota.ee/locator/et?mode=mobile"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+
   <section class="forms" id="contact">
 <div id="pane-contact" class="container tab-pane">
   <header>
@@ -2005,3 +2036,4 @@
 
     </body>
 </html>
+<!-- dealer-map -->
