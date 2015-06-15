@@ -400,7 +400,7 @@
         <button class="btn btn-grey active " data-bt-value="view_all" data-bt-track="">Vaata kõiki</button>
 
       </div>
-      <button type="button" class="btn btn-red btn-eventModal right" data-target="#eventModal" data-direction="right">Lisa sündmus</button>
+      <button type="button" class="btn btn-red btn-eventModal right" data-target="#eventModal" data-direction="right">Broneeri aeg</button>
 
           <!-- <ul class="list2">
 
@@ -522,8 +522,8 @@
           </ul>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6  col-md-4">
-      <h5>Hoolduse tüüp:</h5>
+      <div class="col-xs-12 col-sm-6  col-md-3">
+      <h5>Hoolduse liik:</h5>
       <ul>
         <li>
           <input type="radio" name="options" id="options-00" checked>
@@ -550,7 +550,7 @@
       </div>
     </div>
     <!-- time -->
-    <div class="col-xs-12 col-sm-6 col-md-2">
+    <div class="col-xs-12 col-sm-6 col-md-3">
       <h5 class="form-label">Kell</h5>
       <div class="dropdown" data-select="time">
         <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="forms.html%3Ftab=pane-contact.html#">
@@ -576,7 +576,7 @@
   </div>
 
 <div class="row form"> 
-  <div class="col-xs-12 col-sm-6 col-md-3">
+  <!-- <div class="col-xs-12 col-sm-6 col-md-3">
       <h5>Minu autol võib vahetada või lisada:</h5>
       <ul>
         <li>
@@ -592,9 +592,9 @@
           <label for="options-2">Klaasipuhastajad</label>
         </li>
       </ul>
-    </div>
-    <div class="col-xs-12  col-sm-6 col-md-8">
-      <h5 class="form-label">Palun vaadata üle ka:</h5>
+    </div> -->
+    <div class="col-xs-12  col-sm-6 col-md-11">
+      <h5 class="form-label">Palun vaadata autol üle:</h5>
       <textarea maxlength="1024" name="message" data-validation="length" min-length="5" placeholder="Nt rehvivahetus, vasak ratas koliseb imelikult vmt."></textarea>
     </div>
   </div>
@@ -719,20 +719,91 @@
          <div class="in-modal forms service modal-header">
   <div class="row">
     <div class="col-sm-12">
-      <h1> Uus sündmus</h1>
+      <h1> Broneeri aeg</h1>
     </div>
   </div>
   <div class="row form">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5 class="form-label">Esindus</h5>
+        <div class="dropdown" data-select="time">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="#!">
+            <span>Amserv Järve</span>
+            <i class="icon-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+            <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+            <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+      <h5 class="form-label">Liik</h5>
+      <ul class="list-unstyled">
+        <li>
+            <!-- <img src="assets/img/icon_maintenance.png" alt=""> -->
+            <input id="options-01" type="radio" checked="checked" class=""  name="options" value="01">
+            <label for="options-01">
+              <div class="optiontitle">30 000 hooldus</div>
+              
+            </label>
+          </li>
+          <li>
+            <!-- <img src="assets/img/icon_maintenance.png" alt=""> -->
+            <input id="options-01" type="radio" checked="checked" class=""  name="options" value="01">
+            <label for="options-01">
+              <div class="optiontitle">Riiklik tehnoülevaatus</div>
+              
+            </label>
+          </li>
+          <li>
+            <!-- <img src="assets/img/icon_maintenance.png" alt=""> -->
+            <input id="options-01" type="radio" checked="checked" class=""  name="options" value="01">
+            <label for="options-01">
+              <div class="optiontitle">Tehniline kontroll</div>
+              
+            </label>
+          </li>
+          <li>
+            <!-- <img src="assets/img/icon_tyrechange.png" alt=""> -->
+            <input id="options-2" type="radio" class="" name="options" value="03">
+            <label for="options-2">
+              <div class="optiontitle">Rehvitööd</div>
+            
+            </label>
+          </li>
+          
+          <li>
+            <!-- <img src="assets/img/icon_washwax.png" alt=""> -->
+            <input id="options-1" type="radio" class=""  name="options" value="02">
+            <label for="options-1">
+              <div class="optiontitle">Autopesu</div>
+              
+            </label>
+          </li>
+          
+          <li>
+            <!-- <img src="assets/img/icon_other.png" alt=""> -->
+            <input id="options-2" type="radio" class="" name="options" value="03">
+            <label for="options-2">
+
+              <div class="optiontitle">Muu (lisa kirjeldus tekstikasti)</div>
+              
+            </label>
+          </li>
+        </ul>
+    </div>
     <div class="col-xs-12 col-sm-6 col-md-2">
       <h5 class="form-label">Kuupäev</h5>
       <div class="input-group date">
-        <input type="text" class="form-control" data-validation="length" min-length="5" placeholder="20-03-2015">
+        <input type="text" class="form-control" data-validation="length" min-length="5" placeholder="20-03-2015" value="20/03/2015">
         <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
       </div>
     </div>
     <!-- time -->
-    <div class="col-xs-12 col-sm-6 col-md-2">
-      <h5 class="form-label">Alguaeg</h5>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5 class="form-label">Algusaeg</h5>
       <div class="dropdown" data-select="time">
         <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="forms.html%3Ftab=pane-contact.html#">
           <span>12:00</span>
@@ -750,18 +821,19 @@
         </ul>
       </div>
     </div>
-
-    <div class="col-xs-12 col-sm-6 col-md-5">
-      <h5 class="form-label">Nimetus:</h5>
-      <input type="text">
-    </div>
+    
+    
   </div>
 
 <div class="row form"> 
-    <div class="col-xs-12  col-sm-6 col-md-11">
+  <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5 class="form-label">Nimetus:</h5>
+      <input type="text">
+    </div>
+    <div class="col-xs-12  col-sm-6 col-md-8">
       
       <h5 class="form-label">Kirjeldus:</h5>
-      <textarea maxlength="1024" name="message" data-validation="length" min-length="5" placeholder="Nt rehvivahetus, vasak ratas koliseb imelikult vmt."></textarea>
+      <textarea maxlength="1024" name="message" data-validation="length" min-length="5" placeholder=""></textarea>
         <input type="checkbox" name="options" id="options-0" value="showroom" checked>
         <label for="options-0">Soovin meeldetuletust e-mailile</label>
     </div>
@@ -1049,7 +1121,7 @@
 
 </div>
 </section>
-    <section id="promotions-inpage" class="promotions hidden-xs" data-section-title="Latest Offers" data-bt-componentname="promotions" data-bt-category="component">
+  <section id="promotions-inpage" class="promotions hidden-xs" data-section-title="Latest Offers" data-bt-componentname="promotions" data-bt-category="component">
 
   <header class="promo-headerv1 color-cyan">
     <div class="container">
@@ -1200,6 +1272,7 @@
       <div class="padded">
         <div class="imagewrapper">
           <img src="assets/img/carousel_2.jpg" alt="small image 1">
+          <button class="btn btn-red">Vaheta pilti</button>
         </div>
       </div>
       <aside>
@@ -1257,341 +1330,73 @@
     <a class="carousel-control left"><i class="icon-angle-left"></i></a>
     <a class="carousel-control right"><i class="icon-angle-right"></i></a>
   </div>
-<header class="section-title">
-  <h1>Lisavarustus</h1>
-</header>
-<div class="container">
-  <div class="row filter-row">
-    <div class="filter-bar" data-bt-action="click_tab">
-      <div class="btn-group">
-        <a href="iq-index.html#top" class="btn btn-grey active" data-toggle="tab" data-bt-value="top_accessories" data-bt-track="">Populaarseim</a>
-        <a href="iq-index.html#ext" class="btn btn-grey" data-open-single="true" data-bt-value="EXT" data-bt-track="">Exterior</a>
-        <a href="iq-index.html#int" class="btn btn-grey" data-open-single="true" data-bt-value="INT" data-bt-track="">Interior</a>
-        <button class="btn btn-grey viewall" data-bt-value="view_all" data-bt-track="">Vaata kõiki</button>
-      </div>
-    </div>
-    <span class="text-right switch-view"></span>
-  </div>
-</div>
-
-<div class="tab-content"> 
-<div class="tab-pane responsive-carousel active accessories-list " id="top" data-enableswipe=true data-maxcols=24 data-bt-action="click_function" data-bt-value="browse_accessories">
-<div class="container owl-carousel-2"><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz413-99683-00">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/27483a27-ea6d-49eb-984f-921887a2683e.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>Diebstahlsicherung für verschiedene LM-Felgen</h5><strong>33,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_0" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_0" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">Diebstahlsicherung für verschiedene LM-Felgen</h2><strong>33,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ413-99683-00</div>
-          <div class="description">Price plus assembly costs</div>
+  <header class="section-title">
+    <h1>Lisavarustus</h1>
+  </header>
+  <div class="container">
+    <div class="row filter-row">
+      <div class="filter-bar">
+        <div class="btn-group">
+          <a href="iq-index.html#top" class="btn btn-grey active" data-toggle="tab" data-bt-value="top_accessories" data-bt-track="">Populaarseim</a>
+          <a href="iq-index.html#ext" class="btn btn-grey" data-open-single="true" data-bt-value="EXT" data-bt-track="">Exterior</a>
+          <a href="iq-index.html#int" class="btn btn-grey" data-open-single="true" data-bt-value="INT" data-bt-track="">Interior</a>
+          <button class="btn btn-grey viewall" data-bt-value="view_all" data-bt-track="">Vaata kõiki</button>
         </div>
-        <div class="expansion-arrow"></div>
       </div>
     </div>
   </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0521-zb">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/ef8f1e3f-657d-4f5c-a122-7768a4f525d5.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Außenspiegelkappen, chrom</h5><strong>145,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_1" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_1" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Außenspiegelkappen, chrom</h2><strong>145,00 €</strong>
 
-          <p></p>
 
-          <div class="description">PZ415-I0521-ZB</div>
-          <div class="description">Price plus assembly costs</div>
+
+  <div class="tab-content"> 
+    <div class="tab-pane active accessories-list">
+      <div class="container owl-carousel-2"><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/27483a27-ea6d-49eb-984f-921887a2683e.JPG"/>
+          <h5>Diebstahlsicherung für verschiedene LM-Felgen</h5><strong>33,00 €</strong>
+           <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-ze">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/bdb8d26f-d09d-4837-9280-7d857515cff2.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Leichtmetallfelge, Aurora 15" anthrazit</h5><strong>165,01 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_2" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_2" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Leichtmetallfelge, Aurora 15" anthrazit</h2><strong>165,01 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ474-I0671-ZE</div>
-          <div class="description">Price plus assembly costs</div>
+        <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/ef8f1e3f-657d-4f5c-a122-7768a4f525d5.JPG"/>
+          <h5>iQ Außenspiegelkappen, chrom</h5><strong>145,00 €</strong>
+          <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-zj">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/b83d6208-9119-4507-ab76-8dc41c20aaf7.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Leichtmetallfelge, Aurora, 15" silber</h5><strong>160,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_3" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_3" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Leichtmetallfelge, Aurora, 15" silber</h2><strong>160,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ474-I0671-ZJ</div>
-          <div class="description">Price plus assembly costs</div>
+        <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/bdb8d26f-d09d-4837-9280-7d857515cff2.JPG"/>
+          <h5>iQ Leichtmetallfelge, Aurora 15" anthrazit</h5><strong>165,01 €</strong>
+          <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0671-zf">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/5d291668-bb6d-4562-b1b5-5d76b3306329.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Leichtmetallfelge, Aurora, 15" sterling silber</h5><strong>165,01 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_4" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_4" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Leichtmetallfelge, Aurora, 15" sterling silber</h2><strong>165,01 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ474-I0671-ZF</div>
-          <div class="description">Price plus assembly costs</div>
+        <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/b83d6208-9119-4507-ab76-8dc41c20aaf7.JPG"/>
+          <h5>iQ Leichtmetallfelge, Aurora, 15" silber</h5><strong>160,00 €</strong>
+          <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-ze">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/2c54d8e5-2bcd-4fd2-984b-8830171b95df.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Leichtmetallfelge, Stella, 15" anthrazit</h5><strong>170,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_5" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_5" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Leichtmetallfelge, Stella, 15" anthrazit</h2><strong>170,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ474-I0672-ZE</div>
-          <div class="description">Price plus assembly costs</div>
+        <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/ef8f1e3f-657d-4f5c-a122-7768a4f525d5.JPG"/>
+          <h5>iQ Außenspiegelkappen, chrom</h5><strong>145,00 €</strong>
+          <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-zj">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/06eaaec1-285f-4c30-9c09-773141525927.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Leichtmetallfelge, Stella, 15" silber</h5><strong>160,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_6" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_6" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Leichtmetallfelge, Stella, 15" silber</h2><strong>160,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ474-I0672-ZJ</div>
-          <div class="description">Price plus assembly costs</div>
+        <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/bdb8d26f-d09d-4837-9280-7d857515cff2.JPG"/>
+          <h5>iQ Leichtmetallfelge, Aurora 15" anthrazit</h5><strong>165,01 €</strong>
+          <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz474-i0672-zf">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/c1c12e40-a6bf-47e5-8b44-50e027496455.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Leichtmetallfelge, Stella, 15" sterling silber</h5><strong>165,01 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_7" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_7" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Leichtmetallfelge, Stella, 15" sterling silber</h2><strong>165,01 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ474-I0672-ZF</div>
-          <div class="description">Price plus assembly costs</div>
+        <!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
+        <div class="accessories-item col-xs-12">
+          <img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/b83d6208-9119-4507-ab76-8dc41c20aaf7.JPG"/>
+          <h5>iQ Leichtmetallfelge, Aurora, 15" silber</h5><strong>160,00 €</strong>
+          <a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Ülejäänud seletus" data-original-title="" title=""><span>Read more</span><i class="icon-info-sign"></i></a>
         </div>
-        <div class="expansion-arrow"></div>
+        
+
       </div>
     </div>
   </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz416-i0960-00">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/430e6c43-5b8e-4631-b9e7-33cde902ca82.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Schmutzfänger, Satz vorne</h5><strong>25,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_8" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_8" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Schmutzfänger, Satz vorne</h2><strong>25,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ416-I0960-00</div>
-          <div class="description">Price plus assembly costs</div>
-        </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0491-zb">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/6e65eaff-d00a-4b97-af11-be712be722d9.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>IQ Seitenchromeisten, Satz</h5><strong>139,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_9" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_9" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">IQ Seitenchromeisten, Satz</h2><strong>139,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ415-I0491-ZB</div>
-          <div class="description">Price plus assembly costs</div>
-        </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz415-i0520-00">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/5834beb8-f2d5-4fc3-a067-ca157c4aa3ed.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>iQ Seitenschutzleisten, Satz lackierbar</h5><strong>69,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_10" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_10" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">iQ Seitenschutzleisten, Satz lackierbar</h2><strong>69,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ415-I0520-00</div>
-          <div class="description">Price plus assembly costs</div>
-        </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- accessories-item.nj : end --><!-- accessories-item.nj : begin -->
-<div class="accessories-item responsive-item col-xs-12" data-filter="" data-bt-action="view_accessory" data-bt-value="pz464-i0130-00">
-  <div class="row">
-    <div class="col-xs-12"><img src="https://s3-eu-west-1.amazonaws.com/tme-carassets-acc/40550971-89dd-4e5c-82bb-14aed2a23c71.JPG"/></div>
-    <div class="col-xs-12">
-      <h5>Alarmanlage VSS1 iQ</h5><strong>170,00 €</strong>
-      <a href="iq-index.html#" class="readMore" data-tooltip-selector=".expansion-content.acc_top_11" data-bt-track="">
-        <span>Read more</span><i class="icon-info-sign"></i>
-      </a>
-      <div class="expansion-content acc_top_11" style="display: none;">
-        <a class="closelink" style="position: absolute; top: 10px; right: 10px;" href="iq-index.html#">
-          Close <i class="icon-remove"></i>
-        </a>
-        <div class="expansion-inner">
-          <h2 class="title">Alarmanlage VSS1 iQ</h2><strong>170,00 €</strong>
-
-          <p></p>
-
-          <div class="description">PZ464-I0130-00</div>
-          <div class="description">Price plus assembly costs</div>
-        </div>
-        <div class="expansion-arrow"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  </div>
-</div>
-</div>
 
 </section>
   <section id="videos" class="spotlights navy next-steps">
@@ -1758,7 +1563,20 @@
     </div>
   </div>
 </section>
-
+  <section class="spotlights navy" id="services">
+  <div class="container">
+    <header>
+      <h1>Teenindused Balti riikides</h1>
+    </header>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="http://aabw.toyota.ee/locator/et?mode=mobile"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
   <section class="forms" id="contact">
 <div id="pane-contact" class="container tab-pane">
   <header>
@@ -1970,7 +1788,7 @@
         </a>
       </div>
        
-        <div class="container latest-news modal-header">
+      <div class="container latest-news modal-header">
   <div class="row">
     <section class="forms ">
       <header>
@@ -2015,6 +1833,7 @@
     </section>
   </div>
 </div>
+      
       </div>
     </div>
   </div>
@@ -2029,7 +1848,6 @@
 <script src='bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js'></script>
 <script src='bower_components/bootstrap-dialog/dist/js/bootstrap-dialog.min.js'></script>
 <script src='bower_components/jquery.scrollTo/jquery.scrollTo.min.js'></script>
-<script src='bower_components/skrollr/dist/skrollr.min.js'></script>
 <script src='bower_components/owlcarousel/owl-carousel/owl.carousel.js'></script>
 <script src='assets/js/plugins.js'></script>
 <script src='assets/js/main.js'></script>

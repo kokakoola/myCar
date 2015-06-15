@@ -17478,6 +17478,9 @@ body .tfs-input, body .tfs-disclaimer {
   .promo-headerv1.noimg {
     height: 100px; }
 
+.optiontitle {
+  display: inline; }
+
 @media screen and (min-width: 1200px) {
   .promo-headerv1 {
     height: 550px; } }
@@ -17563,6 +17566,8 @@ body .tfs-input, body .tfs-disclaimer {
     color: #d2001e; }
   .event-item .important {
     color: #f07f0a; }
+  .event-item.forms .row h5 {
+    padding-bottom: 0; }
 
 .event-listing p {
   color: #333333;
@@ -17601,7 +17606,21 @@ body .tfs-input, body .tfs-disclaimer {
   padding-bottom: 24px; }
   .padded .imagewrapper {
     max-height: 312px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; }
+    .padded .imagewrapper .btn {
+      position: absolute;
+      opacity: 0;
+      top: 42%;
+      left: 42%;
+      -webkit-transition: opacity 500ms ease;
+      -moz-transition: opacity 500ms ease;
+      -ms-transition: opacity 500ms ease;
+      -o-transition: opacity 500ms ease;
+      transition: opacity 500ms ease; }
+    .padded .imagewrapper:hover .btn {
+      opacity: 1; }
 
 .readMore.lined {
   display: inline; }

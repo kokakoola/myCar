@@ -1,20 +1,91 @@
 <div class="in-modal forms service modal-header">
   <div class="row">
     <div class="col-sm-12">
-      <h1> Uus sündmus</h1>
+      <h1> Broneeri aeg</h1>
     </div>
   </div>
   <div class="row form">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5 class="form-label">Esindus</h5>
+        <div class="dropdown" data-select="time">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="#!">
+            <span>Amserv Järve</span>
+            <i class="icon-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+            <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+            <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3">
+      <h5 class="form-label">Liik</h5>
+      <ul class="list-unstyled">
+        <li>
+            <!-- <img src="assets/img/icon_maintenance.png" alt=""> -->
+            <input id="options-01" type="radio" checked="checked" class=""  name="options" value="01">
+            <label for="options-01">
+              <div class="optiontitle">30 000 hooldus</div>
+              
+            </label>
+          </li>
+          <li>
+            <!-- <img src="assets/img/icon_maintenance.png" alt=""> -->
+            <input id="options-01" type="radio" checked="checked" class=""  name="options" value="01">
+            <label for="options-01">
+              <div class="optiontitle">Riiklik tehnoülevaatus</div>
+              
+            </label>
+          </li>
+          <li>
+            <!-- <img src="assets/img/icon_maintenance.png" alt=""> -->
+            <input id="options-01" type="radio" checked="checked" class=""  name="options" value="01">
+            <label for="options-01">
+              <div class="optiontitle">Tehniline kontroll</div>
+              
+            </label>
+          </li>
+          <li>
+            <!-- <img src="assets/img/icon_tyrechange.png" alt=""> -->
+            <input id="options-2" type="radio" class="" name="options" value="03">
+            <label for="options-2">
+              <div class="optiontitle">Rehvitööd</div>
+            
+            </label>
+          </li>
+          
+          <li>
+            <!-- <img src="assets/img/icon_washwax.png" alt=""> -->
+            <input id="options-1" type="radio" class=""  name="options" value="02">
+            <label for="options-1">
+              <div class="optiontitle">Autopesu</div>
+              
+            </label>
+          </li>
+          
+          <li>
+            <!-- <img src="assets/img/icon_other.png" alt=""> -->
+            <input id="options-2" type="radio" class="" name="options" value="03">
+            <label for="options-2">
+
+              <div class="optiontitle">Muu (lisa kirjeldus tekstikasti)</div>
+              
+            </label>
+          </li>
+        </ul>
+    </div>
     <div class="col-xs-12 col-sm-6 col-md-2">
       <h5 class="form-label">Kuupäev</h5>
       <div class="input-group date">
-        <input type="text" class="form-control" data-validation="length" min-length="5" placeholder="20-03-2015">
+        <input type="text" class="form-control" data-validation="length" min-length="5" placeholder="20-03-2015" value="20/03/2015">
         <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
       </div>
     </div>
     <!-- time -->
-    <div class="col-xs-12 col-sm-6 col-md-2">
-      <h5 class="form-label">Alguaeg</h5>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5 class="form-label">Algusaeg</h5>
       <div class="dropdown" data-select="time">
         <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="forms.html%3Ftab=pane-contact.html#">
           <span>12:00</span>
@@ -32,17 +103,19 @@
         </ul>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-5">
-      <h5 class="form-label">Nimetus:</h5>
-      <input type="text">
-    </div>
+    
+    
   </div>
 
 <div class="row form"> 
-    <div class="col-xs-12  col-sm-6 col-md-11">
+  <div class="col-xs-12 col-sm-6 col-md-3">
+      <h5 class="form-label">Nimetus:</h5>
+      <input type="text">
+    </div>
+    <div class="col-xs-12  col-sm-6 col-md-8">
       
       <h5 class="form-label">Kirjeldus:</h5>
-      <textarea maxlength="1024" name="message" data-validation="length" min-length="5" placeholder="Nt rehvivahetus, vasak ratas koliseb imelikult vmt."></textarea>
+      <textarea maxlength="1024" name="message" data-validation="length" min-length="5" placeholder=""></textarea>
         <input type="checkbox" name="options" id="options-0" value="showroom" checked>
         <label for="options-0">Soovin meeldetuletust e-mailile</label>
     </div>

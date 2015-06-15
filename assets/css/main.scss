@@ -74,6 +74,10 @@
   // }
 }
 
+.optiontitle {
+  display: inline;
+}
+
 @media screen and (min-width: 1200px) {
   .promo-headerv1 {
     height: 550px;
@@ -214,6 +218,9 @@
   .important {
     color: $colour-vi-orange-1;
   }
+  &.forms .row h5 {
+    padding-bottom: 0;
+  }
 }
 
 .event-listing { 
@@ -270,6 +277,22 @@
   .imagewrapper {
     max-height: 312px;
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    .btn {
+      position: absolute;
+      opacity: 0;
+      top: 42%;
+      left: 42%;
+        -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -ms-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+    }
+    &:hover .btn {
+      opacity: 1;
+    }
   }
 }
 

@@ -22,10 +22,21 @@
     "tests"
   ],
   "dependencies": {
-    "clndr": "~1.2.9",
-    "underscore": "~1.8.2"
+    "clndr": "~1.2.10",
+    "underscore": "~1.8.3",
+    "bootstrap-sass": "~3.3.4",
+    "bootstrap-dialog": "~1.34.5",
+    "jquery.scrollTo": "~2.1.1",
+    "jquery": "~2.1.4",
+    "moment": "~2.10.3",
+    "owlcarousel": "~1.3.2"
   },
   "devDependencies": {
-    "skrollr": "~0.6.29"
+    "handlebars": "~3.0.3",
+    "backstopjs": "~0.4.3"
+  },
+  "resolutions": {
+    "bootstrap-datepicker": "~1.3.1",
+    "jquery.scrollTo": "~1.4.14"
   }
 }

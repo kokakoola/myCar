@@ -12,6 +12,20 @@
   "author": "Mare Hunt",
   "license": "ISC",
   "devDependencies": {
+    "gulp-csso": "^1.0.0",
+    "gulp-uncss": "^1.0.1",
     "subview": "^0.2.4"
-  }
+  },
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-uncss": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kokakoola/myCar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kokakoola/myCar/issues"
+  },
+  "homepage": "hammr.co/8458614/"
 }
