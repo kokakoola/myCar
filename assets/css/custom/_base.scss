@@ -1,11 +1,8 @@
-@import "bourbon";
+// @import "bourbon";
 
 
 // Bootstrap and our vars
-@import "../bootstrap/variables";
-@import "../bootstrap/mixins";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins";
 @import "variables";
 @import "mixins";
-
-
-
