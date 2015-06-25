@@ -1,0 +1,31 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+      <div id="placeholder-clndr">
+         
+      </div>
+    </div>
+
+<script type="text/x-handlebars-template" id="clndr-template">
+<div class="event-listing quick-spec prices">
+  <div class="event-listing-title">
+     <p class="title">Selle kuu teated:</p> 
+  </div>
+
+{{#clndr}}
+  <div class="event-item {{kind}}">
+    <div class="event-item-name">
+      <p class="quickspec-label">
+        {{date}} ,{{title}}
+      </p>
+      <p class="event-item-location">
+        {{location}}
+      </p>
+    </div> 
+    {{#if button}}
+    <button type="button" class="btn btn-primary btn-lg" id="btn-serviceModal" data-target="#serviceModal" data-direction="right">
+      Launch demo modal
+    </button>
+    {{/if}}
+  </div>
+{{/clndr}}
+</div>
+</script>

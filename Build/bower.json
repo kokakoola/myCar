@@ -1,7 +1,7 @@
 {
   "name": "myToyota",
   "version": "0.0.1",
-  "homepage": "http://hammr.co/8458614/",
+  "homepage": "http://ux.netgroupdigital.com/mytoyota/",
   "authors": [
     "mare hunt <mare.hunt@netgroup.ee>"
   ],
@@ -33,7 +33,8 @@
   },
   "devDependencies": {
     "handlebars": "~3.0.3",
-    "backstopjs": "~0.4.3"
+    "backstopjs": "~0.4.3",
+    "bootstrap-datepicker": "~1.4.0"
   },
   "resolutions": {
     "bootstrap-datepicker": "~1.3.1",

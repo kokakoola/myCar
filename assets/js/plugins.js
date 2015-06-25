@@ -72,7 +72,7 @@ $('.date').datepicker();
   });
 
 //carousel for accessories
-  $('.owl-carousel-2').owlCarousel({
+  $('.owl-carousel-accessories').owlCarousel({
     loop:true,
     nav:true,
     items: 4,
@@ -83,7 +83,7 @@ $('.date').datepicker();
     itemsDesktopSmall : [979,3]
 });
 
-  var owl2 = $(".owl-carousel-2");
+  var owl2 = $(".owl-carousel-accessories");
     // Custom Navigation Events
   $("#accessories .carousel-control.right").click(function(){
     owl2.trigger('owl.next');

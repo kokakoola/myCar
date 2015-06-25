@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Minu Konto</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Development -->
+  <link rel="stylesheet" href="bower_components/bootstrap-dialog/dist/css/bootstrap-dialog.min.css">
+  <link rel="stylesheet" href="bower_components/owlcarousel/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="bower_components/owlcarousel/owl-carousel/owl.theme.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Production -->
+<!--   <link rel="stylesheet" href="assets/css/main.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css"> -->
+
+  <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+    </head>
+    <body class="content" role="document">
+
+    <!--[if lt IE 8]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+<nav id="nav-primary" class="navbar navbar-fixed-top">
+  <div class="navbar-inner container">
+    <div class="float-left large-nav dropdown">
+      <a id="dropdown-button-car" class="dropdown-toggle" data-toggle="dropdown" role="button" href="error.html#" data-bt-track="" data-bt-action="menu_click" data-bt-eventclass="componentEvent" data-bt-category="component" data-bt-name="site_search_menu" data-action-target="#dropdown-meau-car">
+        <span class="link hidden-xs">Menüü</span>
+        <i class="icon-chevron-down hidden-xs hidden-sm"></i>
+        <i class="icon-menu visible-xs"></i>
+      </a>
+      <ol id="menu-breadcrumb" class="breadcrumb">
+        <li>Minu konto<i>/</i></li>
+        <li class="active">Sven Peekmann<i>/</i></li>
+      </ol>
+
+      <div id="dropdown-menu-car" class="dropdown-menu fluid" aria-labelledby="dropdown-menu-1" role="menu">
+        <div class="maincontainer">
+        <nav class="container navigation-menu clearfix hidden-xs">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 model-list">
+              <div class="row">
+                <a class="col-sm-3 col-md-4" href="#">
+                  <img width="150" height="95" alt="iq" src="http://toyota-stage.amaze.com/inc/images/nav-models/model-menu-iq.png">
+                  <span>
+                    <strong>IQ</strong> 123ABC
+                  </span>
+                  <div class="label hybrid">hybrid</div>
+                </a>
+                <a class="col-sm-3 col-md-4" href="#">
+                  <img width="150" height="95" alt="aygo" src="http://toyota-stage.amaze.com/inc/images/nav-models/model-menu-aygo.png">
+                  <span>
+                    <strong>Aygo</strong> 234CBO
+                  </span>
+                </a>
+                <a class="col-sm-3 col-md-4" href="carchapter-index.html">
+                  <img alt="Yaris" src="http://toyota-stage.amaze.com/inc/images/nav-models/model-menu-yaris.png" />
+                  <span>
+                    <strong class="hybrid-only">Yaris</strong> 567NBO
+                  </span>
+                </a>
+                <a class="col-sm-3 col-md-4" href="#">
+                  <img width="150" height="95" alt="versos" src="http://toyota-stage.amaze.com/inc/images/nav-models/model-menu-verso-s.png">
+                  <span>
+                    <strong>Verso-S</strong> From €18,000.00
+                  </span>
+                </a>
+                <a class="col-sm-3 col-md-4" href="#">
+                  <img width="150" height="95" alt="urbancruiser" src="http://toyota-stage.amaze.com/inc/images/nav-models/model-menu-urban-cruiser.png">
+                  <span>
+                    <strong>Urban Cruiser</strong> From €18,000.00
+                  </span>
+                </a>
+              </div>
+            </div>
+            <ul class="col-sm-6 col-md-3 link-list">
+              <li class="link-block">
+                <h5>Seaded</h5>
+                <ul>
+                  <li class='current'><a class='current' href="profile.html">Minu konto</a></li>
+                  <li><a href="http://www.toyota.ee/">Logi välja</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="col-sm-6 col-md-3 link-list">
+              <li class="link-block language-selector form">
+                <h5>Vaheta keelt:</h5>
+                <ul>
+                  <li>
+                    <input id="options-1" type="radio" name="options" value="/mockups/pages/empty-language-nl.html" checked>
+                    <label for="options-1">Eesti</label>
+                  </li>
+                  <li>
+                    <input id="options-2" type="radio" name="options" value="/mockups/pages/empty-language-fr.html">
+                    <label for="options-2">Läti</label>
+                  </li>
+                  <li>
+                    <input id="options-3" type="radio" name="options" value="/mockups/pages/empty-language-de.html">
+                    <label for="options-3">Leedu</label>
+                  </li>
+                  <li>
+                    <input id="options-3" type="radio" name="options" value="/mockups/pages/empty-language-de.html">
+                    <label for="options-3">Vene</label>
+                  </li>
+                  <li>
+                    <input id="options-3" type="radio" name="options" value="/mockups/pages/empty-language-de.html">
+                    <label for="options-3">Inglise</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+  <!--       Nav mobile -->
+        <nav class="container navigation-menu clearfix visible-xs">
+          <ul class="language-selector form">
+            <li>
+              <h5>Vaheta keelt:</h5></li>
+            <li>
+              <input id="options-1" type="radio" name="options" value="/mockups/pages/empty-language-nl.html" checked>
+              <label for="options-1">Eesti</label>
+            </li>
+            <li>
+              <input id="options-2" type="radio" name="options" value="/mockups/pages/empty-language-fr.html">
+              <label for="options-2">Läti</label>
+            </li>
+            <li>
+              <input id="options-3" type="radio" name="options" value="/mockups/pages/empty-language-de.html">
+              <label for="options-3">Leedu</label>
+            </li>
+            <li>
+              <input id="options-3" type="radio" name="options" value="/mockups/pages/empty-language-de.html">
+              <label for="options-3">Vene</label>
+            </li>
+            <li>
+              <input id="options-3" type="radio" name="options" value="/mockups/pages/empty-language-de.html">
+              <label for="options-3">Inglise</label>
+            </li>
+          </ul>
+          <!-- <ul>
+            <li><a href="#" class="btn btn-red btn-full-width">Minu autod<i class="icon-chevron-right"></i></a></li>
+          </ul> -->
+          <ul>
+            <li><a class="btn-full-width raw-btn" href="error.html">IQ 123ABC<i class="icon-chevron-right"></i></a></li>
+            <li><a class="btn-full-width raw-btn" href="error.html">Aygo 234CBO<i class="icon-chevron-right"></i></a></li>
+            <li><a class="btn-full-width raw-btn" href="error.html">Yaris 567NBO<i class="icon-chevron-right"></i></a></li>
+            <li><a class="btn-full-width raw-btn" href="error.html">Verso-S 678HBO<i class="icon-chevron-right"></i></a></li>
+            <li><a class="btn-full-width raw-btn" href="error.html">Urban Cruiser 366TRO<i class="icon-chevron-right"></i></a></li>
+          </ul>
+          <ul>
+            <li><a href="../forms/forms.html%3Ftab=pane-testdrive.html" class="btn btn-red btn-full-width">Hooldused Baltikumis<i class="icon-chevron-right"></i></a></li>
+            <li><a href="../forms/forms.html%3Ftab=pane-brochure.html" class="btn btn-red btn-full-width">Kasulik<i class="icon-chevron-right"></i></a></li>
+            <li><a href="../forms/forms.html%3Ftab=pane-contact.html" class="btn btn-red btn-full-width">Kontakt<i class="icon-chevron-right"></i></a></li>
+            <li>
+            </li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+    </div>
+    <div class="float-right">
+      <a href="index.html" id="logo-small" class="logo-link visible-xs visible-sm logo-logo-xs"></a>
+      <a href="index.html" id="logo-medium" class="logo-link hidden-xs hidden-sm logo-logo-sm"></a>
+      <a href="index.html" id="logo-big" class="logo-link hidden-xs hidden-sm logo-logo-md-red"></a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="maincontent">
+  
+<article class="container forms" style="margin-top: -30px;">
+  <header class="section-title">
+    <h1>Minu konto</h1>
+  </header>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 page-tools">
+      <div class="row padded">
+        <div class="col-sm-12">
+          <h3>Kontaktandmed</h3>
+        </div>
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Eesnimi</h5>
+          <input type="text" name="model" value="Sven">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Perenimi</h5>
+          <input type="text" name="model" value="Peekmann">
+        </div>
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Isikukood</h5>
+          <input type="text" name="model" value="">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Sünnipäev</h5>
+          <div class="input-group date">
+            <input type="text" class="form-control" data-validation="length" min-length="5" placeholder="20-03-2015">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">E-mail</h5>
+          <input type="text" name="model" value="sven.peekmann@netgroup.ee">
+        </div>
+        <!-- <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Alternatiivne e-mail<a tabindex="0" class="readMore lined" role="button" data-toggle="popover" data-trigger="focus" data-content="Siin on seletus"><i class="icon-info-sign"></i></a></h5>
+          <input type="text" name="model" value="">
+        </div> -->
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-12">
+          <h5>Eelistatud suhtluskeel</h5>
+          <ul class="list2 language-selector form">
+            <li>
+              <input id="options-30" type="radio" name="options" value="" checked>
+              <label for="options-30">Eesti</label>
+            </li>
+            <li>
+              <input id="options-31" type="radio" name="options" value="">
+              <label for="options-31">По-русски</label>
+            </li>
+            <li>
+              <input id="options-32" type="radio" name="options" value="">
+              <label for="options-32">Läti</label>
+            </li>
+            <li>
+              <input id="options-33" type="radio" name="options" value="">
+              <label for="options-33">Leedu</label>
+            </li>
+            <li>
+              <input id="options-44" type="radio" name="options" value="">
+              <label for="options-44">Inglise</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-12">
+          <h5>Sugu</h5>
+          <ul class="list2 language-selector form">
+            <li>
+              <input id="options-00" type="radio" name="options" value="" checked>
+              <label for="options-00">Mees</label>
+            </li>
+            <li>
+              <input id="options-11" type="radio" name="options" value="">
+              <label for="options-11">Naine</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-6 form">
+          <h5 class="form-label">Riik</h5>
+          <div class="dropdown" data-select="time">
+            <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="#!">
+              <span>Eesti</span>
+              <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine riik</a></li>
+              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine riik</a></li>
+              <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine riik</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Telefon</h5>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">+372</div>
+              <input type="text" class="form-control" id="" placeholder="63474387">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row padded">
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Tänav, maja ja korteri number</h5>
+          <input type="text" name="model" value="Väike-Vägeva tee 16-1">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Linn</h5>
+          <input type="text" name="model" value="Peetri">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Postiindeks</h5>
+          <input type="text" name="model" value="75312">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h5 class="form-label">Maakond</h5>
+          <input type="text" name="model" value="Harju">
+        </div>
+      </div>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="page-tools">
+        <div class="row padded">
+          <div class="col-sm-12">
+            <h3>Eelistatud esindus</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-7 form">
+<!--             <h5 class="form-label">Eelistatud esindus</h5> -->
+            <div class="dropdown" data-select="time">
+              <a class="dropdown-toggle" role="button" data-toggle="dropdown" data-validation="select" href="#!">
+                <span>Amserv Järve</span>
+                <i class="icon-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+                <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+                <li><a href="forms.html%3Ftab=pane-contact.html#" data-value="0900">Järgmine koht</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-5">
+<!--             <h5 class="form-label">Kontakt</h5> -->
+            <span>+372 6 025 205 <br> toyota@mustakiviauto.ee</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-tools">
+        <div class="row padded">
+          <div class="col-xs-12 col-sm-12">
+            <h3>Lisa auto</h3>
+          </div>
+        </div>
+        <div class="row form">
+          <div class="col-xs-12 col-sm-7">
+            <h5 class="form-label">Tehasetähis (17-kohaline VIN-kood)</h5>
+            <input type="text" name="model" value="">
+          </div>
+          <div class="col-sm-5">
+            <h5 class="form-label">&nbsp;</h5>
+                            
+                <input type="checkbox" name="owner" id="owner-1">
+                <label for="owner-1">Olen selle auto omanik/vastutav kasutaja</label>
+          </div>
+        </div>
+      </div>
+      <div class="page-tools">
+        <div class="row form"> 
+          <div class="col-xs-12">
+            <h5>Soovin oma Toyota käekäigul silma peal hoida:</h5>
+            <ul  class="list1">
+              <li>
+                <input type="checkbox" name="options" id="options-20" value="showroom">
+                <label for="options-20">Soovin tellida ajakirja "Toyota Plus"</label>
+              </li>
+              <li>
+                <input type="checkbox" name="options" id="options-22" value="fastfit">
+                <label for="options-22">Soovin saada Toyota pakkumisi</label>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+      
+
+      <div class="row padded">
+        <div class="form-btn col-xs-12">
+          <p>Sinu isikuandmeid kasutatakse ainult Toyota Baltic ja Toyota edasimüüja poolt ning ei avaldata kolmandatele osapooltele. Minu.Toyota portaali kasutades nõustud portaali kasutustingimustega. Nendega saad tutvuda <a href="#" data-target="#addCar" data-direction="right" class="link-Conditions">siin</a>.</p>
+          <br>
+          <a class="btn btn-dark btn-submit" data-action="submit">Uuenda andmed</a>
+          <a class="btn btn-grey btn-submit btn-changePass" data-target="#addCar" data-direction="right">Muuda salasõna</a>
+<!--                             <button type="button" class="btn btn-grey btn-addCar" data-target="#addCar" data-direction="right">
+                      Lisa uus auto
+                    </button> -->
+          <a class="btn btn-grey btn-submit" id="delAccount">Kustuta konto</a>
+          <a class="btn btn-link btn-cancel" data-action="cancel">Loobu</a>
+          
+        </div>
+      </div>
+<!--       <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
+        auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit
+        amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl
+        quis neque. Suspendisse in orci enim.</p> -->
+
+      </div>
+      <!-- paragraph.nj : end --><!-- article-section-items.nj : begin -->
+      
+      
+      <!-- article-section-items.nj : end -->
+    </div>
+    </article>
+
+<!-- Modal password-->
+<div class="modal fade" id="changePass">
+  <div class="modal-dialog fullscreen profile">
+
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+          <a class="close-link" data-dismiss="modal" aria-label="Close">
+            <div class="btn-back">
+              <div class="btn-graphic" >
+                <i class="icon-angle-left"></i>
+              </div>
+            </div>
+            <span class="back-text">Tagasi <strong>lehele</strong></span>
+          </a>
+        </div>
+
+        <div class="modal-header forms">
+          <header class="section-heading">
+            <h1>Muuda salasõna</h1>
+          </header>
+          <div class="row padded">
+
+            <div class="col-sm-4">
+              <h5 class="form-label">Praegune salasõna</h5>
+              <input type="text" name="model" value="">
+            </div>
+            <div class="col-sm-4">
+              <h5 class="form-label">Uus salasõna</h5>
+              <input type="text" name="model" value="">
+            </div>
+            <div class="col-sm-4">
+              <h5 class="form-label">Korda uut salasõna</h5>
+              <input type="text" name="model" value="">
+            </div>
+          </div>
+          <div class="row padded">
+            <div class="col-xs-12 text-right">
+              <a class="btn btn-dark btn-submit">Kinnita</a>
+              <a class="btn btn-link btn-cancel" data-dismiss="modal" aria-label="Close">Loobu</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Conditions -->
+<div class="modal fade" id="conditions">
+  <div class="modal-dialog fullscreen">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+        <a class="close-link" data-dismiss="modal" aria-label="Close">
+          <div class="btn-back">
+            <div class="btn-graphic" >
+              <i class="icon-angle-left"></i>
+            </div>
+          </div>
+          <span class="back-text">Tagasi <strong>lehele</strong></span>
+        </a>
+      </div>
+       
+        <article class="container">
+      <h1>My Toyota veebilehe kasutustingimused</h1>
+
+<div class="registration-terms-content">
+  <p class="terms-heading"><b>My Toyota veebilehe kasutustingimused</b></p>
+
+  Viimati uuendatud: 6.11.2013<br>
+  <br>
+
+  <p><b>Sissejuhatus</b></p>
+  <p>
+    Tere tulemast My Toyota veebilehele. Palun lugege enne My Toyota veebilehe kasutamist käesolevaid 
+    My Toyota veebilehe kasutustingimusi  (edaspidi:<b>tingimused</b>).
+      Tingimused kehtivad veebilehe minu.toyota.ee kaudu pakutavate teenuste kohta. 
+      Enne My Toyota liikmeks saamist peate tutvuma ja nõustuma kõigi tingimustes esitatud sätetega 
+      ja muude viidatud tingimustega.
+      My Toyota veebilehe kasutamisele kehtivad ka asjakohased 
+      <a target="_blank" href="http://www.toyota.ee/site_tools/policy.tmex">Toyota Balticu veebilehe üldised kasutustingimused 
+      </a>ja <a target="_blank" href="http://www.toyota.ee/news_and_events/cookie_policy.tmex">küpsiste kasutamise põhimõtted</a>.
+    <br>
+    <br>
+    Käesolevad tingimused on juriidiliselt siduv leping teie ja Toyota Baltic ASi (edaspidi:<b>Toyota Baltic</b>) vahel.
+  </p>
+  <br>
+
+  <p><b>1. Teenuse osutamine</b></p>
+  <p>
+    My Toyota veebileht võimaldab registreeritud kasutajatele: 
+      i) ligipääsu oma Toyota sõidukite hooldusteabele ja kalendrile, milles saab luua ja salvestada teavitusi; 
+      ii) ligipääsu oma Toyota sõidukite kasutusjuhenditele; 
+      iii) edastada Toyota Balticu ja tema partnerite kampaaniapakkumisi; 
+      iv) edastada teavet tagasikutsumiste kohta (edaspidi: <b>teenus</b>).
+  </p>
+
+  <p>
+    Teenust osutatakse "nii nagu on" ja "kui on kättesaadav" põhimõttel ning Toyota ei anna ühtegi kinnitust, 
+      et teenus ja My Toyota veebileht on pidevalt kättesaadav, õigeaegne, veatu ning pahavara- ja viirustevaba. 
+      Nõustute, et kasutate My Toyota veebilehte omal vastutusel.
+  </p>
+
+  <p>
+    Toyota Balticul on igal ajal õigus teenuse osutamine lõpetada või 
+      My Toyota veebileht sulgeda. Teenuse osutamise lõpetamisest teatatakse 
+      võimaluse korral mõistliku aja jooksul ette.
+  </p>
+
+  <p>
+    Toyota Balticul on õigus keelduda ligipääsu tagamisest selliste Toyota sõidukite hooldusteabele, 
+      mille omanik või volitatud kasutaja te ei ole, ning samuti juhul, kui sõiduki 
+      registreerimisandmed on muutunud pärast sõiduki esmast registreerimist My Toyota veebilehel.
+  </p>
+
+  <p><b>2. Ligipääs My Toyota veebilehele </b></p>
+  <p>
+    Ligipääs registreeritud kasutajana võimaldatakse ainult siis, kui olete nõustunud tingimustega, 
+      märkides registreerimisprotsessi käigus ära „Nõustun tingimustega” kasti. 
+      Selleks, et pääseda veebilehele ligi registreeritud kasutajana, peate täitma 
+      registreerimise veebivormis kõik nõutud väljad. Toyota Baltic jätab endale õiguse keelduda 
+      ligipääsu andmisest ja võib tühistada teie ligipääsu registreeritud kasutajana ilma, 
+      et peaks seda selgitama.
+  </p>
+
+  <p>
+    My Toyota veebilehe kontole ligipääsemiseks peab teil olema kehtiv kasutajanimi (e-posti aadress) 
+      ja salasõna. Palun pidage meeles, et teie vastutate oma konto ja salasõna salajas 
+      hoidmise eest. Süsteemi kasutades nõustute võtma vastutuse kõigi tegevuste eest, mis on seotud 
+      teie kontoga. Kui teil on põhjust uskuda, et keegi teine on teie salasõna teada saanud või et teie 
+      salasõna kasutatakse või võidakse kasutada ilma loata, peaksite meid sellest kohe teavitama.
+  </p>
+
+  <p>
+    Palun kontrollige, et andmed, mis te meile edastate, oleksid õiged, täielikud ja ajakohased, 
+      ning teavitage meid kõigist muudatustest andmetes, mis te meile registreerimisel edastasite. 
+      Toyota Baltic jätab endale õiguse oma äranägemisel keelduda My Toyota veebilehele ligipääsu 
+      andmast, sulgeda kontosid ja eemaldada või toimetada veebilehe sisu.
+  </p>
+
+  <p><b>3. Privaatsus</b></p>
+  <p>
+    Kõiki teie isiklikke andmeid, mille olete Toyota Balticule My Toyota veebilehe kaudu edastanud, 
+      haldab Toyota Baltic. Toyota Baltic teeb kõik endast oleneva, et tagada teie isiklike andmete 
+      turvaline kogumine, edastamine ja säilitamine kooskõlas nende andmete olemusega. Kogutud teavet 
+      kasutatakse My Toyota veebilehe isikupärastamiseks ja arendamiseks. Võime kasutada seda teavet 
+      teenuste osutamiseks, tellimuste käitlemiseks, toodete ja teenuste tarnimiseks, maksete töötlemiseks, 
+      tellimuste, toodete ja teenuste teemal suhtlemiseks, andmebaaside uuendamiseks, konto üldiseks 
+      hooldamiseks ning huvipakkuva teabe kuvamiseks ja huvipakkuvate teenuste ja pakkumiste soovitamiseks. 
+      Lisaks kasutame seda teavet oma platvormi täiustamiseks, pettuste ja kuritarvitamise vältimiseks
+      või avastamiseks meie veebilehel ning samuti selleks, et võimaldada 
+      kolmandatel isikutel täita meie eest teatud tehnilisi, logistilisi või muid funktsioone.
+  </p>
+
+  <p>
+    Teie isiklikke andmeid kasutatakse otseturustuseks, kui olete registreerimisel või konto seadetes 
+      selleks vastava loa andnud või see on lubatud kohaldatavate õigusaktidega.
+  </p>
+
+  <p>
+    Me ei edasta teie isiklikke andmeid kolmandatele isikutele ilma teie loata. 
+      Väljastame konto andmeid ja teisi isikuandmeid juhul, kui usume, et see on 
+      vajalik seaduste täitmiseks, tingimuste ja teiste kokkulepete täitmiseks 
+      või täitmise tagamiseks, meie õiguste ja omandi või My Toyota veebilehe ja selle 
+      teiste kasutajate ohutuse kaitsmiseks. See hõlmab muu hulgas teabevahetust 
+      teiste ettevõtete ja organisatsioonidega pettusevastase kaitse eesmärgil.
+  </p>
+
+  <p>
+    Alati, kui edastame isikuandmeid ülaltoodud tingimustel teavet jagades väljaspool 
+    Euroopa Liitu või Euroopa Majanduspiirkonda asuvatesse riikidesse, jälgime, et andmete 
+    edastamine oleks kooskõlas tingimustega ja kohalduvate andmekaitseseadustega.
+  </p>
+
+  <p>
+    Teil on õigus pääseda ligi Toyota Balticu kogutud teabele, 
+    parandada ebatäpseid või ebapiisavaid andmeid ja lasta need eemaldada. 
+    Teil on igal ajal õigus otseturustusest keelduda.
+  </p>
+
+  <p>
+    Tingimustega nõustudes annate Toyota Balticule 
+    õiguse hankida Toyota edasimüüjalt või remonditöökojalt teavet teie 
+    sõiduki kohta ja seda teavet eeltoodud eesmärkidel töödelda.
+  </p>
+
+  <p><b>4. My Toyota veebilehe kasutamine</b></p>
+  <p>
+    Toyota Baltic annab teile piiratud õiguse pääseda ligi 
+    My Toyota veebilehele, mistõttu võite veebilehte kasutada vaid isiklikuks otstarbeks. Selle hulka EI kuulu õigus: 
+    a) käesolevat veebilehte või selle sisu edasi müüa või kommertseesmärgil kasutada, 
+    b) koguda ja kasutada toodete nimekirju, kirjeldusi või hindu, 
+    c) kasutada veebilehest või selle sisust tuletatud rakendusi, 
+    d) laadida alla või kopeerida kontoteavet mõne teise ettevõtte huvides ega 
+    e) kasutada andmekaevandamist, roboteid või muid selliseid andmete kogumise ja hankimise vahendeid.
+  </p>
+
+  <p>
+    Minu Toyota veebilehte ega ühtegi selle osa ei tohi ilma Toyota Balticu 
+    kirjaliku nõusolekuta mingisugusel kommertseesmärgil kasutada. 
+    See hõlmab muu hulgas My Toyota veebilehe osade reprodutseerimist, kopeerimist, 
+    müüki, edasimüüki ja muul moel edastamist.
+  </p>
+
+  Keelatud on:<br>
+  <ul>
+    <li>freimimine või freimimistehnika kasutamine Toyota Balticu või 
+      selle sidusettevõtete kaubamärgi, logo või muu firmaomase teabe 
+      (sh piltide, tekstide, leheküljekujunduse või vormi) lisamiseks ilma eelneva kirjaliku loata;
+    </li>
+    <li>nimesid või kaubamärke sisaldavate metamärgendite või muu varjatud teksti kasutamine ilma 
+      Toyota Balticu eelneva kirjaliku loata;
+    </li>
+    <li>ebaaus või ebaprofessionaalne käitumine;
+    </li>
+    <li>andmete kopeerimine, litsentseerimine, all-litsentseerimine, avaldamine, levitamine, 
+      ülekandmine, jagamine, esitamine, kuvamine, müümine, ümberbrändimine või muul viisil 
+      ülekandmine, välja arvatud tingimustes lubatud juhtudel;
+    </li>
+    <li>turvakomponentide alistamine või katse seda teha;
+    </li>
+    <li>autoriõiguse, kaubamärgi või ettevõtte õigust tähistava muu märke eemaldamine;
+    </li>
+    <li>teabe, muu hulgas isikuandmete kogumine, kasutamine või edastamine.
+    </li>
+    <li>keelatud kasutusviisid tühistavad Toyota Balticu antud loa või litsentsi.
+    </li>
+  </ul>
+
+  <p><b>5. Kaubamärgid </b></p>
+  <p>
+    Kõik meie veebilehel kasutatavad märgid on Toyota Motor Corporationi (edaspidi:<b>TMC</b>),
+    Toyota Motor Europe’i (edaspidi: <b>TME</b>) ) ja Toyota Balticu kaubamärgid või registreeritud kaubamärgid. 
+    TMC, TME ja Toyota Balticu graafika, logod, leheküljepäised, nuppikoonid, skriptid ja teenuste nimed on TMC, 
+    TME või Toyota Balticu kaubamärgid või TMC, TME või Toyota Balticu kujunduse kaitse objektid. 
+    Neid kaubamärke ja kujunduse kaitse objekte ei või kasutada seoses muude toodete ja teenustega 
+    kui ainult TMC, TME või Toyota Balticu omadega, samuti ei tohi neid kasutada ühelgi sellisel viisil, 
+    mis võib tekitada tarbijates segadust või mis võib TMC-d, TME-d või Toyota Balticut halvustada või 
+    diskrediteerida. Kõik teised käesoleval veebilehel esinevad kaubamärgid, mis ei ole TMC, 
+    TME või Toyota Balticu omandis, kuuluvad nende omanikele, kes võivad, kuid ei pruugi olla TMC, 
+    TME või Toyota Balticu sidusettevõtted, TMC, TME või Toyota Balticuga seotud või TMC, TME või 
+    Toyota Balticu spondeeritavad ettevõtted.
+  </p>
+
+  <p><b>6. Vastutuse piirang</b></p>
+  <p>Kohalduva seaduse alusel maksimaalselt lubatud ulatuses ei võta Toyota Baltic endale mingit vastutust.</p>
+
+  <p>
+    Toyota Baltic ei vastuta otsese kahju ega saamata jäänud tulu eest, mille põhjus on tingimuste rikkumine 
+    Toyota Balticu poolt või My Toyota veebilehe kasutamine teie poolt, välja arvatud juhul, 
+    kui Toyota Baltic tekitas kahju tahtlikult või raske hooletuse tagajärjel.
+  </p>
+
+  <p>
+    Toyota Baltic ei vastuta käesolevates tingimustes sätestatud kohustuste täitmisel tekkivate 
+    viivituste või kohustuste täitmata jätmise eest, kui viivitus või täitmata jätmine tuleneb põhjusest, 
+    mis ei allu meie mõistlikule kontrollile, välja arvatud juhul, kui Toyota Baltic tekitas kahju 
+    tahtlikult või raske hooletuse tagajärjel.
+  </p>
+
+  <p><b>7. Sidusettevõtted</b></p>
+  <p>
+    Sidusettevõtted on teised isikud peale Toyota ja selle tütarettevõtete. 
+    Need isikud võivad osutada teenuseid või müüa tooteid Minu Toyota kaudu. 
+    Me ei ole kohustatud selliste sidusettevõtete pakkumisi uurima ega hindama 
+    ning me ei vastuta nende tagamise ega õigsuse eest. Toyota ei võta endale 
+    mingit vastutust ega mingeid kohustusi seoses selliste ettevõtete ja kõikvõimalike 
+    kolmandate isikute tegevuse, toodete ja materjalidega. Nendel sidusettevõtetel on oma 
+    teenuste pakkumiseks eraldi tingimused. Enne kui otsustate selliste sidusettevõtetega 
+    tehingu sõlmida, peaksite nende tingimustega hoolikalt tutvuma.
+  </p>
+
+  <p><b>8. Tingimuste rikkumine</b></p>
+  <p>Toyota Balticul on õigus võtta õiguslikke meetmeid kõigi isikute vastu, kes käesolevaid tingimusi rikuvad.</p>
+
+  <p><b>9. Tingimuste muutmine</b></p>
+  <p>Toyota Baltic jätab endale õiguse teha My Toyota veebilehel, põhimõtetes ja käesolevates tingimustes igal ajal muudatusi.</p>
+
+  <p>
+    My Toyota veebilehe kasutamisele kohalduvad vastaval ajal jõus olevad põhimõtted ja tingimused.
+    Muudetud tingimused avalikustatakse My Toyota veebilehel ja teid 
+    teavitatakse sellest. Kui te jätkate My Toyota veebilehe ja teenuste kasutamist, 
+    käsitletakse seda muudetud tingimustega nõustumisena. Kui te ei nõustu muudetud tingimustega, 
+    võib Toyota Baltic teie teenuse kasutamise õiguse peatada.
+  </p>
+
+  <p>
+    Kui mõni nendest tingimustest tunnistatakse kehtetuks, tühiseks või mõnel muul põhjusel 
+    rakendamiskõlbmatuks, käsitletakse seda tingimust teistest lahus ning see ei mõjuta ühegi 
+    teise tingimuse kehtivust või rakendatavust.
+  </p>
+  
+  <p>
+    Toyota Baltic ei salvesta ega arhiveeri tingimuste teksti. Toyota Baltic ei salvesta 
+    allkirjastatud tingimusi. Teil on võimalik tingimused salvestada ja/või printida, 
+    kasutades vastavaid nuppe allpool.
+  </p>
+
+  <p><b>10. Reguleerivad seadused ja jurisdiktsioon</b></p>
+  <p>
+    Tingimustele kohaldatakse Eesti Vabariigi õigust. Kõik tingimustega seotud vaidlused, 
+    mida ei suudeta mõistliku aja jooksul läbirääkimiste teel lahendada, lahendatakse 
+    Harju Maakohtus, mis asub Tallinnas Eestis.
+  </p>
+  <br>
+
+  Toyota Baltic AS<br>
+  Rävala pst 2<br>
+  10145 Tallinn<br>
+  Harjumaa<br>
+  Eesti<br>
+</div>
+      </article>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addCar">
+  <div class="modal-dialog fullscreen">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="toolbar">
+        <a class="close-link" data-dismiss="modal" aria-label="Close">
+          <div class="btn-back">
+            <div class="btn-graphic" >
+              <i class="icon-angle-left"></i>
+            </div>
+          </div>
+          <span class="back-text">Tagasi <strong>lehele</strong></span>
+        </a>
+      </div>
+       
+        
+<div class="container latest-news modal-header">
+  <div class="row">
+    <section class="forms ">
+      <header>
+        <h2>Lisa auto</h2>
+      </header>
+      <form>
+        
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-5 col-md-6">
+            <p>Auto tehasetähise leiad registreerimistunnistuselt nagu alloleval illustreerival pildil näidatud.</p>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <img src="assets/img/tech_pass_ee.png" alt="" width="250" height="173">
+            </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-7 col-md-6">
+            <h5>Sisesta oma auto tehasetähis (17-kohaline VIN-kood)</h5>
+            <div class="row">
+              <div class="col-xs-12">
+                <input type="text">
+                <input type="checkbox" name="owner" id="owner-1">
+                <label for="options-6">Olen selle auto omanik/vastutav kasutaja</label>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="form-btn col-xs-12">
+                <a class="btn btn-dark btn-new-car">Lisa</a>
+                <a class="btn btn-link" data-dismiss="modal">Katkesta</a>
+              </div>
+            </div>
+            <div class="row form-error-msg">
+              <div class="col-xs-12">
+                <h3 class="error-message"></h3>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<section class="footer">
+  <div class="container">
+    <div class="row footer-legal-content">
+      <div class="col-xs-12 col-sm-6">
+        <ul class=" language-selector form">
+          <li>
+            <h5>Vali keel</h5>
+          </li>
+          <li>
+            <input id="options-1" type="radio" name="options" value="">
+            <label for="options-1">По-русски</label>
+          </li>
+          <li>
+            <input id="options-2" type="radio" name="options" value="">
+            <label for="options-2">Läti</label>
+          </li>
+          <li>
+            <input id="options-2" type="radio" name="options" value="">
+            <label for="options-2">Leedu</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6 language">
+        <ul class=" footer-collapsed-links">
+          <li><a class="scrollTo" data-scrollTo='{"animation": false}' href="index.html#"><span>Tagasi üles</span><i class="icon-chevron-up"></i></a></li>
+        </ul>
+          
+        </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <p>Autoriõigus &copy; Toyota Baltic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+        <script src='bower_components/jquery/dist/jquery.min.js'></script>
+<script src='bower_components/handlebars/handlebars.js'></script>
+<script src='assets/data/service.json'></script>
+<script src='assets/js/vendor/bootstrap.js'></script>
+<script src='bower_components/moment/moment.js'></script>
+<script src='bower_components/underscore/underscore.js'></script>
+<script src='bower_components/clndr/clndr.min.js'></script>
+<script src='bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js'></script>
+<script src='bower_components/bootstrap-dialog/dist/js/bootstrap-dialog.min.js'></script>
+<script src='bower_components/jquery.scrollTo/jquery.scrollTo.min.js'></script>
+<script src='bower_components/owlcarousel/owl-carousel/owl.carousel.js'></script>
+<script src='assets/js/plugins.js'></script>
+<script src='assets/js/main.js'></script>
+
+    </body>
+</html>
