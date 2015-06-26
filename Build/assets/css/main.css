@@ -11432,12 +11432,12 @@ form .contact-card, .form .contact-card {
           border-bottom: 1px solid rgba(0, 0, 0, 0); }
           #mini-clndr .clndr .days-container .days .day:hover,
           #mini-clndr .clndr .days-container .days .empty:hover {
-            background: #000;
-            opacity: 0.3;
+            background: rgba(0, 0, 0, 0.1);
             cursor: pointer; }
           #mini-clndr .clndr .days-container .days .day.event,
           #mini-clndr .clndr .days-container .days .empty.event {
-            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
             -webkit-transition: background-color 0.5s;
             -moz-transition: background-color 0.5s;
             -ms-transition: background-color 0.5s;
@@ -11455,11 +11455,15 @@ form .contact-card, .form .contact-card {
           #mini-clndr .clndr .days-container .days .day.adjacent-month,
           #mini-clndr .clndr .days-container .days .empty.adjacent-month {
             color: rgba(0, 0, 0, 0.3); }
+        #mini-clndr .clndr .days-container .days .day.calendar-dow-6, #mini-clndr .clndr .days-container .days .day.calendar-dow-0 {
+          color: #d2001e; }
+          #mini-clndr .clndr .days-container .days .day.calendar-dow-6.adjacent-month.next-month, #mini-clndr .clndr .days-container .days .day.calendar-dow-0.adjacent-month.next-month {
+            color: rgba(0, 0, 0, 0.3); }
         #mini-clndr .clndr .days-container .days .empty {
           height: 31px;
           vertical-align: bottom; }
         #mini-clndr .clndr .days-container .days .today {
-          color: #73000d; }
+          font-family: toyotatext_bd; }
         #mini-clndr .clndr .days-container .days .headers {
           background-color: white;
           padding-top: 5px;
@@ -11487,10 +11491,20 @@ form .contact-card, .form .contact-card {
   -webkit-transform: translate3d(0, 125%, 0);
   transform: translate3d(0, 125%, 0); }
 
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: scroll; }
+
 .modal-dialog.fullscreen {
   width: 100%;
   margin: 130px 0 0 0;
-  height: 100vh; }
+  height: 100vh;
+  position: fixed;
+  padding: 0; }
   .modal-dialog.fullscreen.profile {
     margin-top: 70px; }
   .modal-dialog.fullscreen .toolbar {
@@ -11500,11 +11514,11 @@ form .contact-card, .form .contact-card {
     height: 100vh;
     display: inline-block;
     z-index: 1040;
-    position: fixed;
     top: 0 px\9;
     bottom: 0 px\9;
     left: 0 px\9;
-    text-align: center; }
+    text-align: center;
+    position: fixed; }
     .modal-dialog.fullscreen .toolbar a:hover {
       cursor: pointer;
       text-decoration: none; }
@@ -11572,7 +11586,8 @@ form .contact-card, .form .contact-card {
     border: none;
     display: inline-block;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    overflow: auto; }
     .modal-dialog.fullscreen .modal-content .modal-body {
       padding: 0; }
     .modal-dialog.fullscreen .modal-content .in-modal {
