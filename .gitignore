@@ -3,6 +3,7 @@ bower_components/*
 node_modules
 node_modules/*
 rasmuse-test
+rasmuse-test/*
 deploy.sh
 .hammer-ignore
 README.html
