@@ -3,3 +3,4 @@ deploy.sh
 gulpfile.js
 node_modules
 doc
+README.md
