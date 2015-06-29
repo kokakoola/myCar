@@ -12,15 +12,15 @@
   "author": "Mare Hunt",
   "license": "ISC",
   "devDependencies": {
-    "bower-files": "^3.7.0",
-    "gulp-csso": "^1.0.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-uncss": "^1.0.1",
-    "subview": "^0.2.4"
-  },
-  "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-uncss": "^1.0.1"
+      "grunt": "*",
+      "grunt-contrib-concat": "*",
+      "grunt-contrib-copy": "*",
+      "grunt-contrib-sass": "*",
+      "grunt-contrib-uglify": "*",
+      "grunt-contrib-watch": "*",
+      "grunt-contrib-connect": "*",
+      "grunt-sakugawa": "*",
+      "dbushell-grunt-mustatic": "*"
   },
   "repository": {
     "type": "git",

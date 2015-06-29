@@ -8,3 +8,5 @@ deploy.sh
 README.html
 Build/Icon?
 Icon?
+.DS_Store
+.sass-cache

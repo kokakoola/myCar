@@ -49,7 +49,7 @@
     text-align: center;
     position: fixed;
     a {
-      
+
       &:hover {
         cursor: pointer;
         span {
@@ -140,11 +140,11 @@
     width: -moz-calc(100% - 70px);
     width: -webkit-calc(100% - 70px);
     width: calc(100% - 70px);
-    @media (min-width: 992px) {
-      .row {
-        margin-left: 40px;
-      }
-    }
+    // @media (min-width: 992px) {
+    //   .row {
+    //     margin-left: 40px;
+    //   }
+    // }
   }
 }
 }

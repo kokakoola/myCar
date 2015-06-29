@@ -1,0 +1,150 @@
+<section class="forms" id="contact">
+<div id="pane-contact" class="container tab-pane">
+  <header>
+    <h1>Kontakt</h1>
+    <span class="intro hidden-xs">
+      Sinu tagasiside on meile väga oluline ja aitab meie teenuseid veelgi paremaks muuta. Jaga oma tagasisidet meiega.
+    </span>
+  </header>
+
+  <form id="form-contact" class="form-dynamic" name="form-contact" data-type="json" action="forms.html%3Ftab=pane-contact.html#" method="POST">
+    <!-- target/info -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 hidden-xs select-dynamic select-target">
+        <h5 class="form-label">Mis teemal soovid pöörduda</h5>
+
+        <input type="radio" data-activate="general" name="target" id="target-0" value="general" checked>
+        <label for="target-0">Autoga seotud küsimus</label>
+
+        <input type="radio" data-activate="service" name="target" id="target-1" value="service">
+        <label for="target-1">Klienditeenindust puudutav</label>
+
+        <input type="radio" data-activate="customer" name="target" id="target-2" value="customer">
+        <label for="target-2">Minu.Toyota portaaliga seonduv</label>
+
+        <input type="radio" data-activate="financial" name="target" id="target-3" value="financial">
+        <label for="target-3">Muu</label>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="label-contact-data element-dynamic active " id="general">
+          <h5 >Mustakivi Auto</h5>
+
+          <a class="btn btn-dark btn-call visible-xs" href="tel:+32476999840">Helistamiseks vajuta siia</a>
+          <span class="info visible-xs">Sa võid meile ka emaili saata</span>
+
+          <h5 class="visible-xs">Telephone, fax or e-mail</h5>
+          <ul>
+            <li>Tel: +372 6025 205</li>
+            <li>Tähesaju tee 33</li>
+            <li>1140 Tallinn</li>
+            <li>E-mail: info@mustakiviauto.com</li>
+            <li><a href="">www.mustakiviauto.ee</a></li>
+            <li>E-R 9-20, L 10-14</li>
+          </ul>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- phone/email/message -->
+    <div class="row">
+      <!-- <div class="col-xs-12 col-md-6">
+        <div class="select-dynamic select-medium">
+          <h5 class="form-label">Soovin vastust</h5>
+
+          <input data-activate="dynamic-email" type="radio" name="medium" id="medium-0" value="email" checked>
+          <label for="medium-0">e-maili teel</label>
+
+          <input data-activate="dynamic-phone" type="radio" name="medium" id="medium-1" value="phone">
+          <label for="medium-1">telefoni teel</label>
+
+          <input data-activate="dynamic-phone" type="radio" name="medium" id="medium-2" value="none">
+          <label for="medium-2">üldse mitte</label>
+        </div>
+        <div class="element-dynamic active" id="dynamic-email">
+          <h5 class="form-label">Email </h5>
+
+          <input class="input-dynamic input-email" type="email" name="email" data-validation="email">
+        </div>
+        <div class="element-dynamic" id="dynamic-phone">
+          <h5 class="form-label">Phone *</h5>
+          <input class="input-dynamic input-phone" type="tel" name="phone" data-validation="phone">
+        </div>
+      </div> -->
+      <div class="col-xs-12">
+        <h5 class="form-label">Teade</h5>
+        <textarea maxlength="1024" name="message" data-validation="length" min-length="5"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-lg-9">
+        <input type="checkbox" name="optIn" id="opt-in" value="yes">
+        <label for="opt-in">
+          Soovin, et minuga võetakse ühendust
+        </label>
+      </div>
+      <div class="form-btn col-xs-12 col-md-4 col-lg-3">
+        <a class="btn btn-dark btn-submit" data-action="submit">Saada</a>
+        <a class="btn btn-link btn-cancel" data-action="cancel">Loobu</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- response -->
+<div id="pane-contact-result" class="container hide">
+  <header>
+    <h2>Thanks!</h2>
+    <span class="intro">
+      Thank you for contacting Toyota, we will deal with your enquiry as soon as possible.
+      Whilst you're here, why not do one of the following, you won't need to fill in your contact details again...
+    </span>
+  </header>
+  <div class="section-sub-spotlights">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3 element">
+        <a href="http://www.toyota.be">
+          <span class="image-container">
+            <img src="../../assets/img/section-spotlight1.jpg" alt="" >
+          </span>
+          <h4>
+            Warranty & assistance
+          </h4>
+          <p>
+            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem.
+          </p>
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3 element">
+        <a href="http://www.toyota.be">
+          <span class="image-container">
+            <img src="../../assets/img/section-spotlight2.jpg" alt="" >
+          </span>
+          <h4>
+            Warranty & assistance
+          </h4>
+          <p>
+            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem.
+          </p>
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3 element">
+        <a href="http://www.toyota.be">
+          <span class="image-container">
+            <img src="../../assets/img/section-spotlight1.jpg" alt="" >
+          </span>
+          <h4>
+            Warranty & assistance
+          </h4>
+          <p>
+            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem.
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
