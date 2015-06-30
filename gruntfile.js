@@ -6,9 +6,9 @@ module.exports = function(grunt) {
                 files: [
                     {expand: true, src: ['bower_components/bootstrap-sass/assets/fonts/bootstrap/*'], dest: 'app/assets/fonts/bootstrap', filter: 'isFile', flatten: true},
 
-                    {expand: true, src: ['bower_components/bootstrap-dialog/dist/css/bootstrap-dialog.css'], dest: 'assets/css', filter: 'isFile', flatten: true},
-                    {expand: true, src: ['bower_components/owlcarousel/owl-carousel/owl.theme.css'], dest: 'assets/css', filter: 'isFile', flatten: true},
-                    {expand: true, src: ['bower_components/owlcarousel/owl-carousel/owl.carousel.css'], dest: 'assets/css', filter: 'isFile', flatten: true},
+                    {expand: true, src: ['bower_components/bootstrap-dialog/dist/css/bootstrap-dialog.css'], dest: 'app/assets/css', filter: 'isFile', flatten: true},
+                    {expand: true, src: ['bower_components/owlcarousel/owl-carousel/owl.theme.css'], dest: 'app/assets/css', filter: 'isFile', flatten: true},
+                    {expand: true, src: ['bower_components/owlcarousel/owl-carousel/owl.carousel.css'], dest: 'app/assets/css', filter: 'isFile', flatten: true},
                 ],
             },
         },
