@@ -1,17 +1,17 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         // copies fonts and bootstrap scss
-        // copy: {
-        //     main: {
-        //         files: [
-        //             {expand: true, src: ['bower_components/fontawesome/fonts/*'], dest: 'Build/assets/fonts/', filter: 'isFile', flatten: true},
-        //             {expand: true, src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*'], dest: 'Build/assets/fonts/bootstrap', filter: 'isFile', flatten: true},
-        //
-        //             {expand: true, src: ['bower_components/modernizr/modernizr.js'], dest: 'Build/assets/js/vendor/', filter: 'isFile', flatten: true},
-        //             {expand: true, src: ['bower_components/jquery/dist/jquery.min.js'], dest: 'Build/assets/js/vendor/', filter: 'isFile', flatten: true}
-        //         ],
-        //     },
-        // },
+        copy: {
+            main: {
+                files: [
+                    {expand: true, src: ['bower_components/bootstrap-sass/assets/fonts/bootstrap/*'], dest: 'app/assets/fonts/bootstrap', filter: 'isFile', flatten: true},
+
+                    {expand: true, src: ['bower_components/bootstrap-dialog/dist/css/bootstrap-dialog.css'], dest: 'assets/css', filter: 'isFile', flatten: true},
+                    {expand: true, src: ['bower_components/owlcarousel/owl-carousel/owl.theme.css'], dest: 'assets/css', filter: 'isFile', flatten: true},
+                    {expand: true, src: ['bower_components/owlcarousel/owl-carousel/owl.carousel.css'], dest: 'assets/css', filter: 'isFile', flatten: true},
+                ],
+            },
+        },
 
         // compiles sass to minified css
         sass: {
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'Build/assets/css/main.min.css': 'assets/css/main.scss'
+                    'app/assets/css/main.min.css': 'assets/css/main.scss'
                 }
             },
             // dist: {
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
             //         style: 'compressed'
             //     },
             //     files: {
-            //         'Build/assets/css/app.min_1.css': 'Build/assets/css/app_1.css',
-            //         'Build/assets/css/app.min_2.css': 'Build/assets/css/app_2.css'
+            //         'app/assets/css/app.min_1.css': 'app/assets/css/app_1.css',
+            //         'app/assets/css/app.min_2.css': 'app/assets/css/app_2.css'
             //     }
             // }
         },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                     'bower_components/owlcarousel/owl-carousel/owl.carousel.js',
                     'assets/js/*.js'
                 ],
-                dest: 'Build/assets/js/main.js'
+                dest: 'app/assets/js/main.js'
             }
         },
 
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    'Build/assets/js/main.min.js': 'Build/assets/js/main.js'
+                    'app/assets/js/main.min.js': 'app/assets/js/main.js'
                 }
             }
         },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         mustatic: {
             options: {
                 src: 'includes',
-                dest: 'Build'
+                dest: 'app'
             },
             dist: {
                 globals: {
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
         	livereload: {
         		options: {
         			open: true,
-        			base: ['Build']
+        			base: ['app']
         		}
         	}
         }
