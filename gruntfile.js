@@ -136,8 +136,7 @@ module.exports = function(grunt) {
     // grunt.registerTask('scss', ['sass:dev', 'sakugawa', 'sass:dist']);
     grunt.registerTask('js', ['concat', 'uglify']);
     grunt.registerTask('serve', ['connect', 'watch']);
-    // grunt.registerTask('init', ['copy', 'scss', 'js', 'mustatic', 'serve']);
-    grunt.registerTask('init', ['sass', 'js', 'mustatic', 'serve']);
+    grunt.registerTask('init', ['copy', 'sass', 'js', 'mustatic', 'serve']);
     // grunt.registerTask('update', ['copy', 'scss', 'js', 'mustatic']);
 
 };
