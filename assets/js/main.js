@@ -45,4 +45,9 @@
         $(this).modal('hide');
     });
 
+    $('.js-scroll-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+
 })(jQuery);
