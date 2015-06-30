@@ -3,12 +3,39 @@ table of contents](TOC.md)
 
 # Usage
 
-Once you have cloned or downloaded myToyota UI, creating a site or app
+## Getting started
+
+To get you started on Windows:
+
+- Install [Ruby](http://rubyinstaller.org/)
+- Install [NodeJS](https://nodejs.org/)
+- Open Ruby cmd and install sass with gem
+```bash
+gem install sass
+```
+- Install [git](https://git-scm.com/)
+- Make sure ruby, node and git are in your environment variables PATH
+- Close cmd and reopen it
+- Check if everything is installed correctly in Ruby cmd
+```bash
+ruby -v
+node -v
+git
+```
+- Make directory to store your project
+```bash
+mkdir /path/to/your-project-dir
+cd /path/to/your-project-dir
+```
+
+Once you have cloned or downloaded UI, creating a site or app
 usually involves the following:
 
-1. Navigate to build catalogue.
-2. Run your site locally to see how it looks.
-3. Deploy your site.
+- Run
+```bash
+grunt init
+```
+
 
 
 ## Basic structure
@@ -52,7 +79,7 @@ CSS](css.md).
 
 ### doc
 
-This directory contains all the myToyota UI documentation. 
+This directory contains all the myToyota UI documentation.
 
 ### js
 
