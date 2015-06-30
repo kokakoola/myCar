@@ -9,14 +9,38 @@
 @import 'owl.theme.css';
 // ************
 
+// GENERAL
 .navy {
     background: #1C2830;
+}
+
+.forms {
+    background: #fff;
+    &.page-tools-downloads {
+        background: $colour-bg-beige;
+    }
+}
+
+.padded {
+    padding-bottom: 0;
+    @media (min-width: $screen-sm) {
+        padding-bottom: 24px;
+    }
+}
+
+.forms .row .row .col-xs-12 {
+    padding-bottom: 24px;
+}
+
+.right {
+    float: right;
 }
 
 .promotions {
     position: relative;
 }
 
+// Branding
 .logo-logo-lvl2, .logo-logo-md-blue, .logo-logo-md-brown, .logo-logo-md-green, .logo-logo-md-lightblue, .logo-logo-md-purple, .logo-logo-md-red, .logo-logo-md-yellow, .logo-logo-sm, .logo-logo-xs, .logo-sprite {
     background-image: url(../images/sprites/logo-s6f7aa3aeee.png);
 }
@@ -37,6 +61,30 @@
     background-position: 0 -1211px;
     height: 56px;
     width: 66px;
+}
+
+.logo-tagline {
+    display: table;
+    margin-top: 12px;
+    h1 {
+        display: table-cell;
+        vertical-align: middle;
+        font-family: $font-toyota-display-regular;
+        font-size: 16px;
+        line-height: 1em;
+        text-align: right;
+        color: $colour-vi-red-1;
+        padding: 0 15px 0 0;
+        border-right: 2px solid $colour-default-grey-8;
+    }
+    h2 {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 15px;
+        font-size: 15px;
+        line-height: 1em;
+        color: $colour-default-grey-7;
+    }
 }
 
 @media (min-width: $screen-sm) {
@@ -71,8 +119,10 @@
     }
 }
 
-@media (min-width: $screen-sm) {
-    margin-top: 130px;
+@media (min-width: $screen-md) {
+    .maincontent section {
+        padding-top: 0;
+    }
 }
 
 .promo-headerv1 {
@@ -102,7 +152,6 @@
     }
 }
 
-
 #calendar.articles-list {
     padding-top: 60px;
     padding-bottom: 0;
@@ -112,44 +161,70 @@
     margin-top: 20px;
 }
 
-.calendar.hero-unit {
+.calendar {
+    &.hero-unit {
     background: url('../img/loginimg.jpg');
     // background: url('../img/AUR0025a_15.jpg');
     background-position: top left;
     background-size: cover;
+    }
+    h1 {
+        font-size: 6rem;
+        font-size: 64px;
+    }
+    .container {
+        padding-top: 70px;
+    }
+}
+
+.icon.flagged {
+    color: $colour-default-red;
+}
+
+.event-listing {
+    p {
+        color: $text-color;
+        text-indent: 0;
+    }
+    .page-tools {
+        margin: 0;
+        opacity: 0.8;
+    }
+    .event-item {
+        margin-top: 2px;
+        padding: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        .title {
+            font-family: $font-toyota-text-bold;
+        }
+        i {
+            padding-right: 10px;
+        }
+        .alerted {
+            color: $colour-vi-red-1;
+        }
+        .important {
+            color: $colour-vi-orange-1;
+        }
+        &.forms .row h5 {
+            padding-bottom: 0;
+        }
+    }
+    .conclusion {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        .btn-group {
+            display: inline;
+        }
+    }
 }
 
 .spotlight {
     background: transparent;
 }
 
-.calendar .container {
-    padding-top: 80px;
-    .dropdown-toggle {
-        color: #fff;
-        font-family: toyotatext_bd;
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-        i {
-            padding-left: 10px;
-        }
-    }
-    h1 {
-
-    }
-}
-
-.conclusion {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
 .form label {
     margin-right: 0;
-    display: inline;
-}
-
-.conclusion .btn-group {
     display: inline;
 }
 
@@ -159,55 +234,21 @@
     line-height: 28px;
     line-height: 2.8rem;
     text-indent: 0;
-
     margin-top: 40px;
 }
 
-.event-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    i {
-        padding-right: 10px;
-    }
-    .alerted {
-        color: $colour-vi-red-1;
-    }
-    .important {
-        color: $colour-vi-orange-1;
-    }
-    &.forms .row h5 {
-        padding-bottom: 0;
-    }
-}
 
-.event-listing {
-    p {
-        color: $text-color;
-        text-indent: 0;
+// servicemodal
+.service {
+    h5 {
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
-
-    .page-tools {
-        margin: 0;
-        opacity: 0.8;
+    &.forms {
+        ul li {
+            list-style-type: none;
+        }
     }
-}
-
-.page-tools.price {
-    text-align: center;
-    color: $colour-default-grey-0;
-}
-
-.event-item {
-    margin-top: 2px;
-    padding: 12px;
-    // background-color: rgba(255, 255, 255, 0.7);
-    .title {
-        font-family: $font-toyota-text-bold;
-    }
-}
-
-.service h5 {
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
 .service-list li {
     margin-bottom: 8px;
@@ -217,24 +258,7 @@
     margin-top: 35px;
 }
 
-.forms {
-    background: #fff;
-    &.page-tools-downloads {
-        background: $colour-bg-beige;
-    }
-}
-
-.padded {
-    padding-bottom: 0;
-    @media (min-width: $screen-sm) {
-        padding-bottom: 24px;
-    }
-}
-
-.forms .row .row .col-xs-12 {
-    padding-bottom: 24px;
-}
-
+// car details
 .imagewrapper {
     max-height: 312px;
     overflow: hidden;
@@ -260,38 +284,7 @@
     display: inline;
 }
 
-.icon.flagged {
-    color: $colour-default-red;
-}
-
-
-header .filter-bar {
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-}
-
-.service.forms {
-    ul li {
-        list-style-type: none;
-    }
-}
-
-.right {
-    float: right;
-}
-
-.forms.on-well {
-    background-color: #F4F4F5;
-    border-radius: 2px;
-    padding: 10px;
-}
-
-@media (min-width: $screen-md) {
-    .maincontent section {
-        padding-top: 0;
-    }
-}
-
+// carousels
 .owl-carousel-list {
     margin-top: 20px;
 }
@@ -309,7 +302,7 @@ header .filter-bar {
     height: 8px;
 }
 
-
+// login-page
 .login {
     .hero-unit {
         background: url('../img/loginimg.jpg');
@@ -360,26 +353,4 @@ header .filter-bar {
     background-color: #fff;
 }
 
-.logo-tagline {
-    display: table;
-    margin-top: 12px;
-    h1 {
-        display: table-cell;
-        vertical-align: middle;
-        font-family: $font-toyota-display-regular;
-        font-size: 16px;
-        line-height: 1em;
-        text-align: right;
-        color: $colour-vi-red-1;
-        padding: 0 15px 0 0;
-        border-right: 2px solid $colour-default-grey-8;
-    }
-    h2 {
-        display: table-cell;
-        vertical-align: middle;
-        padding-left: 15px;
-        font-size: 15px;
-        line-height: 1em;
-        color: $colour-default-grey-7;
-    }
-}
+
