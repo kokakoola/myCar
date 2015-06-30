@@ -17,6 +17,10 @@
     position: relative;
 }
 
+.logo-logo-lvl2, .logo-logo-md-blue, .logo-logo-md-brown, .logo-logo-md-green, .logo-logo-md-lightblue, .logo-logo-md-purple, .logo-logo-md-red, .logo-logo-md-yellow, .logo-logo-sm, .logo-logo-xs, .logo-sprite {
+    background-image: url(../images/sprites/logo-s6f7aa3aeee.png);
+}
+
 .logo-logo-md-red {
     background-position: 0 0;
     height: 153px;
@@ -35,7 +39,7 @@
     width: 66px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-sm) {
     .open .dropdown-menu#dropdown-menu-car {
         padding-bottom: 0;
         height: auto;
@@ -56,10 +60,10 @@
 
 .maincontent {
     margin-top: 75px;
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $screen-sm) {
         margin-top: 116px;
     }
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-md) {
         margin-top: 130px;
     }
     &.login {
@@ -67,7 +71,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-sm) {
     margin-top: 130px;
 }
 
@@ -86,24 +90,18 @@
     display: inline;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $screen-lg) {
     .promo-headerv1 {
         height: 550px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $screen-md) {
     .bg-image-hero {
         height: 400px;
     }
 }
 
-
-@media (min-width: 992px) {
-    .login .bg-image-hero {
-        height: auto;
-    }
-}
 
 #calendar.articles-list {
     padding-top: 60px;
@@ -114,15 +112,10 @@
     margin-top: 20px;
 }
 
-.login .hero-unit {
-    background: url('../img/loginimg.jpg');
-    background-position: center left;
-    background-size: cover;
-}
-
 .calendar.hero-unit {
-    background: url('../img/AUR0025a_15.jpg');
-    background-position: center left;
+    background: url('../img/loginimg.jpg');
+    // background: url('../img/AUR0025a_15.jpg');
+    background-position: top left;
     background-size: cover;
 }
 
@@ -151,54 +144,10 @@
     padding-bottom: 12px;
 }
 
-// .quick-spec {
-//   min-height: 20px;
-//   padding: 0;
-//   hr {
-//     margin-bottom: 9px;
-//   }
-//   &.prices {
-//     background-color: rgba(30, 42, 50, 0.8);
-//   }
-// }
-
-// .quick-spec p.quickspec-label {
-// min-height: 15px;
-// }
-
-// .label {
-//   background: $colour-vi-red-1;
-//   margin-right: 15px;
-// }
-
 .form label {
     margin-right: 0;
     display: inline;
 }
-
-// .btn-bordered {
-//   border: 1px solid #FFF;
-//   font-size: 15px;
-//   font-size: 1.5rem;
-//   border-radius: 3px;
-//   padding: 9px 13px 9px;
-//   text-decoration: none;
-//   line-height: normal;
-//   margin: 10px;
-//   display: inline-block;
-//   color: #fff;
-//   background-color: rgba(255, 255, 255, 0);
-//   -webkit-transition: all 500ms ease;
-//   -moz-transition: all 500ms ease;
-//   -ms-transition: all 500ms ease;
-//   -o-transition: all 500ms ease;
-//   transition: all 500ms ease;
-//   &:hover {
-//       background-color: rgba(255, 255, 255, 0.2);
-//       color: #fff;
-//       font-weight: bold;
-//   }
-// }
 
 .conclusion .btn-group {
     display: inline;
@@ -254,10 +203,6 @@
     .title {
         font-family: $font-toyota-text-bold;
     }
-}
-
-.event-items {
-
 }
 
 .service h5 {
@@ -319,9 +264,6 @@
     color: $colour-default-red;
 }
 
-.logo-logo-lvl2, .logo-logo-md-blue, .logo-logo-md-brown, .logo-logo-md-green, .logo-logo-md-lightblue, .logo-logo-md-purple, .logo-logo-md-red, .logo-logo-md-yellow, .logo-logo-sm, .logo-logo-xs, .logo-sprite {
-    background-image: url(../images/sprites/logo-s6f7aa3aeee.png);
-}
 
 header .filter-bar {
     margin-bottom: 60px;
@@ -338,54 +280,17 @@ header .filter-bar {
     float: right;
 }
 
-// .accordion.heading {
-//     font-size: 17px;
-//   font-size: 1.7rem;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   border-top: 1px solid #BDBFC0;
-//   cursor: pointer;
-//   &:after {
-//     content: "\f107";
-//     font-family: 'toyotaicons';
-//     float: right;
-//     font-weight: bold;
-//     margin-right: 5px;
-//     font-size: 21px;
-//     font-size: 2.1rem;
-//     line-height: 21px;
-//     line-height: 2.1rem;
-//   }
-// }
-
-// .today {
-//     border: 3px solid red;
-//     border-radius: 30px;
-//     left:20px;
-//     top:214px;
-//     -webkit-animation: pulsate 1s ease-out;
-//     -webkit-animation-iteration-count: infinite;
-//     opacity: 0.0
-// }
-// @-webkit-keyframes pulsate {
-//     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-//     50% {opacity: 1.0;}
-//     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
-// }
-
 .forms.on-well {
     background-color: #F4F4F5;
     border-radius: 2px;
     padding: 10px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $screen-md) {
     .maincontent section {
         padding-top: 0;
     }
 }
-
-
 
 .owl-carousel-list {
     margin-top: 20px;
@@ -397,8 +302,6 @@ header .filter-bar {
     .carouselNav {
         bottom: 180px;
     }
-
-
 }
 
 .owl-theme .owl-controls .owl-page span {
@@ -406,25 +309,30 @@ header .filter-bar {
     height: 8px;
 }
 
-.login h1,
-.login h2 {
-    text-align: left;
-}
-
-.login .well {
-    background-color: rgba(255, 255, 255, 0.6);
-
-}
-
-.maincontent.login header {
-    padding-top: 40px;
-    h1 {
-        text-align: center;
-        padding-bottom: 40px;
-    }
-}
 
 .login {
+    .hero-unit {
+        background: url('../img/loginimg.jpg');
+        background-position: center left;
+        background-size: cover;
+    }
+    header {
+    padding-top: 40px;
+        h1 {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+    }
+    h1,
+    h2 {
+        text-align: left;
+    }
+    .intro {
+        padding-top: 100px;
+    }
+    .well {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
     .media {
         margin-bottom: 30px;
         margin-top: 30px;
@@ -434,6 +342,12 @@ header .filter-bar {
     }
     .media-body {
         margin-left: 84px;
+    }
+}
+
+@media (min-width: $screen-md) {
+    .login .bg-image-hero {
+        height: auto;
     }
 }
 
