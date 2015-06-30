@@ -19596,6 +19596,11 @@ if (typeof Object.create !== "function") {
         $(this).modal('hide');
     });
 
+    $('.js-scroll-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+
 })(jQuery);
 
 // Avoid `console` errors in browsers that lack a console.

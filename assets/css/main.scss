@@ -55,7 +55,7 @@
 }
 
 .maincontent {
-    margin-top: 75px;
+    margin-top: 101px;
     @media (min-width: $screen-sm-min) {
         margin-top: 116px;
     }
@@ -63,7 +63,7 @@
         margin-top: 130px;
     }
     &.login {
-        margin-top: 70px;
+        margin-top: 56px;
     }
 }
 
@@ -444,4 +444,28 @@ header .filter-bar {
 
 .bootstrap-dialog.type-primary .modal-header {
     background-color: #fff;
+}
+
+.logo-tagline {
+    display: table;
+    margin-top: 12px;
+    h1 {
+        display: table-cell;
+        vertical-align: middle;
+        font-family: $font-toyota-display-regular;
+        font-size: 16px;
+        line-height: 1em;
+        text-align: right;
+        color: $colour-vi-red-1;
+        padding: 0 15px 0 0;
+        border-right: 2px solid $colour-default-grey-8;
+    }
+    h2 {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 15px;
+        font-size: 15px;
+        line-height: 1em;
+        color: $colour-default-grey-7;
+    }
 }
