@@ -184,12 +184,12 @@
 .calendar {
     &.hero-unit {
     background: url('../img/loginimg.jpg');
-        @media (min-width: $screen-md) {
-      background: url('../img/loginimg.jpg');
-    }
-    // background: url('../img/AUR0025a_15.jpg');
+        // background: url('../img/AUR0025a_15.jpg');
     background-position: top left;
     background-size: cover;
+        @media (min-width: $screen-md) {
+          background: url('../img/loginimg.jpg');
+        }
     }
     h1 {
         font-size: 3rem;

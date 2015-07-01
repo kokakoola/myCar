@@ -133,8 +133,7 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
         .empty {
           width: 14.285%;
           display: inline-block;
-          padding: 12px;
-          padding-bottom: 12px;
+          padding: 18px;
           font-size: 1em;
           text-align: center;
           color: #212121;
@@ -199,8 +198,8 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
         }
         .headers {
           background-color: rgba(255, 255, 255, 1);
-          padding-top: 5px;
-          padding-bottom: 5px;
+          padding-top: 15px;
+          padding-bottom: 15px;
           border-bottom: 1px solid #ddd;
           border-top: 1px solid #ddd;
             .day-header {
