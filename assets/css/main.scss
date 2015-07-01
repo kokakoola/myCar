@@ -66,6 +66,12 @@
 .logo-tagline {
     display: table;
     margin-top: 12px;
+    @media (min-width: $screen-md-min) {
+        margin-top: 19px;
+    }
+    @media (max-width: $screen-xs-max) {
+        padding-left: 15px;
+    }
     h1 {
         display: table-cell;
         vertical-align: middle;
@@ -353,4 +359,10 @@
     background-color: #fff;
 }
 
-
+.forms .row h5 {
+    &.form-label {
+        @media (max-width: $screen-xs-max) {
+            padding-top: 10px;
+        }
+    }
+}

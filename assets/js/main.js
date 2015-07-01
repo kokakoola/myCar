@@ -51,3 +51,13 @@
     });
 
 })(jQuery);
+
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+        document.getElementById("logo-big").style.transform = "translate(0, -160px)";
+        $('#logo-medium').css({opacity: 1});
+    } else {
+        document.getElementById("logo-big").style.transform = "translate(0, 0)";
+        $('#logo-medium').css({opacity: 0});
+    }
+});

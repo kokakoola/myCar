@@ -34,6 +34,9 @@
     padding: 0;
     &.profile {
         margin-top: 70px;
+        .toolbar {
+            margin-top: 0;
+        }
     }
 
     .toolbar {
