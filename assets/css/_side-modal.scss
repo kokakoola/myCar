@@ -46,21 +46,18 @@
 
     .toolbar {
         width: 70px;
-        float: left;
         background-color: $colour-default-grey-1;
         height: 100%;
-        display: inline-block;
         z-index: $pageoverlayer-toolbar-zindex;
         top: 0 px\9;
         bottom: 0 px\9;
         left: 0 px\9;
-        text-align: center;
         position: fixed;
         @media (min-width: $screen-sm-min) {
-            margin-top: 116px;
+            top: 116px;
         }
         @media (min-width: $screen-md-min) {
-            margin-top: 130px;
+            top: 130px;
         }
         a {
 
