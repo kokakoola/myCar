@@ -4,7 +4,6 @@
 'side-modal',
 'modules';
 
-@import 'bootstrap-dialog.css';
 @import 'owl.carousel.css';
 @import 'owl.theme.css';
 // ************
@@ -130,6 +129,9 @@
     }
     &.login {
         margin-top: 56px;
+    }
+    &.profile {
+        margin-top: 70px;
     }
 }
 
@@ -365,8 +367,16 @@
     margin-top: 150px;
 }
 
-.bootstrap-dialog.type-primary .modal-header {
-    background-color: #fff;
+.alert-modal {
+    .modal-content {
+        border-radius: 4px;
+        .modal-header {
+            border: none;
+        }
+        .modal-footer {
+            border: none;
+        }
+    }
 }
 
 .forms .row h5 {

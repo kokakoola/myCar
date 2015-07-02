@@ -211,7 +211,7 @@
 <!--                             <button type="button" class="btn btn-grey btn-addCar" data-target="#addCar" data-direction="right">
                       Lisa uus auto
                     </button> -->
-          <a class="btn btn-grey btn-submit" id="delAccount">Kustuta konto</a>
+          <a class="btn btn-grey btn-submit" data-toggle="modal" href="#delAccount">Kustuta konto</a>
           <a class="btn btn-link btn-cancel" data-action="cancel">Loobu</a>
 
         </div>
@@ -252,23 +252,23 @@
           </header>
           <div class="row">
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 form-group">
               <h5 class="form-label">Praegune salasõna</h5>
               <input type="text" name="model" value="">
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 form-group">
               <h5 class="form-label">Uus salasõna</h5>
               <input type="text" name="model" value="">
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 form-group">
               <h5 class="form-label">Korda uut salasõna</h5>
               <input type="text" name="model" value="">
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-12 text-right">
-              <a class="btn btn-dark btn-submit">Kinnita</a>
+            <div class="col-xs-12 text-right form-group">
               <a class="btn btn-link btn-cancel" data-dismiss="modal" aria-label="Close">Loobu</a>
+              <a class="btn btn-dark btn-submit">Kinnita</a>
             </div>
           </div>
         </div>
@@ -280,7 +280,7 @@
 
 <!-- Modal Conditions -->
 <div class="modal fade" id="conditions">
-  <div class="modal-dialog fullscreen">
+  <div class="modal-dialog fullscreen profile">
 
     <div class="modal-content">
       <div class="modal-body">
@@ -295,8 +295,8 @@
         </a>
       </div>
 
-        <article class="container">
-      {{>components/_conditions-modal.html}}
+        <article class="modal-header">
+      {{>components/_conditions-modal}}
       </article>
 
       </div>
@@ -326,3 +326,18 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade alert-modal" id="delAccount">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Oled <strong>KINDEL</strong>, et soovid konto kustutada?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Loobu</button>
+                <a href="login.html" class="btn btn-submit btn-dark">Kustuta</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

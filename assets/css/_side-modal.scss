@@ -33,7 +33,12 @@
     position: fixed;
     padding: 0;
     &.profile {
-        margin-top: 70px;
+        @media (min-width: $screen-sm-min) {
+            margin-top: 56px;
+        }
+        @media (min-width: $screen-md-min) {
+            margin-top: 70px;
+        }
         .toolbar {
             margin-top: 0;
         }
@@ -101,23 +106,20 @@
         .back-text {
             display: block;
             font-family: toyotatext_rg;
-            @include font-size(15);
+            @include font-size(18);
             text-align: left;
             white-space: nowrap;
-            -moz-transform: rotate(270deg);
-            -ms-transform: rotate(270deg);
-            -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-            bottom: 45px;
-            left: 19px;
+            -moz-transform: rotate(-270deg);
+            -ms-transform: rotate(-270deg);
+            -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+            left: 45px;
             padding-left: 20px;
             transform-origin: 0 0 0;
             -webkit-transform-origin: 0 0 0;
             -ms-transform-origin: 0 0;
             -o-transform-origin: 0 0 0;
             position: absolute;
-            top: 180px;
-
         }
         .close-link {
             display: block;
@@ -127,8 +129,10 @@
     }
     .modal-header {
         margin-left: 70px;
-        padding-top: 60px;
         border-bottom: 0;
+        @media (min-width: $screen-sm-min) {
+            padding-top: 60px;
+        }
     }
     .modal-content {
         border-radius: 0;

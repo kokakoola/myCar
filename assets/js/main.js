@@ -1,4 +1,4 @@
-(function($){
+$(function () {
 
     // directional modal
     $('.btn-serviceModal').click(function() {
@@ -50,14 +50,29 @@
         return false;
     });
 
-})(jQuery);
+    $("#scrollServicesListed").click(function() {
+        $('.modal-content').animate({
+            scrollTop: 600
+        }, 500);
+    });
+
+});
+
+var translateCss = function ($obj, $x, $y) {
+    $obj.css({
+        "-webkit-transform":"translate("+ $x +"px, "+ $y +"px)",
+        "-ms-transform":"translate("+ $x +"px, "+ $y +"px)",
+        "-o-transform":"translate("+ $x +"px, "+ $y +"px)",
+        "transform":"translate("+ $x +"px, "+ $y +"px)"
+    });
+}
 
 $(window).scroll(function() {
     if ($(document).scrollTop() > 100) {
-        document.getElementById("logo-big").style.transform = "translate(0, -160px)";
+        translateCss($("#logo-big"), 0, -160);
         $('#logo-medium').css({opacity: 1});
     } else {
-        document.getElementById("logo-big").style.transform = "translate(0, 0)";
+        translateCss($("#logo-big"), 0, 0);
         $('#logo-medium').css({opacity: 0});
     }
 });

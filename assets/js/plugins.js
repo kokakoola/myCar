@@ -134,25 +134,3 @@
     //http://nakupanda.github.io/bootstrap3-dialog/#available-options
 
 }());
-
-$("#delAccount").on('click', areYouSure);
-
-function areYouSure() {
-    BootstrapDialog.show({
-        title: ' ',
-        message: 'Oled sa <strong>KINDEL</strong>, et soovid kustutada?',
-        buttons: [{
-            label: 'Katkesta',
-            cssClass: 'btn-link',
-            action: function(dialogItself){
-                dialogItself.close();
-            }
-        }, {
-            label: 'Jah',
-            cssClass: 'btn-dark',
-            action: function(dialog) {
-                alert('Olgu nii - oled kustutatud. Oli kena sind kohata. Jällenägemiseni!');
-            }
-        }]
-    });
-}
