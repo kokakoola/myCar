@@ -238,6 +238,10 @@
 				}
 			}
 			.model-list {
+				h5 {
+					color: #fff;
+					margin-bottom: 10px;
+				}
 				a {
 					height: auto;
 					padding: 0;
@@ -303,6 +307,7 @@
 					margin: 0 0 10px;
 					padding: 10px;
 					ul li {
+						color: $colour-default-grey-6;
 						background-color: rgba(0, 0, 0, 0);
 						font-family: toyotatext_rg, Verdana, Geneva, Arial, Helvetica, sans-serif;
 						margin: 8px 0;
@@ -320,6 +325,9 @@
 						background-color: $colour-default-grey-1;
 						border-radius: 2px;
 						transition: background-color 0.25s ease-out 0s;
+						h5 {
+							color: #fff;
+						}
 					}
 					&.link-block-cta {
 						@include gradient-vertical($colour-default-red, $colour-default-red-2);
@@ -790,7 +798,7 @@
 			&#dropdown-menu-car {
 				padding-bottom: 80px;
 				height: 800px; // keep height prop for animation
-				overflow-y: scroll;
+				overflow-y: auto;
 				.maincontainer > .navigation-menu {
 					opacity: 1;
 				}

@@ -17,33 +17,46 @@
 }
 
 @-webkit-keyframes redPulse {
-
 from { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
-
 50% { background-color: #e33100; -webkit-box-shadow: 0 0 18px #e33100; }
-
 to { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
-
 }
 
 @-webkit-keyframes bluePulse {
-
 from { background-color: $colour-vi-cyan-1; -webkit-box-shadow: 0 0 9px #333; }
-
 50% { background-color: $colour-vi-cyan-2; -webkit-box-shadow: 0 0 18px #2daebf; }
-
 to { background-color: $colour-btn-blue-2; -webkit-box-shadow: 0 0 9px #333; }
-
 }
 
 @-webkit-keyframes orangePulse {
-
 from { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
-
 50% { background-color: $colour-vi-orange-2; -webkit-box-shadow: 0 0 18px #e33100; }
-
 to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
+}
 
+
+@keyframes greenPulse {
+  from { background-color: #749a02; box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; box-shadow: 0 0 9px #333; }
+}
+
+@keyframes redPulse {
+from { background-color: #bc330d; box-shadow: 0 0 9px #333; }
+50% { background-color: #e33100; box-shadow: 0 0 18px #e33100; }
+to { background-color: #bc330d; box-shadow: 0 0 9px #333; }
+}
+
+@keyframes bluePulse {
+from { background-color: $colour-vi-cyan-1; box-shadow: 0 0 9px #333; }
+50% { background-color: $colour-vi-cyan-2; box-shadow: 0 0 18px #2daebf; }
+to { background-color: $colour-btn-blue-2; box-shadow: 0 0 9px #333; }
+}
+
+@keyframes orangePulse {
+from { background-color: $colour-vi-orange-1; box-shadow: 0 0 9px #333; }
+50% { background-color: $colour-vi-orange-2; box-shadow: 0 0 18px #e33100; }
+to { background-color: $colour-vi-orange-1; box-shadow: 0 0 9px #333; }
 }
 
 // .event-item.important {
@@ -169,6 +182,9 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
               -webkit-animation-name: orangePulse;
               -webkit-animation-duration: 2s;
               -webkit-animation-iteration-count: infinite;
+              animation-name: orangePulse;
+              animation-duration: 2s;
+              animation-iteration-count: infinite;
             }
           }
           &.adjacent-month {
