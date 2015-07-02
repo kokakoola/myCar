@@ -71,7 +71,6 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
     .controls {
 
       // @include trans(bg, $colour-vi-cyan-1, .9);
-      background-color: rgba(255, 255, 255, 0.5);
 
        .clndr-previous-button,
        .clndr-next-button {
@@ -114,8 +113,11 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
     .days-container {
       position: relative;
       width: 100%;
-      height: 186px;
+      height: 245px;
       display: inline-block;
+        @media (min-width: $screen-md) {
+          height: 186px;
+        }
 
       .days {
         position: absolute;
@@ -127,13 +129,11 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
         -ms-transition: left 0.5s;
         -o-transition: left 0.5s;
         transition: left 0.5s;
-        background-color: rgba(255, 255, 255, 0.5);
         .day,
         .empty {
           width: 14.285%;
           display: inline-block;
-          padding: 12px;
-          padding-bottom: 12px;
+          padding: 18px;
           font-size: 1em;
           text-align: center;
           color: #212121;
@@ -150,18 +150,18 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
           &.event {
             // background-color: rgba(000, 000, 000, 0.2);
             border: 1px solid rgba(000, 000, 000, 0.1);
-            background-image: -webkit-gradient(
-  linear, left top, left bottom, from(rgba(50,50,50,0.8)),
-  to(rgba(80,80,80,0.2)), color-stop(.5,#333333)
-);
+            
             background-repeat: repeat-x;
-            // border-radius: 2px;
+            border-radius: 2px;
             -webkit-transition: background-color 0.5s;
             -moz-transition: background-color 0.5s;
             -ms-transition: background-color 0.5s;
             -o-transition: background-color 0.5s;
             transition: background-color 0.5s;
             cursor: pointer;
+            &:not(.important) {
+              background-image: linear-gradient(to bottom, #FFF 0%, #E8E9EA 100%);
+            }
 
             &:hover {
 
@@ -198,8 +198,8 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
         }
         .headers {
           background-color: rgba(255, 255, 255, 1);
-          padding-top: 5px;
-          padding-bottom: 5px;
+          padding-top: 15px;
+          padding-bottom: 15px;
           border-bottom: 1px solid #ddd;
           border-top: 1px solid #ddd;
             .day-header {
