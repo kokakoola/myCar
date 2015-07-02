@@ -162,16 +162,13 @@
     }
 }
 
-@media (min-width: $screen-md) {
-    .bg-image-hero {
-        height: 400px;
-    }
-}
-
 
 #calendar.articles-list {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 0;
+        @media (min-width: $screen-md) {
+      padding-bottom: 40px;
+    }
     @media (min-width: $screen-md) {
       padding-bottom: 0;
     }
@@ -185,12 +182,21 @@
 
 .calendar {
     &.hero-unit {
-    background: url('../img/loginimg.jpg');
+    background: url('../img/auris-xs.jpg');
         // background: url('../img/AUR0025a_15.jpg');
-    background-position: top left;
+    // background-position: top left;
     background-size: cover;
+        @media (min-width: $screen-sm) {
+          background: url('../img/auris-sm.jpg');
+          background-size: cover;
+        }
         @media (min-width: $screen-md) {
-          background: url('../img/loginimg.jpg');
+          background: url('../img/auris-md.jpg');
+          background-size: cover;
+        }
+        @media (min-width: $screen-lg) {
+          background: url('../img/auris-lg.jpg');
+          background-size: cover;
         }
     }
     h1 {
@@ -213,6 +219,12 @@
         @media (min-width: $screen-md) {
         padding-top: 70px;
         }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .bg-image-hero {
+        height: 400px;
     }
 }
 
