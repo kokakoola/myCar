@@ -119,16 +119,16 @@
     $("#collapseBtn").on('click', firstClick);
 
     function firstClick() {
-        $("#collapsePass").collapse('show').off('click').on('click', secondClick);
+        $("#collapsePass").collapse('show');
     }
 
-    // function secondClick() {
-    //   alert(2);
-    // $('.collapse').on('shown.bs.collapse', function () {
-    //   $("#collapsePass").off('click').on('click', firstClick);
-
-    // });
-    // }
+    $('#collapsePass').on('shown.bs.collapse', function () {
+        $('.btn').on('click', function () {
+            if ($(this).data('target') == '#collapsePass') {
+                window.location.href="loggedin.html";
+            }
+        });
+    });
 
     // dialogs - more methods at:
     //http://nakupanda.github.io/bootstrap3-dialog/#available-options

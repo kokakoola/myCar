@@ -1,102 +1,101 @@
 <section class="calendar hero-unit bg-image-hero background" id="calendar">
-  <div class="container">
-    <header class="section-title">
-      <h1>Toyota kalender</h1>
-    </header>
-  </div>
+    <div class="container">
+        <header class="section-title">
+            <h1>Toyota kalender</h1>
+        </header>
+    </div>
 </section>
 <section id="calendar" class="articles-list">
     <div class="container">
-      <div class="row">
-        <div id="mini-clndr"></div>
-          {{>components/_events-current-month}}
-
+        <div class="row">
+            <div class="col-xs-12 col-md-5">
+                <div id="mini-clndr"></div>
+            </div>
+            {{>components/_events-current-month}}
         </div>
     </div>
-  </section>
+</section>
 
-  <section class="page-tools carousel">
+<section class="page-tools carousel">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="  "  >
-            <ul class="owl-carousel-list list1">
-              <li><a href="#!"><strong>Suverehvid Rehvikeskusest superhinnaga</strong> On aeg mõelda suvele. Loe lisa meie kodulehelt. <i class="icon-chevron-right"></i></a></li>
-              <li><a href="article-all-options.html#link2"><strong>Toyota is the winner of Auto Bild Quality Report 2012</strong> For since the inception of the study in 2001, the brand is the fifth time at the top of the quality rankings.<i class="icon-chevron-right"></i></a></li>
-              <li><a href="article-all-options.html#link3"><strong>Toyota most successful brand in the TUV report 2013</strong> 20 times in the Top 10 in 5 classes<i class="icon-chevron-right"></i></a></li>
-            </ul>
-          </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="  "  >
+                    <ul class="owl-carousel-list list1">
+                        <li><a href="#!"><strong>Suverehvid Rehvikeskusest superhinnaga</strong> On aeg mõelda suvele. Loe lisa meie kodulehelt. <i class="icon-chevron-right"></i></a></li>
+                        <li><a href="article-all-options.html#link2"><strong>Toyota is the winner of Auto Bild Quality Report 2012</strong> For since the inception of the study in 2001, the brand is the fifth time at the top of the quality rankings.<i class="icon-chevron-right"></i></a></li>
+                        <li><a href="article-all-options.html#link3"><strong>Toyota most successful brand in the TUV report 2013</strong> 20 times in the Top 10 in 5 classes<i class="icon-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
 
     </div>
-  </section>
+</section>
 
-      <!-- <a href="#!" class="clndr-today-button">Today</a> -->
-  <script id="calendar-template" type="text/template">
-    <div class="col-xs-12 col-md-5">
-        <div class="controls">
-          <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %> <%= year %></div><div class="clndr-next-button">&rsaquo;</div>
-        </div>
-        <div class="days-container">
-          <div class="days">
+<!-- <a href="#!" class="clndr-today-button">Today</a> -->
+<script id="calendar-template" type="text/template">
+    <div class="controls">
+        <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %> <%= year %></div><div class="clndr-next-button">&rsaquo;</div>
+    </div>
+    <div class="days-container">
+        <div class="days">
             <div class="headers">
-              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
             </div>
             <% _.each(days, function(day) { %><div id="<%= day.id %>" class="<%= day.classes %>
-              <% _.each(day.events, function(event){ %>
-             <%= event.type %>
-          <% }) %>
-              " ><%= day.day %></div><% }); %>
-          </div>
-        </div>
-      </div>
-  </script>
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog fullscreen">
-
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="toolbar">
-        <a class="close-link" data-dismiss="modal" aria-label="Close">
-          <div class="btn-back">
-            <div class="btn-graphic" >
-              <i class="icon-angle-left"></i>
+                <% _.each(day.events, function(event){ %>
+                    <%= event.type %>
+                    <% }) %>
+                    " ><%= day.day %></div><% }); %>
+                </div>
             </div>
-          </div>
-          <span class="back-text">Tagasi <strong>lehele</strong></span>
-        </a>
-      </div>
+        </script>
 
-        {{>components/_service-modal}}
 
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog fullscreen">
 
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="toolbar">
-          <a class="close-link" data-dismiss="modal" aria-label="Close">
-            <div class="btn-back">
-              <div class="btn-graphic" >
-                <i class="icon-angle-left"></i>
-              </div>
+        <!-- Modal -->
+        <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog fullscreen">
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="toolbar">
+                            <a class="close-link" data-dismiss="modal" aria-label="Close">
+                                <div class="btn-back">
+                                    <div class="btn-graphic" >
+                                        <i class="icon-angle-left"></i>
+                                    </div>
+                                </div>
+                                <span class="back-text">Tagasi <strong>lehele</strong></span>
+                            </a>
+                        </div>
+
+                        {{>components/_service-modal}}
+
+                    </div>
+                </div>
             </div>
-            <span class="back-text">Tagasi <strong>lehele</strong></span>
-          </a>
         </div>
-         {{>components/_new-event-modal}}
-      </div>
-    </div>
-  </div>
-</div>
+
+        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog fullscreen">
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="toolbar">
+                            <a class="close-link" data-dismiss="modal" aria-label="Close">
+                                <div class="btn-back">
+                                    <div class="btn-graphic" >
+                                        <i class="icon-angle-left"></i>
+                                    </div>
+                                </div>
+                                <span class="back-text">Tagasi <strong>lehele</strong></span>
+                            </a>
+                        </div>
+                        {{>components/_new-event-modal}}
+                    </div>
+                </div>
+            </div>
+        </div>

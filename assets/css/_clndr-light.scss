@@ -113,15 +113,9 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
     .days-container {
       position: relative;
       width: 100%;
-      height: 245px;
       display: inline-block;
-        @media (min-width: $screen-md) {
-          height: 186px;
-        }
 
       .days {
-        position: absolute;
-        left: 0;
         /*width: 100%;*/
         /*height: auto;*/
         -webkit-transition: left 0.5s;
@@ -133,7 +127,10 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
         .empty {
           width: 14.285%;
           display: inline-block;
-          padding: 18px;
+          padding: 10px;
+          @media (min-width: $screen-sm-min) {
+              padding: 18px;
+          }
           font-size: 1em;
           text-align: center;
           color: #212121;
@@ -150,7 +147,7 @@ to { background-color: $colour-vi-orange-1; -webkit-box-shadow: 0 0 9px #333; }
           &.event {
             // background-color: rgba(000, 000, 000, 0.2);
             border: 1px solid rgba(000, 000, 000, 0.1);
-            
+
             background-repeat: repeat-x;
             border-radius: 2px;
             -webkit-transition: background-color 0.5s;

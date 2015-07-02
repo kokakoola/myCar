@@ -1,0 +1,38 @@
+{{>components/_header-lg}}
+
+<div class="maincontent">
+    {{>blocks/_calendar-chapter}}
+    {{>blocks/_offers-chapter}}
+    {{>blocks/_model-chapter}}
+    {{>blocks/_car-detail}}
+    {{>blocks/_accessories-chapter}}
+    {{>blocks/_video-chapter}}
+    {{>blocks/_dealer-map}}
+    {{>blocks/_contact-chapter}}
+</div>
+
+{{>components/_footer-chapter}}
+
+<!-- Modal -->
+<div class="modal fade" id="addCar">
+    <div class="modal-dialog fullscreen">
+        <div class="toolbar">
+            <a class="close-link" data-dismiss="modal" aria-label="Close">
+                <div class="btn-back">
+                    <div class="btn-graphic" >
+                        <i class="icon-angle-left"></i>
+                    </div>
+                </div>
+                <span class="back-text">Tagasi <strong>lehele</strong></span>
+            </a>
+        </div>
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                {{>components/_add-car}}
+
+            </div>
+        </div>
+    </div>
+</div>
