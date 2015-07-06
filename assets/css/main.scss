@@ -235,10 +235,18 @@
     color: $colour-default-red;
 }
 
+#nav-secondary-level ul li.alerted {
+    background-color: $colour-vi-red-1;
+}
+
 .event-listing {
     p {
         color: $text-color;
         text-indent: 0;
+    }
+    .event-item.past p,
+    .event-item.past a.btn {
+        color: rgba(0,0,0, 0.3);
     }
     .page-tools {
         margin: 0;
@@ -262,6 +270,12 @@
         }
         &.forms .row h5 {
             padding-bottom: 0;
+        }
+        &.past {
+            color: rgba(0,0,0, 0.3);
+            &.last {
+                border-bottom: 4px double rgba(0,0,0, 0.2);
+            }
         }
     }
     .conclusion {

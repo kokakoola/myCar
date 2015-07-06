@@ -192,8 +192,15 @@ to { background-color: $colour-vi-orange-1; box-shadow: 0 0 9px #333; }
           }
         }
         .day {
+          &.past,
+          &.past.important,
+          &.past.calendar-dow-6,
+          &.past.calendar-dow-0 {
+            color: rgba(0, 0, 0, 0.3);
+          }
           &.calendar-dow-6,
-          &.calendar-dow-0 {
+          &.calendar-dow-0
+           {
             color: $colour-vi-red-1;
             &.adjacent-month.next-month {
               color: rgba(000, 000, 000, 0.3);
