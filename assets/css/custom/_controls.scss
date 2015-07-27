@@ -94,6 +94,17 @@ a, button, .checkbox-btn {
 			color: $colour-default-white;
 		}
 	}
+		&.btn-orange {
+		margin-top:1px;
+		border: 0px solid white !important;
+		color: $colour-default-white;
+		background-color: $colour-vi-orange-1;
+		@include gradient-vertical($colour-vi-orange-1, $colour-vi-orange-2);
+		&:active, &:focus, &:hover {
+			background: $colour-vi-orange-1;
+			color: $colour-default-white;
+		}
+	}
 	&.btn-red {
 		text-decoration: none;
 		color: $colour-default-white;
