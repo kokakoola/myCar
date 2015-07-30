@@ -125,6 +125,22 @@ a, button, .checkbox-btn {
 			color: $colour-default-white;
 		}
 	}
+	&.btn-success {
+		text-decoration: none;
+		color: $colour-default-white;
+		background-color: $colour-vi-green-2;
+		border: none;
+		@include gradient-vertical($colour-vi-green-1, $colour-vi-green-2);
+		&:before {
+			content: "\f00c";
+			font-family: 'toyotaicons' !important;
+			padding-right: 10px;
+		}
+		&:active, &:focus, &:hover {
+			background: $colour-vi-green-2;
+			color: $colour-default-white;
+		}
+	}
 	&.btn-small {
 		font-size: _em(13px);
 		padding: 8px 12px 11px;

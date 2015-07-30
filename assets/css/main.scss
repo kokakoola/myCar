@@ -20,6 +20,22 @@
     }
 }
 
+.success {
+    color: $colour-vi-green-1;
+}
+
+.error {
+    color: $colour-vi-red-1;
+}
+
+form.submitted .ng-invalid .error,
+form.submitted input.ng-invalid {
+    color: $colour-vi-red-1;
+    border: 1px solid $colour-vi-red-1;
+    box-shadow: inset 0 0 3px $colour-vi-red-1;
+    transition: all .6s ease;
+}
+
 .page-tools {
     padding: 20px;
     margin-bottom: 20px;
@@ -277,6 +293,9 @@
                 border-bottom: 4px double rgba(0,0,0, 0.2);
             }
         }
+        .col-xs-12 {
+            padding-bottom: 0;
+        }
     }
     .conclusion {
         padding-top: 12px;
@@ -379,7 +398,7 @@
     padding-right: 17px;
     border-right: 1px solid #ddd;
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .login {

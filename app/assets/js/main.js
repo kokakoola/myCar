@@ -19721,12 +19721,12 @@ $(window).scroll(function() {
     // $('#calendar').clndr();
     var currentMonth = moment().format('YYYY-MM');
     var prevMonth    = moment().add( -1, 'month').format('YYYY-MM');
-    var nextMonth    = moment().add(1, 'month').format('YYYY-MM');
+    var nextMonth    = moment().add(-1, 'month').format('YYYY-MM');
     var events = [
         { time: '14.00 - 16.00', date: currentMonth + '-' + '14', title: 'Autopesu ja vahatamine', location: 'Mustakivi Auto', linkto: '' },
-        { time: '14.00 - 16.00', date: nextMonth + '-' + '19', title: 'Teenindus 32 417 km', location: 'Mustakivi Auto', type: 'important', linkto: '' },
-        { time: '14.00 - 16.00', date: nextMonth + '-' + '27', title: 'Rehvivahetus', location: 'Kummimeister', linkto: ''  },
-        { time: '14.00 - 16.00', date: nextMonth + '-' + '07',    title: 'Hooldus', location: 'Mustakivi Auto', linkto: '' }
+        { time: '14.00 - 16.00', date: currentMonth + '-' + '19', title: 'Teenindus 32 417 km', location: 'Mustakivi Auto', type: 'important', linkto: '' },
+        { time: '14.00 - 16.00', date: currentMonth + '-' + '23', title: 'Rehvivahetus', location: 'Kummimeister', linkto: ''  },
+        { time: '14.00 - 16.00', date: currentMonth + '-' + '07',    title: 'Hooldus', location: 'Mustakivi Auto', linkto: '' }
     ];
 
     $('#mini-clndr').clndr({
