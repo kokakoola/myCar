@@ -19754,7 +19754,7 @@ $(window).scroll(function() {
     $('#collapsePass').on('shown.bs.collapse', function () {
         $('.btn').on('click', function () {
             if ($(this).data('target') == '#collapsePass') {
-                window.location.href="loggedin.html";
+                window.location.href="index.html";
             }
         });
     });

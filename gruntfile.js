@@ -21,16 +21,7 @@ module.exports = function(grunt) {
                 files: {
                     'app/assets/css/main.min.css': 'assets/css/main.scss'
                 }
-            },
-            // dist: {
-            //     options: {
-            //         style: 'compressed'
-            //     },
-            //     files: {
-            //         'app/assets/css/app.min_1.css': 'app/assets/css/app_1.css',
-            //         'app/assets/css/app.min_2.css': 'app/assets/css/app_2.css'
-            //     }
-            // }
+            }
         },
 
         // concatenates js files to single file
