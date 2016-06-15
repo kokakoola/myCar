@@ -126,9 +126,11 @@ form.submitted input.ng-invalid {
     }
 }
 
-.large-nav.float-right {
+.large-nav.float-right>a,
+.link-light {
   font-family: toyotatext_rg;
 }
+
 
 .sprite-menu-dark-arrow, .sprite-share-arrow, .sprite-share-arrow-inverted, .sprite-sprite, .sprite-trolley, .sprite-tumblr-share-button, .sprite-videoplayer-start-button, .trolley {
     background: url('../images/sprites/sprite-sdd5c6c5eeb.png') no-repeat;
